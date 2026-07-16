@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("../assets/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink-900 antialiased;
+  }
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-brand-600;
+  }
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-ink-900 leading-tight;
+  }
+  .section-desc {
+    @apply mt-4 text-base sm:text-lg text-ink-500 leading-relaxed;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-all duration-200 whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white shadow-soft hover:bg-brand-700 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply btn border-2 border-ink-200 text-ink-700 hover:border-brand-500 hover:text-brand-600 bg-white;
+  }
+  .btn-white {
+    @apply btn bg-white text-brand-700 hover:bg-brand-50 hover:-translate-y-0.5;
+  }
+  .card {
+    @apply rounded-3xl border border-ink-100 bg-white shadow-card transition-all duration-300;
+  }
+  .reveal {
+    opacity: 0;
+  }
+  .reveal.in-view {
+    @apply animate-fade-up;
+  }
+  .tag {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-bold;
+  }
+}

@@ -24,7 +24,7 @@
 
 @layer components {
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-brand-600;
+    @apply inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wide uppercase text-brand-600;
   }
   .section-title {
     @apply text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-ink-900 leading-tight;

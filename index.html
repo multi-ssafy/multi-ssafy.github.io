@@ -127,7 +127,7 @@
       <p class="section-desc">지원에 필요한 핵심 내용을 먼저 확인하세요</p>
     </div>
 
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
       <!-- 지원 대상 -->
       <div class="card reveal p-6 hover:shadow-card-hover hover:-translate-y-1">
         <div class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center"><svg class="lucide lucide-user-check w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m16 11 2 2 4-4" /> <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> </svg></div>
@@ -145,41 +145,47 @@
         <p class="mt-2 text-lg font-extrabold text-ink-900 leading-snug tracking-tight whitespace-nowrap">2026.04.27 ~ 05.11</p>
         <span class="tag bg-coral-50 text-coral-500 mt-3">17시 서류 마감</span>
       </div>
-      <!-- 모집 절차 -->
+      <!-- 교육 기간 -->
       <div class="card reveal p-6 hover:shadow-card-hover hover:-translate-y-1" style="animation-delay:.1s">
+        <div class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center"><svg class="lucide lucide-graduation-cap w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /> </svg></div>
+        <p class="mt-4 text-base font-extrabold text-ink-900">교육 기간</p>
+        <p class="mt-2 text-lg font-extrabold text-ink-900 leading-snug tracking-tight">2026.07 ~ 2027.06 <span class="whitespace-nowrap">(1년)</span></p>
+      </div>
+      <!-- 교육 장소 -->
+      <div class="card reveal p-6 hover:shadow-card-hover hover:-translate-y-1" style="animation-delay:.15s">
+        <div class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center"><svg class="lucide lucide-map-pin w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /> </svg></div>
+        <p class="mt-4 text-base font-extrabold text-ink-900">교육 장소</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="tag bg-brand-50 text-brand-600">서울</span>
+          <span class="tag bg-brand-50 text-brand-600">대전</span>
+          <span class="tag bg-brand-50 text-brand-600">광주</span>
+          <span class="tag bg-brand-50 text-brand-600">구미</span>
+          <span class="tag bg-brand-50 text-brand-600">부울경</span>
+        </div>
+      </div>
+      <!-- 모집 절차 -->
+      <div class="card reveal p-6 hover:shadow-card-hover hover:-translate-y-1" style="animation-delay:.2s">
         <div class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center"><svg class="lucide lucide-list-checks w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> </svg></div>
         <p class="mt-4 text-base font-extrabold text-ink-900">모집 절차</p>
-        <ol class="mt-3 space-y-1.5">
-          <li class="flex items-center gap-2 text-sm font-semibold text-ink-700">
-            <span class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[11px] font-bold flex items-center justify-center shrink-0">1</span>지원서 접수
+        <ol class="mt-4 relative">
+          <div class="absolute left-[11px] top-2 bottom-2 w-px bg-ink-100"></div>
+          <li class="relative flex items-center gap-3 pb-4">
+            <span class="relative z-10 w-[22px] h-[22px] rounded-full bg-white border-2 border-brand-200 text-brand-600 text-[11px] font-bold flex items-center justify-center shrink-0">1</span>
+            <span class="text-sm font-semibold text-ink-600">지원서 접수</span>
           </li>
-          <li class="flex items-center gap-2 text-sm font-semibold text-ink-700">
-            <span class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[11px] font-bold flex items-center justify-center shrink-0">2</span>SW 적성진단
+          <li class="relative flex items-center gap-3 pb-4">
+            <span class="relative z-10 w-[22px] h-[22px] rounded-full bg-white border-2 border-brand-200 text-brand-600 text-[11px] font-bold flex items-center justify-center shrink-0">2</span>
+            <span class="text-sm font-semibold text-ink-600">SW 적성진단</span>
           </li>
-          <li class="flex items-center gap-2 text-sm font-semibold text-ink-700">
-            <span class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[11px] font-bold flex items-center justify-center shrink-0">3</span>인터뷰
+          <li class="relative flex items-center gap-3 pb-4">
+            <span class="relative z-10 w-[22px] h-[22px] rounded-full bg-white border-2 border-brand-200 text-brand-600 text-[11px] font-bold flex items-center justify-center shrink-0">3</span>
+            <span class="text-sm font-semibold text-ink-600">인터뷰</span>
           </li>
-          <li class="flex items-center gap-2 text-sm font-semibold text-ink-700">
-            <span class="w-5 h-5 rounded-full bg-brand-600 text-white text-[11px] font-bold flex items-center justify-center shrink-0">4</span>입과
+          <li class="relative flex items-center gap-3">
+            <span class="relative z-10 w-[22px] h-[22px] rounded-full bg-brand-600 text-white text-[11px] font-bold flex items-center justify-center shrink-0 shadow-soft">4</span>
+            <span class="text-sm font-extrabold text-ink-900">입과</span>
           </li>
         </ol>
-      </div>
-      <!-- 교육 기간 & 장소 -->
-      <div class="card reveal p-6 hover:shadow-card-hover hover:-translate-y-1 flex flex-col justify-between" style="animation-delay:.15s">
-        <div class="flex items-start gap-3">
-          <div class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-graduation-cap w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /> </svg></div>
-          <div class="min-w-0">
-            <p class="text-base font-extrabold text-ink-900">교육 기간</p>
-            <p class="mt-1 text-sm font-extrabold text-ink-900 leading-snug tracking-tight">2026.07 ~ 2027.06 <span class="whitespace-nowrap">(1년)</span></p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <div class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-map-pin w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /> </svg></div>
-          <div class="min-w-0">
-            <p class="text-base font-extrabold text-ink-900">교육 장소</p>
-            <p class="mt-1 text-sm font-extrabold text-ink-900 leading-snug">서울·대전·광주<br/>구미·부울경</p>
-          </div>
-        </div>
       </div>
     </div>
     <p class="reveal text-center text-xs text-ink-400 mt-6">※ 세부 모집 일정의 경우 각 단계별 합격자에게 개별적으로 발표합니다.</p>

@@ -661,9 +661,129 @@
     <div class="mt-14 grid lg:grid-cols-2 gap-8 items-start">
       <!-- 지도 placeholder + 탭 -->
       <div class="reveal">
-        <div class="aspect-[4/3] rounded-3xl border-2 border-dashed border-ink-200 bg-white flex flex-col items-center justify-center text-ink-400 gap-2">
+        <!-- <div class="aspect-[4/3] rounded-3xl border-2 border-dashed border-ink-200 bg-white flex flex-col items-center justify-center text-ink-400 gap-2">
           <svg class="lucide lucide-map w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /> <path d="M15 5.764v15" /> <path d="M9 3.236v15" /> </svg>
           <p class="text-sm font-semibold">전국 캠퍼스 지도 이미지 삽입 예정</p>
+        </div> -->
+        <div class="campus-map-wrap" aria-label="SSAFY 전국 캠퍼스 지도">
+          <div class="campus-map-grid" aria-hidden="true"></div>
+
+          <svg
+            class="campus-map"
+            viewBox="0 0 620 520"
+            role="img"
+            aria-labelledby="campus-map-title campus-map-desc"
+          >
+            <title id="campus-map-title">SSAFY 전국 캠퍼스 위치</title>
+            <desc id="campus-map-desc">
+              서울, 대전, 광주, 구미, 부울경 캠퍼스 위치를 선택할 수 있는 지도
+            </desc>
+
+            <defs>
+              <linearGradient id="campus-map-fill" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#172337"></stop>
+                <stop offset="100%" stop-color="#0b1220"></stop>
+              </linearGradient>
+
+              <filter id="campus-map-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="4" result="blur"></feGaussianBlur>
+                <feMerge>
+                  <feMergeNode in="blur"></feMergeNode>
+                  <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- 대한민국 실루엣 -->
+            <path
+              class="campus-map-shape"
+              d="M333 55
+                L361 80 L371 111 L398 133 L405 162
+                L431 184 L425 213 L448 236 L437 261
+                L453 286 L434 307 L438 336 L416 353
+                L409 381 L389 395 L382 421 L360 435
+                L345 463 L323 476 L302 466 L294 441
+                L272 429 L274 402 L257 382 L265 358
+                L247 338 L257 316 L243 291 L259 270
+                L251 246 L268 226 L265 202 L282 185
+                L286 159 L306 146 L312 119 L330 107
+                L324 81 Z"
+            ></path>
+
+            <!-- 서울 -->
+            <g
+              class="campus-map-point is-active"
+              data-campus="seoul"
+              role="button"
+              tabindex="0"
+              aria-label="서울 캠퍼스 선택"
+            >
+              <line class="campus-map-line" x1="285" y1="181" x2="166" y2="181"></line>
+              <circle class="campus-map-pulse" cx="285" cy="181" r="16"></circle>
+              <circle class="campus-map-dot" cx="285" cy="181" r="7"></circle>
+              <text class="campus-map-label" x="150" y="187" text-anchor="end">서울</text>
+            </g>
+
+            <!-- 대전 -->
+            <g
+              class="campus-map-point"
+              data-campus="daejeon"
+              role="button"
+              tabindex="0"
+              aria-label="대전 캠퍼스 선택"
+            >
+              <line class="campus-map-line" x1="304" y1="286" x2="180" y2="286"></line>
+              <circle class="campus-map-pulse" cx="304" cy="286" r="16"></circle>
+              <circle class="campus-map-dot" cx="304" cy="286" r="7"></circle>
+              <text class="campus-map-label" x="164" y="292" text-anchor="end">대전</text>
+            </g>
+
+            <!-- 광주 -->
+            <g
+              class="campus-map-point"
+              data-campus="gwangju"
+              role="button"
+              tabindex="0"
+              aria-label="광주 캠퍼스 선택"
+            >
+              <line class="campus-map-line" x1="292" y1="382" x2="168" y2="382"></line>
+              <circle class="campus-map-pulse" cx="292" cy="382" r="16"></circle>
+              <circle class="campus-map-dot" cx="292" cy="382" r="7"></circle>
+              <text class="campus-map-label" x="152" y="388" text-anchor="end">광주</text>
+            </g>
+
+            <!-- 구미 -->
+            <g
+              class="campus-map-point"
+              data-campus="gumi"
+              role="button"
+              tabindex="0"
+              aria-label="구미 캠퍼스 선택"
+            >
+              <line class="campus-map-line" x1="391" y1="300" x2="500" y2="300"></line>
+              <circle class="campus-map-pulse" cx="391" cy="300" r="16"></circle>
+              <circle class="campus-map-dot" cx="391" cy="300" r="7"></circle>
+              <text class="campus-map-label" x="516" y="306">구미</text>
+            </g>
+
+            <!-- 부울경 -->
+            <g
+              class="campus-map-point"
+              data-campus="buulgyeong"
+              role="button"
+              tabindex="0"
+              aria-label="부울경 캠퍼스 선택"
+            >
+              <line class="campus-map-line" x1="401" y1="380" x2="500" y2="380"></line>
+              <circle class="campus-map-pulse" cx="401" cy="380" r="16"></circle>
+              <circle class="campus-map-dot" cx="401" cy="380" r="7"></circle>
+              <text class="campus-map-label" x="516" y="386">부울경</text>
+            </g>
+          </svg>
+
+          <p class="campus-map-guide">
+            지도 또는 아래 버튼을 눌러 캠퍼스를 확인해보세요
+          </p>
         </div>
         <div class="mt-5 grid grid-cols-5 gap-2" id="campus-tabs">
           <button data-campus="seoul" class="campus-tab is-active tag justify-center !py-2.5 w-full bg-brand-600 text-white">서울</button>

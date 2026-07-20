@@ -129,37 +129,63 @@ document.addEventListener("DOMContentLoaded", () => {
   //     });
   //   });
   // });
-  /* ---------- 캠퍼스 탭·지도 마커 전환 ---------- */
+ /* ---------- 캠퍼스 탭·콘텐츠·영상 전환 ---------- */
 const campusTabs = document.querySelectorAll(".campus-tab");
 const campusPanels = document.querySelectorAll(".campus-panel");
-const campusMapPoints = document.querySelectorAll(".campus-map-point");
-
 const campusMainImage = document.querySelector("#campus-main-image");
+const campusVideoLink = document.querySelector("#campus-video-link");
+const campusVideoThumbnail = document.querySelector(
+  "#campus-video-thumbnail"
+);
 
 const campusImages = {
   seoul: {
     src: "./assets/images/campus-seoul.jpg",
     alt: "서울 캠퍼스 대표 사진",
+    position: "center center",
   },
   daejeon: {
     src: "./assets/images/campus-daejeon.png",
     alt: "대전 캠퍼스 대표 사진",
     position: "center 70%",
-
   },
   gwangju: {
     src: "./assets/images/campus-gwangju.jpg",
     alt: "광주 캠퍼스 대표 사진",
+    position: "center center",
   },
   gumi: {
     src: "./assets/images/campus-gumi.jpg",
     alt: "구미 캠퍼스 대표 사진",
     position: "center 70%",
-
   },
   buulgyeong: {
     src: "./assets/images/campus-buulgyeong.jpg",
     alt: "부울경 캠퍼스 대표 사진",
+    position: "center center",
+  },
+};
+
+const campusVideos = {
+  seoul: {
+    id: "BSFhTq6AxPY",
+    name: "서울",
+  },
+  daejeon: {
+    id: "SmNfX6bY8pk",
+    name: "대전",
+  },
+  gwangju: {
+    id: "wIfu-6aYDTY",
+    name: "광주",
+  },
+  gumi: {
+    id: "02w81Tz4e5w",
+    name: "구미",
+  },
+  buulgyeong: {
+    id: "LZ9OR0uNBVo",
+    name: "부울경",
   },
 };
 
@@ -184,43 +210,42 @@ const activateCampus = (target) => {
     panel.classList.toggle("hidden", !isActive);
   });
 
-  campusMapPoints.forEach((point) => {
-    const isActive = point.dataset.campus === target;
-
-    point.classList.toggle("is-active", isActive);
-    point.setAttribute("aria-pressed", String(isActive));
-  });
-
   const nextImage = campusImages[target];
 
-if (campusMainImage && nextImage) {
-  campusMainImage.classList.add("opacity-0");
+  if (campusMainImage && nextImage) {
+    campusMainImage.classList.add("opacity-0");
 
-  setTimeout(() => {
-    campusMainImage.src = nextImage.src;
-    campusMainImage.alt = nextImage.alt;
-    campusMainImage.style.objectPosition = nextImage.position;
-    campusMainImage.classList.remove("opacity-0");
-  }, 150);
-}
+    setTimeout(() => {
+      campusMainImage.src = nextImage.src;
+      campusMainImage.alt = nextImage.alt;
+      campusMainImage.style.objectPosition = nextImage.position;
+      campusMainImage.classList.remove("opacity-0");
+    }, 150);
+  }
+
+  const nextVideo = campusVideos[target];
+
+  if (campusVideoLink && campusVideoThumbnail && nextVideo) {
+    const videoTitle = `${nextVideo.name} 캠퍼스 소개 영상`;
+
+    campusVideoLink.href =
+      `https://www.youtube.com/watch?v=${nextVideo.id}`;
+
+    campusVideoLink.setAttribute(
+      "aria-label",
+      `${videoTitle} 유튜브에서 보기`
+    );
+
+    campusVideoThumbnail.src =
+      `https://img.youtube.com/vi/${nextVideo.id}/maxresdefault.jpg`;
+
+    campusVideoThumbnail.alt = `${videoTitle} 썸네일`;
+  }
 };
 
 campusTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     activateCampus(tab.dataset.campus);
-  });
-});
-
-campusMapPoints.forEach((point) => {
-  point.addEventListener("click", () => {
-    activateCampus(point.dataset.campus);
-  });
-
-  point.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      activateCampus(point.dataset.campus);
-    }
   });
 });
   /* ---------- FAQ 아코디언 (싱글 오픈) ---------- */

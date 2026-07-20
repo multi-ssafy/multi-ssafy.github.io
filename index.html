@@ -96,7 +96,7 @@
       </a>
       <a href="#recruit-info" class="btn-outline w-full sm:w-auto">모집 핵심정보 보기</a>
     </div>
-    <p class="reveal in-view mt-4 text-sm text-ink-400">아직 모집 전이라면? <a href="#recruit-alert" class="font-bold text-brand-600 hover:text-brand-700">모집 알림 신청 →</a></p>
+    <!-- <p class="reveal in-view mt-4 text-sm text-ink-400">아직 모집 전이라면? <a href="#recruit-alert" class="font-bold text-brand-600 hover:text-brand-700">모집 알림 신청 →</a></p> -->
 
     <!-- 함께하는 기업 (삼성 계열사) - 자동 스크롤 로고 마퀴 -->
     <div class="reveal in-view mt-20 sm:mt-28 relative overflow-hidden marquee-mask -mx-5 sm:-mx-8">
@@ -628,151 +628,212 @@
 </section>
 
 <!-- ============ 교육지원 혜택 ============ -->
+<!-- ============ 교육지원 혜택 ============ -->
 <section id="benefit" class="scroll-mt-20 py-20 md:py-28">
   <div class="max-w-content mx-auto px-5 sm:px-8">
+
     <div class="text-center max-w-2xl mx-auto reveal">
       <p class="eyebrow justify-center">EDUCATION BENEFIT</p>
       <h2 class="section-title mt-3">몰입을 돕는 교육지원 혜택</h2>
-      <p class="section-desc">교육에만 온전히 집중할 수 있도록, 최고의 학습 환경을 지원합니다</p>
-      <p class="section-desc">항목을 눌러 세부 내용을 펼쳐보세요</p>
+      <p class="section-desc">
+        교육에만 온전히 집중할 수 있도록, 최고의 학습 환경을 지원합니다
+      </p>
     </div>
 
     <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
       <!-- 1. 교육지원금 -->
-      <div class="reveal card p-0 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col">
-        <div class="p-6 sm:p-7 flex flex-col flex-1">
-          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">최대 월 140만 원</span>
-          <h3 class="mt-4 text-lg font-extrabold text-ink-900 leading-snug">교육지원금 지급</h3>
-          <p class="mt-1.5 text-sm text-ink-500 leading-relaxed">교육에만 집중할 수 있도록</p>
+      <div
+        class="reveal card relative p-7 overflow-hidden hover:shadow-card-hover hover:-translate-y-1"
+        style="min-height:270px;"
+      >
+        <div class="relative z-10">
+          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">
+            최대 월 140만 원
+          </span>
+
+          <h3 class="mt-5 text-lg font-extrabold text-ink-900 leading-snug">
+            교육지원금 지급
+          </h3>
+
+          <p class="mt-2 text-sm text-ink-500 leading-relaxed">
+            교육에만 집중할 수 있도록
+          </p>
         </div>
-        <div class="relative mt-auto h-32 bg-gradient-to-br from-brand-50 to-brand-100/60 flex items-center justify-center overflow-hidden">
-          <div class="pointer-events-none absolute -bottom-8 -right-6 w-32 h-32 bg-white/50 rounded-full blur-2xl"></div>
-          <div class="relative flex items-center gap-2">
-            <svg class="lucide lucide-banknote w-16 h-16 text-brand-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /> </svg>
-            <span class="absolute -top-2 -right-4 w-7 h-7 rounded-full bg-brand-600 text-white text-sm font-extrabold flex items-center justify-center shadow-soft">₩</span>
-          </div>
+
+        <div
+          class="absolute rounded-3xl flex items-center justify-center"
+          style="
+            right:28px;
+            bottom:28px;
+            width:88px;
+            height:88px;
+            background:#eef3ff;
+          "
+        >
+          <svg
+            class="w-11 h-11 text-brand-600"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="12" x="2" y="6" rx="2"/>
+            <circle cx="12" cy="12" r="2"/>
+            <path d="M6 12h.01M18 12h.01"/>
+          </svg>
         </div>
       </div>
 
       <!-- 2. 고성능 AI 학습 환경 -->
-      <div class="reveal card p-0 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col" style="animation-delay:.06s">
-        <div class="p-6 sm:p-7 flex flex-col flex-1">
-          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">1인 1GPU</span>
-          <h3 class="mt-4 text-lg font-extrabold text-ink-900 leading-snug">고성능 AI 학습 환경</h3>
-          <p class="mt-1.5 text-sm text-ink-500 leading-relaxed">NVIDIA GPU 서버 상시 지원</p>
+      <div
+        class="reveal card relative p-7 overflow-hidden hover:shadow-card-hover hover:-translate-y-1"
+        style="min-height:270px; animation-delay:.06s;"
+      >
+        <div class="relative z-10">
+          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">
+            1인 1GPU
+          </span>
+
+          <h3 class="mt-5 text-lg font-extrabold text-ink-900 leading-snug">
+            고성능 AI 학습 환경
+          </h3>
+
+          <p class="mt-2 text-sm text-ink-500 leading-relaxed">
+            NVIDIA GPU 서버 상시 지원
+          </p>
         </div>
-        <div class="relative mt-auto h-32 bg-gradient-to-br from-brand-50 to-brand-100/60 flex items-center justify-center overflow-hidden">
-          <div class="pointer-events-none absolute -bottom-8 -left-6 w-32 h-32 bg-white/50 rounded-full blur-2xl"></div>
-          <div class="relative">
-            <svg class="lucide lucide-cpu w-16 h-16 text-brand-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 20v2" /> <path d="M12 2v2" /> <path d="M17 20v2" /> <path d="M17 2v2" /> <path d="M2 12h2" /> <path d="M2 17h2" /> <path d="M2 7h2" /> <path d="M20 12h2" /> <path d="M20 17h2" /> <path d="M20 7h2" /> <path d="M7 20v2" /> <path d="M7 2v2" /> <rect x="4" y="4" width="16" height="16" rx="2" /> <rect x="8" y="8" width="8" height="8" rx="1" /> </svg>
-            <span class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-brand-600 tracking-tight">GPU</span>
-          </div>
+
+        <div
+          class="absolute rounded-3xl flex items-center justify-center"
+          style="
+            right:28px;
+            bottom:28px;
+            width:88px;
+            height:88px;
+            background:#eef3ff;
+          "
+        >
+          <svg
+            class="w-11 h-11 text-brand-600"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <rect x="8" y="8" width="8" height="8" rx="1"/>
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3"/>
+            <path d="M1 9h3M1 15h3M20 9h3M20 15h3"/>
+          </svg>
         </div>
       </div>
 
       <!-- 3. 피지컬 AI 제작 지원 -->
-      <div class="reveal card p-0 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col" style="animation-delay:.12s">
-        <div class="p-6 sm:p-7 flex flex-col flex-1">
-          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">전국 캠퍼스</span>
-          <h3 class="mt-4 text-lg font-extrabold text-ink-900 leading-snug">피지컬 AI 제작 지원</h3>
-          <p class="mt-1.5 text-sm text-ink-500 leading-relaxed">3D 프린터·스캐너 제공</p>
+      <div
+        class="reveal card relative p-7 overflow-hidden hover:shadow-card-hover hover:-translate-y-1"
+        style="min-height:270px; animation-delay:.12s;"
+      >
+        <div class="relative z-10">
+          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">
+            전국 캠퍼스
+          </span>
+
+          <h3 class="mt-5 text-lg font-extrabold text-ink-900 leading-snug">
+            피지컬 AI 제작 지원
+          </h3>
+
+          <p class="mt-2 text-sm text-ink-500 leading-relaxed">
+            3D 프린터·스캐너 제공
+          </p>
         </div>
-        <div class="relative mt-auto h-32 bg-gradient-to-br from-brand-50 to-brand-100/60 flex items-center justify-center overflow-hidden">
-          <div class="pointer-events-none absolute -top-8 -right-6 w-32 h-32 bg-white/50 rounded-full blur-2xl"></div>
-          <div class="relative flex items-center gap-2.5">
-            <svg class="lucide lucide-box w-14 h-14 text-brand-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" > <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /> <path d="m3.3 7 8.7 5 8.7-5" /> <path d="M12 22V12" /> </svg>
-            <svg class="lucide lucide-scan w-8 h-8 text-brand-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 7V5a2 2 0 0 1 2-2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M21 17v2a2 2 0 0 1-2 2h-2" /> <path d="M7 21H5a2 2 0 0 1-2-2v-2" /> </svg>
-          </div>
+
+        <div
+          class="absolute rounded-3xl flex items-center justify-center"
+          style="
+            right:28px;
+            bottom:28px;
+            width:88px;
+            height:88px;
+            background:#eef3ff;
+          "
+        >
+          <svg
+            class="w-11 h-11 text-brand-600"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+            <path d="m3.3 7 8.7 5 8.7-5"/>
+            <path d="M12 22V12"/>
+          </svg>
         </div>
       </div>
 
       <!-- 4. 국내 최고 교수진 강의 -->
-      <div class="reveal card p-0 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col" style="animation-delay:.18s">
-        <div class="p-6 sm:p-7 flex flex-col flex-1">
-          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">AI 전문가 LIVE</span>
-          <h3 class="mt-4 text-lg font-extrabold text-ink-900 leading-snug">국내 최고 교수진 강의</h3>
-          <p class="mt-1.5 text-sm text-ink-500 leading-relaxed">AI 인사이트 라이브 강의</p>
+      <div
+        class="reveal card relative p-7 overflow-hidden hover:shadow-card-hover hover:-translate-y-1"
+        style="min-height:270px; animation-delay:.18s;"
+      >
+        <div class="relative z-10">
+          <span class="tag bg-brand-50 text-brand-700 border border-brand-100 w-fit">
+            AI 전문가 LIVE
+          </span>
+
+          <h3 class="mt-5 text-lg font-extrabold text-ink-900 leading-snug">
+            국내 최고 교수진 강의
+          </h3>
+
+          <p class="mt-2 text-sm text-ink-500 leading-relaxed">
+            AI 인사이트 라이브 강의
+          </p>
         </div>
-        <div class="relative mt-auto h-32 bg-gradient-to-br from-brand-50 to-brand-100/60 flex items-center justify-center overflow-hidden">
-          <div class="pointer-events-none absolute -bottom-8 -right-6 w-32 h-32 bg-white/50 rounded-full blur-2xl"></div>
-          <div class="relative">
-            <svg class="lucide lucide-presentation w-16 h-16 text-brand-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 3h20" /> <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" /> <path d="m7 21 5-5 5 5" /> </svg>
-            <span class="absolute -top-1 -right-3 inline-flex items-center gap-1 rounded-full bg-coral-500 text-white text-[9px] font-black px-1.5 py-0.5 shadow-soft">
-              <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>LIVE
-            </span>
-          </div>
+
+        <div
+          class="absolute rounded-3xl flex items-center justify-center"
+          style="
+            right:28px;
+            bottom:28px;
+            width:88px;
+            height:88px;
+            background:#eef3ff;
+          "
+        >
+          <svg
+            class="w-11 h-11 text-brand-600"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M2 3h20"/>
+            <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/>
+            <path d="m7 21 5-5 5 5"/>
+          </svg>
         </div>
       </div>
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180">
-        <summary class="list-none cursor-pointer flex items-center justify-between gap-3">
-          <span class="flex items-center gap-3">
-            <span class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-wallet w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /> </svg></span>
-            <span class="font-bold text-ink-900">교육지원금</span>
-          </span>
-          <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
-        </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">월 100만원 지급 (지역 캠퍼스 최대 월 140만원)</p>
-      </details>
 
-      <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.04s">
-        <summary class="list-none cursor-pointer flex items-center justify-between gap-3">
-          <span class="flex items-center gap-3">
-            <span class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-book-open w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 7v14" /> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /> </svg></span>
-            <span class="font-bold text-ink-900">최신 정보 지원</span>
-          </span>
-          <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
-        </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">국내 최고 대학 AI 교수의 라이브 강의 제공</p>
-      </details>
-
-      <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.08s">
-        <summary class="list-none cursor-pointer flex items-center justify-between gap-3">
-          <span class="flex items-center gap-3">
-            <span class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-server w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="8" x="2" y="2" rx="2" ry="2" /> <rect width="20" height="8" x="2" y="14" rx="2" ry="2" /> <line x1="6" x2="6.01" y1="6" y2="6" /> <line x1="6" x2="6.01" y1="18" y2="18" /> </svg></span>
-            <span class="font-bold text-ink-900">실습 인프라</span>
-          </span>
-          <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
-        </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">AI 프로젝트를 위한 GPU 기반 인프라 지원</p>
-      </details>
-
-      <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.12s">
-        <summary class="list-none cursor-pointer flex items-center justify-between gap-3">
-          <span class="flex items-center gap-3">
-            <span class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-graduation-cap w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /> </svg></span>
-            <span class="font-bold text-ink-900">전문가 멘토링</span>
-          </span>
-          <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
-        </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">AI 전문 강사진과 현업 멘토링 체계</p>
-      </details>
-
-      <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.16s">
-        <summary class="list-none cursor-pointer flex items-center justify-between gap-3">
-          <span class="flex items-center gap-3">
-            <span class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-briefcase w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /> <rect width="20" height="14" x="2" y="6" rx="2" /> </svg></span>
-            <span class="font-bold text-ink-900">취업지원</span>
-          </span>
-          <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
-        </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">1:1 컨설팅부터 채용 연계까지 전 과정 지원</p>
-      </details>
-
-      <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.2s">
-        <summary class="list-none cursor-pointer flex items-center justify-between gap-3">
-          <span class="flex items-center gap-3">
-            <span class="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0"><svg class="lucide lucide-building w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 10h.01" /> <path d="M12 14h.01" /> <path d="M12 6h.01" /> <path d="M16 10h.01" /> <path d="M16 14h.01" /> <path d="M16 6h.01" /> <path d="M8 10h.01" /> <path d="M8 14h.01" /> <path d="M8 6h.01" /> <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" /> <rect x="4" y="2" width="16" height="20" rx="2" /> </svg></span>
-            <span class="font-bold text-ink-900">교육 공간</span>
-          </span>
-          <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
-        </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">전국 5개 캠퍼스의 몰입형 오프라인 교육 공간</p>
-      </details>
     </div>
   </div>
 </section>
-
 <!-- ============ CTA 배너 ============ -->
 <section class="py-16 md:py-20">
   <div class="max-w-content mx-auto px-5 sm:px-8">

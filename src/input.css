@@ -81,3 +81,174 @@
     transform: translateX(-50%);
   }
 }
+
+/* 캠퍼스 네온 지도 */
+.campus-map-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(91, 126, 179, 0.22);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(36, 76, 145, 0.24),
+      transparent 48%
+    ),
+    #070b12;
+  box-shadow:
+    0 24px 60px rgba(10, 20, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.campus-map-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(103, 225, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 225, 255, 0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  pointer-events: none;
+}
+
+.campus-map {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.campus-map-shape {
+  fill: url("#campus-map-fill");
+  stroke: #b7ff5f;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 5px rgba(183, 255, 95, 0.64));
+}
+
+.campus-map-point {
+  cursor: pointer;
+  outline: none;
+}
+
+.campus-map-line {
+  stroke: rgba(177, 255, 97, 0.58);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 4 5;
+  transition:
+    stroke 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.campus-map-dot {
+  fill: #68dfff;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 5px rgba(104, 223, 255, 0.75));
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    fill 0.3s ease,
+    filter 0.3s ease;
+}
+
+.campus-map-pulse {
+  fill: none;
+  stroke: #b7ff5f;
+  stroke-width: 2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.campus-map-label {
+  fill: rgba(255, 255, 255, 0.72);
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    fill 0.3s ease,
+    filter 0.3s ease;
+}
+
+.campus-map-point:hover .campus-map-dot,
+.campus-map-point:focus-visible .campus-map-dot {
+  transform: scale(1.2);
+}
+
+.campus-map-point:hover .campus-map-label,
+.campus-map-point:focus-visible .campus-map-label {
+  fill: #ffffff;
+}
+
+.campus-map-point.is-active .campus-map-dot {
+  fill: #b7ff5f;
+  transform: scale(1.45);
+  filter:
+    drop-shadow(0 0 5px rgba(183, 255, 95, 0.95))
+    drop-shadow(0 0 12px rgba(104, 223, 255, 0.7));
+}
+
+.campus-map-point.is-active .campus-map-line {
+  stroke: #b7ff5f;
+  opacity: 1;
+}
+
+.campus-map-point.is-active .campus-map-label {
+  fill: #ffffff;
+  filter: drop-shadow(0 0 4px rgba(183, 255, 95, 0.45));
+}
+
+.campus-map-point.is-active .campus-map-pulse {
+  animation: campus-map-pulse 1.15s ease-out 2;
+}
+
+.campus-map-guide {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 0.8rem;
+  left: 1rem;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+@keyframes campus-map-pulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.35);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
+@media (max-width: 640px) {
+  .campus-map-label {
+    font-size: 17px;
+  }
+
+  .campus-map-guide {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campus-map-point.is-active .campus-map-pulse {
+    animation: none;
+  }
+
+  .campus-map-dot {
+    transition: none;
+  }
+}

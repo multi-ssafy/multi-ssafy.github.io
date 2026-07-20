@@ -110,26 +110,77 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- 캠퍼스 탭 전환 ---------- */
-  const campusTabs = document.querySelectorAll(".campus-tab");
-  const campusPanels = document.querySelectorAll(".campus-panel");
+  // const campusTabs = document.querySelectorAll(".campus-tab");
+  // const campusPanels = document.querySelectorAll(".campus-panel");
 
+  // campusTabs.forEach((tab) => {
+  //   tab.addEventListener("click", () => {
+  //     const target = tab.dataset.campus;
+
+  //     campusTabs.forEach((t) => {
+  //       t.classList.remove("is-active", "bg-brand-600", "text-white");
+  //       t.classList.add("bg-white", "text-ink-600", "border", "border-ink-200");
+  //     });
+  //     tab.classList.add("is-active", "bg-brand-600", "text-white");
+  //     tab.classList.remove("bg-white", "text-ink-600", "border", "border-ink-200");
+
+  //     campusPanels.forEach((panel) => {
+  //       panel.classList.toggle("hidden", panel.id !== `campus-panel-${target}`);
+  //     });
+  //   });
+  // });
+  /* ---------- 캠퍼스 탭·지도 마커 전환 ---------- */
+const campusTabs = document.querySelectorAll(".campus-tab");
+const campusPanels = document.querySelectorAll(".campus-panel");
+const campusMapPoints = document.querySelectorAll(".campus-map-point");
+
+const activateCampus = (target) => {
   campusTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const target = tab.dataset.campus;
+    const isActive = tab.dataset.campus === target;
 
-      campusTabs.forEach((t) => {
-        t.classList.remove("is-active", "bg-brand-600", "text-white");
-        t.classList.add("bg-white", "text-ink-600", "border", "border-ink-200");
-      });
-      tab.classList.add("is-active", "bg-brand-600", "text-white");
-      tab.classList.remove("bg-white", "text-ink-600", "border", "border-ink-200");
+    tab.classList.toggle("is-active", isActive);
+    tab.classList.toggle("bg-brand-600", isActive);
+    tab.classList.toggle("text-white", isActive);
 
-      campusPanels.forEach((panel) => {
-        panel.classList.toggle("hidden", panel.id !== `campus-panel-${target}`);
-      });
-    });
+    tab.classList.toggle("bg-white", !isActive);
+    tab.classList.toggle("text-ink-600", !isActive);
+    tab.classList.toggle("border", !isActive);
+    tab.classList.toggle("border-ink-200", !isActive);
+
+    tab.setAttribute("aria-pressed", String(isActive));
   });
 
+  campusPanels.forEach((panel) => {
+    const isActive = panel.id === `campus-panel-${target}`;
+    panel.classList.toggle("hidden", !isActive);
+  });
+
+  campusMapPoints.forEach((point) => {
+    const isActive = point.dataset.campus === target;
+
+    point.classList.toggle("is-active", isActive);
+    point.setAttribute("aria-pressed", String(isActive));
+  });
+};
+
+campusTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    activateCampus(tab.dataset.campus);
+  });
+});
+
+campusMapPoints.forEach((point) => {
+  point.addEventListener("click", () => {
+    activateCampus(point.dataset.campus);
+  });
+
+  point.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      activateCampus(point.dataset.campus);
+    }
+  });
+});
   /* ---------- FAQ 아코디언 (싱글 오픈) ---------- */
   const faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach((item) => {

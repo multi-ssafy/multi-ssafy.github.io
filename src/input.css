@@ -252,3 +252,23 @@
     transition: none;
   }
 }
+.campus-map-base {
+  pointer-events: none;
+  transform: translateY(65px) scale(1.17);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.campus-map-guide {
+  display: none;
+}
+#campus-tabs .campus-tab {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  #campus-tabs .campus-tab {
+    font-size: 13px;
+  }
+}

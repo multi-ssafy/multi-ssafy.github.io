@@ -1165,6 +1165,35 @@
   </div>
 </footer>
 
+<!-- ============ 챗봇 위젯 ============ -->
+<div id="chatbot" class="fixed bottom-5 right-5 z-[60] flex flex-col items-end">
+  <!-- 대화 패널 -->
+  <div id="chatbot-panel" class="is-closed mb-3 w-[min(90vw,360px)] h-[520px] max-h-[72vh] rounded-3xl bg-white shadow-2xl border border-ink-100 flex flex-col overflow-hidden" role="dialog" aria-label="SSAFY 안내 챗봇" aria-hidden="true">
+    <!-- 헤더 -->
+    <div class="shrink-0 bg-gradient-to-br from-brand-600 to-brand-800 px-5 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center"><svg class="lucide lucide-bot w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></div>
+        <div>
+          <p class="font-bold text-sm leading-tight">SSAFY 안내 봇</p>
+          <p class="text-[11px] text-brand-100 flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>궁금한 점을 골라보세요</p>
+        </div>
+      </div>
+      <button id="chatbot-close" type="button" aria-label="채팅 닫기" class="w-8 h-8 rounded-full hover:bg-white/10 flex items-center justify-center transition-colors"><svg class="lucide lucide-x w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg></button>
+    </div>
+    <!-- 메시지 영역 -->
+    <div id="chatbot-messages" class="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-3 bg-ink-50/40"></div>
+    <!-- 빠른 선택지 -->
+    <div id="chatbot-quick" class="shrink-0 px-4 py-3 border-t border-ink-100 bg-white flex flex-wrap gap-2"></div>
+  </div>
+
+  <!-- 런처 버튼 -->
+  <button id="chatbot-toggle" type="button" aria-label="채팅 상담 열기" aria-expanded="false" aria-controls="chatbot-panel" class="relative w-14 h-14 rounded-full bg-brand-600 text-white shadow-soft hover:bg-brand-700 hover:scale-105 active:scale-100 transition-transform flex items-center justify-center">
+    <svg id="chatbot-icon-open" class="lucide lucide-message-circle w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /> </svg>
+    <svg id="chatbot-icon-close" class="lucide lucide-x w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg>
+    <span class="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-coral-500 border-2 border-white"></span>
+  </button>
+</div>
+
 <script src="./js/main.js"></script>
 </body>
 </html>

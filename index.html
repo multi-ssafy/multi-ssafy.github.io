@@ -90,12 +90,13 @@
     </p>
 
     <div class="reveal in-view mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-      <a href="#recruit-info" class="btn-outline w-full sm:w-auto">모집 핵심정보 보기</a>
-      <a href="#recruit-alert" class="btn-primary w-full sm:w-auto">
-        모집 알림 신청
-        <svg class="lucide lucide-arrow-right w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg>
+      <a href="https://www.ssafy.com" target="_blank" rel="noopener" class="btn-primary w-full sm:w-auto">
+        지원하기
+        <svg class="lucide lucide-arrow-up-right w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg>
       </a>
+      <a href="#recruit-info" class="btn-outline w-full sm:w-auto">모집 핵심정보 보기</a>
     </div>
+    <p class="reveal in-view mt-4 text-sm text-ink-400">아직 모집 전이라면? <a href="#recruit-alert" class="font-bold text-brand-600 hover:text-brand-700">모집 알림 신청 →</a></p>
 
     <!-- 함께하는 기업 (삼성 계열사) - 자동 스크롤 로고 마퀴 -->
     <div class="reveal in-view mt-20 sm:mt-28 relative overflow-hidden marquee-mask -mx-5 sm:-mx-8">
@@ -207,6 +208,52 @@
   </div>
 </section>
 
+<!-- ============ 타깃별 SSAFY ============ -->
+<section id="target" class="scroll-mt-20 py-20 md:py-28">
+  <div class="max-w-content mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="eyebrow justify-center">WHO IS IT FOR</p>
+      <h2 class="section-title mt-3">나 같은 배경도 가능할까?</h2>
+      <p class="section-desc">출발점이 어디든, 실전형 SW·AI 인재로 성장합니다</p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <!-- 전공자 -->
+      <div class="reveal card p-8 hover:shadow-card-hover hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center shadow-soft"><svg class="lucide lucide-code-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /> </svg></div>
+        <h3 class="mt-5 text-lg font-bold text-ink-900">전공자라면</h3>
+        <p class="mt-2 text-sm text-ink-500 leading-relaxed">심화·실전 프로젝트로 바로 도약</p>
+        <div class="mt-5 flex flex-wrap gap-1.5">
+          <span class="text-[11px] font-bold text-brand-600 px-2 py-1 rounded-full bg-brand-50">AI 심화</span>
+          <span class="text-[11px] font-bold text-brand-600 px-2 py-1 rounded-full bg-brand-50">기업연계 프로젝트</span>
+        </div>
+      </div>
+
+      <!-- 비전공자 -->
+      <div class="reveal card p-8 hover:shadow-card-hover hover:-translate-y-1" style="animation-delay:.06s">
+        <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center shadow-soft"><svg class="lucide lucide-sprout w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 20h10" /> <path d="M10 20c5.5-2.5.8-6.4 3-10" /> <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /> <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /> </svg></div>
+        <h3 class="mt-5 text-lg font-bold text-ink-900">비전공자라면</h3>
+        <p class="mt-2 text-sm text-ink-500 leading-relaxed">전공 무관, 기초 사전학습부터 체계적으로</p>
+        <div class="mt-5 flex flex-wrap gap-1.5">
+          <span class="text-[11px] font-bold text-brand-600 px-2 py-1 rounded-full bg-brand-50">전공 무관</span>
+          <span class="text-[11px] font-bold text-brand-600 px-2 py-1 rounded-full bg-brand-50">기초부터</span>
+        </div>
+      </div>
+
+      <!-- 지역 지원자 -->
+      <div class="reveal card p-8 hover:shadow-card-hover hover:-translate-y-1" style="animation-delay:.12s">
+        <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center shadow-soft"><svg class="lucide lucide-map-pin w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /> </svg></div>
+        <h3 class="mt-5 text-lg font-bold text-ink-900">지역 지원자라면</h3>
+        <p class="mt-2 text-sm text-ink-500 leading-relaxed">전국 5개 캠퍼스에서 동일한 교육</p>
+        <div class="mt-5 flex flex-wrap gap-1.5">
+          <span class="text-[11px] font-bold text-brand-600 px-2 py-1 rounded-full bg-brand-50">셔틀버스 운영</span>
+          <span class="text-[11px] font-bold text-brand-600 px-2 py-1 rounded-full bg-brand-50">지역 최대 월140만원</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ WHY SSAFY ============ -->
 <section id="why" class="scroll-mt-20 py-20 md:py-28">
   <div class="max-w-content mx-auto px-5 sm:px-8">
@@ -278,13 +325,25 @@
       <p class="section-desc">삼성전자의 표준 AI 역량 인증 체계를 기반으로 합니다.</p>
     </div>
 
-    <div class="mt-14 grid md:grid-cols-4 gap-4">
+    <!-- 학기 구분 -->
+    <div class="reveal mt-10 flex items-center justify-center gap-2 text-xs font-bold text-ink-400">
+      <span class="px-3 py-1.5 rounded-full bg-white border border-ink-100">1학기 · 기초 → 심화</span>
+      <svg class="lucide lucide-arrow-right w-3.5 h-3.5 text-ink-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg>
+      <span class="px-3 py-1.5 rounded-full bg-white border border-ink-100">2학기 · 실전 프로젝트</span>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-4 gap-4">
       <!-- STEP 1 -->
       <div class="reveal relative">
         <div class="card p-6 h-full hover:shadow-card-hover hover:-translate-y-1">
           <span class="tag bg-brand-50 text-brand-600">STEP 1</span>
           <h3 class="mt-4 font-bold text-ink-900 text-lg">기초 역량</h3>
           <p class="mt-1.5 text-sm text-ink-500">프로그래밍·알고리즘</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">스타트캠프</span>
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">알고리즘</span>
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">코딩</span>
+          </div>
         </div>
         <svg class="lucide lucide-arrow-right hidden md:block absolute top-1/2 -right-6 -translate-y-1/2 w-5 h-5 text-ink-300 z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg>
       </div>
@@ -294,6 +353,10 @@
           <span class="tag bg-brand-50 text-brand-600">STEP 2</span>
           <h3 class="mt-4 font-bold text-ink-900 text-lg">전문 트랙</h3>
           <p class="mt-1.5 text-sm text-ink-500">AI·데이터·SW 심화</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">AI 강의 Ⅰ·Ⅱ</span>
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">관통 프로젝트</span>
+          </div>
         </div>
         <svg class="lucide lucide-arrow-right hidden md:block absolute top-1/2 -right-6 -translate-y-1/2 w-5 h-5 text-ink-300 z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg>
       </div>
@@ -303,6 +366,10 @@
           <span class="tag bg-brand-50 text-brand-600">STEP 3</span>
           <h3 class="mt-4 font-bold text-ink-900 text-lg">실전 프로젝트</h3>
           <p class="mt-1.5 text-sm text-ink-500">기업 요구사항 구현</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">공통·특화·자율</span>
+            <span class="text-[11px] font-bold text-ink-500 px-2 py-1 rounded-full bg-ink-50">기업연계</span>
+          </div>
         </div>
         <svg class="lucide lucide-arrow-right hidden md:block absolute top-1/2 -right-6 -translate-y-1/2 w-5 h-5 text-ink-300 z-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg>
       </div>
@@ -312,6 +379,10 @@
           <span class="tag bg-white/15 text-white">STEP 4</span>
           <h3 class="mt-4 font-bold text-white text-lg">포트폴리오</h3>
           <p class="mt-1.5 text-sm text-brand-100">성과 정리·취업 연결</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-[11px] font-bold text-white px-2 py-1 rounded-full bg-white/15">성과 정리</span>
+            <span class="text-[11px] font-bold text-white px-2 py-1 rounded-full bg-white/15">취업 연계</span>
+          </div>
         </div>
       </div>
     </div>
@@ -562,7 +633,7 @@
     <div class="text-center max-w-2xl mx-auto reveal">
       <p class="eyebrow justify-center">EDUCATION BENEFIT</p>
       <h2 class="section-title mt-3">몰입을 돕는 교육지원 혜택</h2>
-      <p class="section-desc">항목을 눌러 세부 내용을 펼쳐보세요 <span class="text-ink-400 text-sm">(세부 문구는 예시입니다)</span></p>
+      <p class="section-desc">항목을 눌러 세부 내용을 펼쳐보세요</p>
     </div>
 
     <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -574,7 +645,7 @@
           </span>
           <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">최대 월140만원 교육지원금</p>
+        <p class="mt-4 text-sm text-ink-500 leading-relaxed">월 100만원 지급 (지역 캠퍼스 최대 월 140만원)</p>
       </details>
 
       <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.04s">
@@ -596,7 +667,7 @@
           </span>
           <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">개인 실습 PC·고사양 NVIDA GPU 제공</p>
+        <p class="mt-4 text-sm text-ink-500 leading-relaxed">AI 프로젝트를 위한 GPU 기반 인프라 지원</p>
       </details>
 
       <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.12s">
@@ -607,7 +678,7 @@
           </span>
           <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">현업 전문가·삼성 임직원 멘토링 프로그램 (예시)</p>
+        <p class="mt-4 text-sm text-ink-500 leading-relaxed">AI 전문 강사진과 현업 멘토링 체계</p>
       </details>
 
       <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.16s">
@@ -618,7 +689,7 @@
           </span>
           <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">1:1 컨설팅부터 채용연계까지 전 과정 지원 (예시)</p>
+        <p class="mt-4 text-sm text-ink-500 leading-relaxed">1:1 컨설팅부터 채용 연계까지 전 과정 지원</p>
       </details>
 
       <details class="reveal group card p-6 open:shadow-card-hover [&_.chev]:open:rotate-180" style="animation-delay:.2s">
@@ -629,7 +700,7 @@
           </span>
           <svg class="lucide lucide-chevron-down chev w-4 h-4 text-ink-400 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </summary>
-        <p class="mt-4 text-sm text-ink-500 leading-relaxed">전국 5개 캠퍼스의 몰입형 오프라인 교육 공간 (예시)</p>
+        <p class="mt-4 text-sm text-ink-500 leading-relaxed">전국 5개 캠퍼스의 몰입형 오프라인 교육 공간</p>
       </details>
     </div>
   </div>
@@ -902,9 +973,9 @@
       <div class="reveal card p-7 hover:shadow-card-hover hover:-translate-y-1">
         <span class="tag bg-orange-100 text-orange-600">지원 자격</span>
         <ul class="mt-4 space-y-2 text-sm text-ink-600">
-          <li class="flex items-start gap-2"><svg class="lucide lucide-check w-4 h-4 text-orange-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>만 29세 이하 (예시)</li>
-          <li class="flex items-start gap-2"><svg class="lucide lucide-check w-4 h-4 text-orange-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>4년제 대학 졸업(예정)자 (예시)</li>
-          <li class="flex items-start gap-2"><svg class="lucide lucide-check w-4 h-4 text-orange-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>병역필 또는 면제자 (예시)</li>
+          <li class="flex items-start gap-2"><svg class="lucide lucide-check w-4 h-4 text-orange-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>만 29세 이하 미취업자</li>
+          <li class="flex items-start gap-2"><svg class="lucide lucide-check w-4 h-4 text-orange-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>4년제 대학 졸업(예정)자 · 전공 무관</li>
+          <li class="flex items-start gap-2"><svg class="lucide lucide-check w-4 h-4 text-orange-500 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 6 9 17l-5-5" /> </svg>병역필 또는 면제자</li>
         </ul>
       </div>
 
@@ -923,13 +994,21 @@
 
       <div class="reveal card p-7 hover:shadow-card-hover hover:-translate-y-1" style="animation-delay:.12s">
         <span class="tag bg-brand-100 text-brand-700">교육 일정</span>
-        <p class="mt-4 text-lg font-extrabold text-ink-900">2027. 01 ~ 2027. 12 <span class="text-sm font-semibold text-ink-400">(예정)</span></p>
-        <p class="mt-2 text-sm text-ink-500">세부 일정은 최종 모집공고에서 확인 가능합니다.</p>
+        <p class="mt-4 text-lg font-extrabold text-ink-900">2026. 07 ~ 2027. 06 <span class="text-sm font-semibold text-ink-400">(예정)</span></p>
+        <p class="mt-2 text-sm text-ink-500">평일 09:00~18:00 · 세부 일정은 최종 모집공고에서 확인 가능합니다.</p>
       </div>
     </div>
 
-    <div class="reveal text-center mt-10">
-      <a href="#" class="btn-primary">모집공고 자세히 보기</a>
+    <div class="reveal mt-8 flex items-center justify-center gap-2 text-sm text-ink-500">
+      <svg class="lucide lucide-info w-4 h-4 text-brand-600 shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="M12 16v-4" /> <path d="M12 8h.01" /> </svg>
+      <span>지원 접수는 <span class="font-bold text-ink-700">SSAFY 홈페이지(www.ssafy.com)</span>에서 PC·모바일로 가능합니다</span>
+    </div>
+
+    <div class="reveal text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="https://www.ssafy.com" target="_blank" rel="noopener" class="btn-primary w-full sm:w-auto">
+        지원하기 <svg class="lucide lucide-arrow-up-right w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg>
+      </a>
+      <a href="#" class="btn-outline w-full sm:w-auto">모집공고 자세히 보기</a>
     </div>
   </div>
 </section>
@@ -964,7 +1043,7 @@
           <svg class="lucide lucide-chevron-down faq-icon w-5 h-5 text-ink-400 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </button>
         <div class="faq-panel hidden px-6 pb-5 text-sm text-ink-500 leading-relaxed">
-          연령·학력 등 세부 지원 자격 안내 (예시 답변 — 실제 모집공고 기준 내용으로 교체 예정)
+          만 29세 이하 미취업자이면서 4년제 대학 졸업(예정)자라면 전공에 관계없이 지원할 수 있습니다. (병역필 또는 면제자)
         </div>
       </div>
       <div class="faq-item card overflow-hidden">
@@ -973,7 +1052,7 @@
           <svg class="lucide lucide-chevron-down faq-icon w-5 h-5 text-ink-400 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </button>
         <div class="faq-panel hidden px-6 pb-5 text-sm text-ink-500 leading-relaxed">
-          네, 전공 무관 지원 가능합니다. 비전공자를 위한 기초 과정부터 시작합니다 (예시 답변)
+          네, 전공 무관으로 지원할 수 있습니다. 사전학습·스타트캠프 등 기초 과정부터 체계적으로 학습해 실전형 SW·AI 인재로 성장합니다.
         </div>
       </div>
       <div class="faq-item card overflow-hidden">
@@ -982,7 +1061,7 @@
           <svg class="lucide lucide-chevron-down faq-icon w-5 h-5 text-ink-400 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </button>
         <div class="faq-panel hidden px-6 pb-5 text-sm text-ink-500 leading-relaxed">
-          지원 시 희망 캠퍼스를 선택하며, 트랙은 입과 후 안내에 따라 결정됩니다 (예시 답변)
+          서울·대전·광주·구미·부울경 5개 캠퍼스 중 지원 시 선택하며, Python·Java 등 트랙은 캠퍼스별 운영 과정에 따라 안내됩니다.
         </div>
       </div>
       <div class="faq-item card overflow-hidden">
@@ -991,7 +1070,7 @@
           <svg class="lucide lucide-chevron-down faq-icon w-5 h-5 text-ink-400 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </button>
         <div class="faq-panel hidden px-6 pb-5 text-sm text-ink-500 leading-relaxed">
-          지원서 접수 → SW 적성진단 → 인터뷰 → 입과 순으로 진행됩니다 (예시 답변)
+          지원서 접수 → SW 적성진단 → 인터뷰 → 입과 순으로 진행되며, 세부 일정은 단계별 합격자에게 개별 안내됩니다.
         </div>
       </div>
       <div class="faq-item card overflow-hidden">
@@ -1000,7 +1079,7 @@
           <svg class="lucide lucide-chevron-down faq-icon w-5 h-5 text-ink-400 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m6 9 6 6 6-6" /> </svg>
         </button>
         <div class="faq-panel hidden px-6 pb-5 text-sm text-ink-500 leading-relaxed">
-          1:1 취업컨설팅, 채용행사, 우대기업 연계 등을 통해 수료 이후까지 지원합니다 (예시 답변)
+          진로 설정부터 취업역량 강화, 1:1 맞춤 컨설팅, Job Fair, 170여 개 우대기업 연계까지 수료 이후 취업할 때까지 지원합니다.
         </div>
       </div>
     </div>
@@ -1024,6 +1103,7 @@
       <button type="submit" class="btn-primary shrink-0">17기 모집 알림 신청</button>
     </form>
     <p class="mt-4 text-xs text-ink-500">※ 신청 폼은 데모용이며, 실제 알림 연동은 추후 설정 예정입니다.</p>
+    <p class="mt-6 text-sm text-ink-300">모집 기간이라면 지금 바로 <a href="https://www.ssafy.com" target="_blank" rel="noopener" class="font-bold text-white hover:text-brand-300 underline underline-offset-4">SSAFY 지원하기 →</a></p>
   </div>
 </section>
 

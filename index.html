@@ -694,91 +694,85 @@
               </filter>
             </defs>
 
-            <!-- 대한민국 실루엣 -->
-            <path
-              class="campus-map-shape"
-              d="M333 55
-                L361 80 L371 111 L398 133 L405 162
-                L431 184 L425 213 L448 236 L437 261
-                L453 286 L434 307 L438 336 L416 353
-                L409 381 L389 395 L382 421 L360 435
-                L345 463 L323 476 L302 466 L294 441
-                L272 429 L274 402 L257 382 L265 358
-                L247 338 L257 316 L243 291 L259 270
-                L251 246 L268 226 L265 202 L282 185
-                L286 159 L306 146 L312 119 L330 107
-                L324 81 Z"
-            ></path>
+            <!-- 대한민국 지도 외곽선 -->
+            <image
+              href="./assets/map/korea-outline.svg"
+              x="0"
+              y="0"
+              width="620"
+              height="520"
+              preserveAspectRatio="xMidYMid meet"
+              class="campus-map-base"
+            />
+          <!-- 서울 -->
+          <g
+            class="campus-map-point is-active"
+            data-campus="seoul"
+            role="button"
+            tabindex="0"
+            aria-label="서울 캠퍼스 선택"
+          >
+          <line class="campus-map-line" x1="270" y1="148" x2="155" y2="108"></line>
+          <circle class="campus-map-pulse" cx="270" cy="148" r="16"></circle>
+          <circle class="campus-map-dot" cx="270" cy="148" r="7"></circle>
+          <text class="campus-map-label" x="139" y="114" text-anchor="end">서울</text>
+          </g>
 
-            <!-- 서울 -->
-            <g
-              class="campus-map-point is-active"
-              data-campus="seoul"
-              role="button"
-              tabindex="0"
-              aria-label="서울 캠퍼스 선택"
-            >
-              <line class="campus-map-line" x1="285" y1="181" x2="166" y2="181"></line>
-              <circle class="campus-map-pulse" cx="285" cy="181" r="16"></circle>
-              <circle class="campus-map-dot" cx="285" cy="181" r="7"></circle>
-              <text class="campus-map-label" x="150" y="187" text-anchor="end">서울</text>
-            </g>
+          <!-- 대전 -->
+          <g
+            class="campus-map-point"
+            data-campus="daejeon"
+            role="button"
+            tabindex="0"
+            aria-label="대전 캠퍼스 선택"
+          >
+            <line class="campus-map-line" x1="295" y1="242" x2="182" y2="242"></line>
+            <circle class="campus-map-pulse" cx="295" cy="242" r="16"></circle>
+            <circle class="campus-map-dot" cx="295" cy="242" r="7"></circle>
+            <text class="campus-map-label" x="166" y="248" text-anchor="end">대전</text>
+          </g>
 
-            <!-- 대전 -->
-            <g
-              class="campus-map-point"
-              data-campus="daejeon"
-              role="button"
-              tabindex="0"
-              aria-label="대전 캠퍼스 선택"
-            >
-              <line class="campus-map-line" x1="304" y1="286" x2="180" y2="286"></line>
-              <circle class="campus-map-pulse" cx="304" cy="286" r="16"></circle>
-              <circle class="campus-map-dot" cx="304" cy="286" r="7"></circle>
-              <text class="campus-map-label" x="164" y="292" text-anchor="end">대전</text>
-            </g>
+          <!-- 광주 -->
+          <g
+            class="campus-map-point"
+            data-campus="gwangju"
+            role="button"
+            tabindex="0"
+            aria-label="광주 캠퍼스 선택"
+          >
+          <line class="campus-map-line" x1="267" y1="330" x2="155" y2="370"></line>
+          <circle class="campus-map-pulse" cx="267" cy="330" r="16"></circle>
+          <circle class="campus-map-dot" cx="267" cy="330" r="7"></circle>
+          <text class="campus-map-label" x="139" y="376" text-anchor="end">광주</text>
+          </g>
 
-            <!-- 광주 -->
-            <g
-              class="campus-map-point"
-              data-campus="gwangju"
-              role="button"
-              tabindex="0"
-              aria-label="광주 캠퍼스 선택"
-            >
-              <line class="campus-map-line" x1="292" y1="382" x2="168" y2="382"></line>
-              <circle class="campus-map-pulse" cx="292" cy="382" r="16"></circle>
-              <circle class="campus-map-dot" cx="292" cy="382" r="7"></circle>
-              <text class="campus-map-label" x="152" y="388" text-anchor="end">광주</text>
-            </g>
+          <!-- 구미 -->
+          <g
+            class="campus-map-point"
+            data-campus="gumi"
+            role="button"
+            tabindex="0"
+            aria-label="구미 캠퍼스 선택"
+          >
+            <line class="campus-map-line" x1="348" y1="279" x2="490" y2="242"></line>
+            <circle class="campus-map-pulse" cx="348" cy="279" r="16"></circle>
+            <circle class="campus-map-dot" cx="348" cy="279" r="7"></circle>
+            <text class="campus-map-label" x="506" y="248">구미</text>
+          </g>
 
-            <!-- 구미 -->
-            <g
-              class="campus-map-point"
-              data-campus="gumi"
-              role="button"
-              tabindex="0"
-              aria-label="구미 캠퍼스 선택"
-            >
-              <line class="campus-map-line" x1="391" y1="300" x2="500" y2="300"></line>
-              <circle class="campus-map-pulse" cx="391" cy="300" r="16"></circle>
-              <circle class="campus-map-dot" cx="391" cy="300" r="7"></circle>
-              <text class="campus-map-label" x="516" y="306">구미</text>
-            </g>
-
-            <!-- 부울경 -->
-            <g
-              class="campus-map-point"
-              data-campus="buulgyeong"
-              role="button"
-              tabindex="0"
-              aria-label="부울경 캠퍼스 선택"
-            >
-              <line class="campus-map-line" x1="401" y1="380" x2="500" y2="380"></line>
-              <circle class="campus-map-pulse" cx="401" cy="380" r="16"></circle>
-              <circle class="campus-map-dot" cx="401" cy="380" r="7"></circle>
-              <text class="campus-map-label" x="516" y="386">부울경</text>
-            </g>
+          <!-- 부울경 -->
+          <g
+            class="campus-map-point"
+            data-campus="buulgyeong"
+            role="button"
+            tabindex="0"
+            aria-label="부울경 캠퍼스 선택"
+          >
+            <line class="campus-map-line" x1="401" y1="316" x2="500" y2="316"></line>
+            <circle class="campus-map-pulse" cx="401" cy="316" r="16"></circle>
+            <circle class="campus-map-dot" cx="401" cy="316" r="7"></circle>
+            <text class="campus-map-label" x="516" y="322">부울경</text>
+          </g>
           </svg>
 
           <p class="campus-map-guide">
@@ -796,65 +790,100 @@
 
       <!-- 캠퍼스 상세 패널 -->
       <div class="reveal card p-7 sm:p-8">
-        <div class="aspect-video rounded-2xl bg-gradient-to-br from-ink-100 to-ink-200 flex items-center justify-center text-ink-400 mb-6">
-          <span class="text-sm font-semibold">캠퍼스 실제 사진 삽입 예정</span>
-        </div>
+        <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-ink-100">
+          <img
+            id="campus-main-image"
+            src="./assets/images/campus-seoul.jpg"
+            alt="서울 캠퍼스 대표 사진"
+            class="w-full h-full object-cover transition-opacity duration-300"
+          >
+      </div>
 
         <div id="campus-panel-seoul" class="campus-panel">
-          <p class="eyebrow">SEOUL CAMPUS</p>
+          <p class="eyebrow">역삼 멀티캠퍼스</p>
           <h3 class="mt-2 text-xl font-extrabold text-ink-900">서울 캠퍼스</h3>
-          <p class="mt-2 text-sm text-ink-500">다양한 개발 분야를 폭넓게 경험할 수 있는 환경</p>
+          <p class="mt-2 text-sm text-ink-500">첨단 산업의 중심에서 SW·AI 인재로 성장합니다</p>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="tag bg-brand-50 text-brand-600">Python</span>
             <span class="tag bg-brand-50 text-brand-600">Java</span>
-            <span class="tag bg-brand-50 text-brand-600">Embedded</span>
             <span class="tag bg-brand-50 text-brand-600">Data</span>
           </div>
         </div>
 
         <div id="campus-panel-daejeon" class="campus-panel hidden">
-          <p class="eyebrow">DAEJEON CAMPUS</p>
+          <p class="eyebrow">삼성화재 유성연수원</p>
           <h3 class="mt-2 text-xl font-extrabold text-ink-900">대전 캠퍼스</h3>
-          <p class="mt-2 text-sm text-ink-500">캠퍼스별 상세 소개 및 운영 트랙 정보 입력 예정 (예시)</p>
+          <p class="mt-2 text-sm text-ink-500">첨단 과학의 도시에서 배움과 성장을 함께합니다</p>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="tag bg-brand-50 text-brand-600">Python</span>
             <span class="tag bg-brand-50 text-brand-600">Java</span>
+            <span class="tag bg-brand-50 text-brand-600">Data</span>
+  
           </div>
         </div>
 
         <div id="campus-panel-gwangju" class="campus-panel hidden">
-          <p class="eyebrow">GWANGJU CAMPUS</p>
+          <p class="eyebrow">삼성전자 광주 사업장</p>
           <h3 class="mt-2 text-xl font-extrabold text-ink-900">광주 캠퍼스</h3>
-          <p class="mt-2 text-sm text-ink-500">캠퍼스별 상세 소개 및 운영 트랙 정보 입력 예정 (예시)</p>
+          <p class="mt-2 text-sm text-ink-500">따뜻한 캠퍼스 문화와 함께 SW·AI 역량을 키워갑니다</p>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="tag bg-brand-50 text-brand-600">Python</span>
-            <span class="tag bg-brand-50 text-brand-600">Data</span>
+            <span class="tag bg-brand-50 text-brand-600">Java</span>
+            <span class="tag bg-brand-50 text-brand-600">Embedded Robot</span>
           </div>
         </div>
 
         <div id="campus-panel-gumi" class="campus-panel hidden">
-          <p class="eyebrow">GUMI CAMPUS</p>
+          <p class="eyebrow">삼성전자 구미 사업장</p>
           <h3 class="mt-2 text-xl font-extrabold text-ink-900">구미 캠퍼스</h3>
-          <p class="mt-2 text-sm text-ink-500">캠퍼스별 상세 소개 및 운영 트랙 정보 입력 예정 (예시)</p>
+          <p class="mt-2 text-sm text-ink-500">산업 현장과 가까운 스마트 SW·AI를 교육합니다</p>
           <div class="mt-4 flex flex-wrap gap-2">
-            <span class="tag bg-brand-50 text-brand-600">Embedded</span>
+            <span class="tag bg-brand-50 text-brand-600">Python</span>
             <span class="tag bg-brand-50 text-brand-600">Java</span>
+            <span class="tag bg-brand-50 text-brand-600">Mobile</span>
+
           </div>
         </div>
 
         <div id="campus-panel-buulgyeong" class="campus-panel hidden">
-          <p class="eyebrow">BUULGYEONG CAMPUS</p>
+          <p class="eyebrow">삼성전기 부산 사업장</p>
           <h3 class="mt-2 text-xl font-extrabold text-ink-900">부울경 캠퍼스</h3>
-          <p class="mt-2 text-sm text-ink-500">캠퍼스별 상세 소개 및 운영 트랙 정보 입력 예정 (예시)</p>
+          <p class="mt-2 text-sm text-ink-500">부산·울산·경남을 잇는 SW·AI 교육 허브입니다</p>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="tag bg-brand-50 text-brand-600">Python</span>
-            <span class="tag bg-brand-50 text-brand-600">Data</span>
+            <span class="tag bg-brand-50 text-brand-600">Java</span>
           </div>
         </div>
 
-        <a href="#" class="mt-6 inline-flex items-center gap-1.5 font-bold text-brand-600 hover:text-brand-700">
-          캠퍼스 자세히 보기 <svg class="lucide lucide-arrow-right w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg>
-        </a>
+<a href="#"
+   class="mt-6 inline-flex items-center gap-2 font-bold text-brand-600 hover:text-brand-700">
+  <svg
+    class="w-5 h-5 text-red-500"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="red"
+    aria-hidden="true"
+  >
+    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/>
+  </svg>
+
+  <span>캠퍼스 소개영상 보러가기</span>
+
+  <svg
+    class="w-4 h-4"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M5 12h14"/>
+    <path d="m12 5 7 7-7 7"/>
+  </svg>
+</a>
       </div>
     </div>
   </div>

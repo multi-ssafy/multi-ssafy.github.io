@@ -134,6 +134,35 @@ const campusTabs = document.querySelectorAll(".campus-tab");
 const campusPanels = document.querySelectorAll(".campus-panel");
 const campusMapPoints = document.querySelectorAll(".campus-map-point");
 
+const campusMainImage = document.querySelector("#campus-main-image");
+
+const campusImages = {
+  seoul: {
+    src: "./assets/images/campus-seoul.jpg",
+    alt: "서울 캠퍼스 대표 사진",
+  },
+  daejeon: {
+    src: "./assets/images/campus-daejeon.png",
+    alt: "대전 캠퍼스 대표 사진",
+    position: "center 70%",
+
+  },
+  gwangju: {
+    src: "./assets/images/campus-gwangju.jpg",
+    alt: "광주 캠퍼스 대표 사진",
+  },
+  gumi: {
+    src: "./assets/images/campus-gumi.jpg",
+    alt: "구미 캠퍼스 대표 사진",
+    position: "center 70%",
+
+  },
+  buulgyeong: {
+    src: "./assets/images/campus-buulgyeong.jpg",
+    alt: "부울경 캠퍼스 대표 사진",
+  },
+};
+
 const activateCampus = (target) => {
   campusTabs.forEach((tab) => {
     const isActive = tab.dataset.campus === target;
@@ -161,6 +190,19 @@ const activateCampus = (target) => {
     point.classList.toggle("is-active", isActive);
     point.setAttribute("aria-pressed", String(isActive));
   });
+
+  const nextImage = campusImages[target];
+
+if (campusMainImage && nextImage) {
+  campusMainImage.classList.add("opacity-0");
+
+  setTimeout(() => {
+    campusMainImage.src = nextImage.src;
+    campusMainImage.alt = nextImage.alt;
+    campusMainImage.style.objectPosition = nextImage.position;
+    campusMainImage.classList.remove("opacity-0");
+  }, 150);
+}
 };
 
 campusTabs.forEach((tab) => {

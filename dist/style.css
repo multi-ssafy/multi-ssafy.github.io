@@ -82,12 +82,11 @@
   transform-box: fill-box;
   transform-origin: center;
 }
-
 .campus-map-label {
-  fill: rgba(255, 255, 255, 0.72);
+  fill: rgba(255, 255, 255, 0.9);
   font-family: "Pretendard Variable", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 800;
   transition:
     fill 0.3s ease,
     filter 0.3s ease;
@@ -152,7 +151,7 @@
 
 @media (max-width: 640px) {
   .campus-map-label {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .campus-map-guide {
@@ -167,5 +166,26 @@
 
   .campus-map-dot {
     transition: none;
+  }
+}
+
+.campus-map-base {
+  pointer-events: none;
+  transform: translateY(65px) scale(1.17);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.campus-map-guide {
+  display: none;
+}
+#campus-tabs .campus-tab {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  #campus-tabs .campus-tab {
+    font-size: 13px;
   }
 }

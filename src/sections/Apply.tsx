@@ -19,7 +19,7 @@ export default function Apply() {
     <section id="apply" className="scroll-mt-20 py-20 md:py-28 bg-cream-50">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">APPLICATION GUIDE</p>
+          {/* <p className="eyebrow justify-center">APPLICATION GUIDE</p> */}
           <h2 className="section-title mt-3">지원자격 및 선발 프로세스</h2>
           <p className="section-desc">
             지원 직전, 상세 자격 요건과 선발 과정을 꼼꼼히 확인하세요
@@ -107,7 +107,7 @@ export default function Apply() {
                 </li>
                 <li className="flex items-start gap-2 text-ink-500">
                   <span className="mt-2 w-1.5 h-1.5 rounded-full bg-ink-300 shrink-0" />
-                  ※ 졸업예정자는 취업 여부 상관없이 지원 가능
+                  졸업예정자는 취업 여부 상관없이 지원 가능
                 </li>
               </ul>
             </div>
@@ -253,9 +253,9 @@ export default function Apply() {
           >
             지원하기 <ArrowUpRight className="w-4 h-4" />
           </a>
-          <a href="#" className="btn-outline w-full sm:w-auto">
+          {/* <a href="#" className="btn-outline w-full sm:w-auto">
             모집공고 자세히 보기
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

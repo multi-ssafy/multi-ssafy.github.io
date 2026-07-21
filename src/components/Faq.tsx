@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "캠퍼스와 트랙은 어떻게 선택하나요?",
-    a: "서울·대전·광주·구미·부울경 5개 캠퍼스 중 지원 시 선택하며, Python·Java 등 트랙은 캠퍼스별 운영 과정에 따라 안내됩니다.",
+    a: "서울·대전·광주·구미·부울경 5개 캠퍼스 중 지원 시 선택하며, 트랙은 입과 이후 분반테스트를 거쳐 최종 확정됩니다.",
   },
   {
     q: "선발 과정은 어떻게 진행되나요?",
@@ -37,36 +37,46 @@ export default function Faq() {
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">MORE INFORMATION</p>
           <h2 className="section-title mt-3">설명회 다시보기와 자주 묻는 질문</h2>
-          <p className="section-desc">지원자가 남은 궁금증을 해소하는 최종 구간</p>
+          <p className="section-desc">싸피에 대해서 더 궁금하다면</p>
         </div>
 
         {/* 설명회 영상 */}
-        <div className="reveal mt-14 max-w-3xl mx-auto">
-          <button className="group relative w-full aspect-video rounded-3xl bg-ink-900 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <span className="absolute inset-0 flex items-center justify-center">
-              <span className="w-16 h-16 rounded-full bg-white/95 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg
-                  className="w-6 h-6 text-brand-600 ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
-                </svg>
-              </span>
+      <div className="reveal mt-14 max-w-3xl mx-auto">
+        <a
+          href="https://youtu.be/Uchd53qy6lk?si=tiX5wCUm9sPJhHlS"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative block w-full aspect-video rounded-3xl bg-ink-900 overflow-hidden"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://img.youtube.com/vi/Uchd53qy6lk/maxresdefault.jpg"
+            alt="SSAFY 17기 온라인 설명회 다시보기"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="w-16 h-16 rounded-full bg-white/95 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg
+                className="w-6 h-6 text-brand-600 ml-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+              </svg>
             </span>
-            <span className="absolute bottom-4 left-5 text-white font-bold text-sm sm:text-base">
-              SSAFY 17기 온라인 설명회 다시보기 (예시 영상)
-            </span>
-          </button>
-        </div>
-
+          </span>
+          {/* <span className="absolute bottom-4 left-5 text-white font-bold text-sm sm:text-base">
+            SSAFY 17기 온라인 설명회 다시보기 (예시 영상)
+          </span> */}
+        </a>
+      </div>
         {/* FAQ 아코디언 */}
         <div className="reveal mt-14 max-w-3xl mx-auto space-y-3">
           {FAQS.map((item, i) => {

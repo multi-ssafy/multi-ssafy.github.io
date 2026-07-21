@@ -85,8 +85,8 @@ export default function Project() {
           <p className="eyebrow justify-center">PROJECT</p>
           <h2 className="section-title mt-3">기업연계 프로젝트</h2>
           <p className="section-desc">
-            기업의 요구사항을 직접 구현하는 프로젝트를 진행합니다.{" "}
-            <span className="text-ink-400">(자율프로젝트 中)</span>
+            삼성전자, 금융, IT 등 다양한 기업들의 과제를 해결해요{" "}
+            {/* <span className="text-ink-400">(자율프로젝트 中)</span> */}
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export default function Project() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/assets/photos/project-wonsofteam.jpg"
+                    src="/assets/photos/project-wonsofteam.png"
                     alt="원소프트다임 기업연계 프로젝트"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -160,11 +160,11 @@ export default function Project() {
                       }}
                     />
                   </span>
-                  <span className="absolute left-6 bottom-6">
+                  {/* <span className="absolute left-6 bottom-6">
                     <span className="inline-flex rounded-full bg-black/50 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm">
                       프로젝트 영상 보기
                     </span>
-                  </span>
+                  </span> */}
                 </a>
               </div>
 
@@ -172,7 +172,7 @@ export default function Project() {
               <div className="p-7 sm:p-9 lg:p-10 flex flex-col">
                 <div>
                   <span className="tag bg-brand-50 text-brand-600 border border-brand-100">
-                    채용연계형 기업연계 프로젝트
+                    채용연계형
                   </span>
                   <h4 className="mt-5 text-2xl sm:text-3xl font-extrabold text-ink-900 leading-snug">
                     디바이스와 AI를 연결한
@@ -188,8 +188,8 @@ export default function Project() {
                     헬스케어 서비스입니다.
                   </p>
                   <div className="mt-6">
-                    <p className="text-xs font-bold text-ink-400">
-                      PARTICIPATION
+                    <p className="text-xs font-bold text-ink-700">
+                      참여 파트
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       <span className="tag bg-ink-50 text-ink-600">기획</span>
@@ -204,14 +204,14 @@ export default function Project() {
                   </div>
                 </div>
 
-                <div
+                {/* <div
                   className="mt-8 rounded-2xl p-5 sm:p-6"
                   style={{
                     background: "linear-gradient(135deg, #2145f0, #1534c7)",
                   }}
                 >
                   <div className="flex items-center gap-4" />
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -225,7 +225,7 @@ export default function Project() {
                   className="w-14 h-14 rounded-full object-cover bg-ink-100"
                 />
                 <div>
-                  <blockquote className="text-base sm:text-lg font-bold text-ink-800 leading-relaxed">
+                  <blockquote className="text-base sm:text-lg font-bold text-ink-900 leading-relaxed">
                     “이 경험이 저의 취업으로 이어지는 가장 직접적이고 결정적인
                     계기가 되었습니다.”
                   </blockquote>

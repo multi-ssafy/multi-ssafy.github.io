@@ -109,10 +109,10 @@ export default function Benefit() {
     <section id="benefit" className="scroll-mt-20 py-20 md:py-28">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">EDUCATION BENEFIT</p>
+          <p className="eyebrow justify-center">BENEFIT</p>
           <h2 className="section-title mt-3">몰입을 돕는 교육지원 혜택</h2>
           <p className="section-desc">
-            교육에만 온전히 집중할 수 있도록, 최고의 학습 환경을 지원합니다
+            교육에만 온전히 집중할 수 있도록 최고의 학습 환경을 지원할게요
           </p>
         </div>
 

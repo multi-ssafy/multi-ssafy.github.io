@@ -55,10 +55,10 @@ const BARS = [
 const SOLUTIONS = [
   {
     title: "취업특강",
-    photo: null, // 매칭되는 실사진이 없어 브랜드 그라디언트 헤더 사용
+    photo: { src: "/assets/photos/career-session.jpg", alt: "1:1 취업 상담·컨설팅 모습" },
     icon: <GraduationCap className="w-5 h-5" />,
     items: [
-      "단계별 취업 경쟁력 제고 교육 실시",
+      "단계별 취업 경쟁력 제고 교육",
       "비즈니스 매너 및 직무 지식 함양",
       "맞춤형 취업 실전 프로그램 제공",
     ],
@@ -84,8 +84,8 @@ const SOLUTIONS = [
       </svg>
     ),
     items: [
-      "우수 IT 기업의 채용 설명회 실시",
-      "특별전형, 서류가점 등 SSAFY 교육생을 우대하는 기업 정보 및 채용전형 참여기회 제공",
+      "우수한 기업들의 채용 설명회 상시 진행",
+      ["특별전형, 서류가점 등 우대 기업 정보 및 채용 전형", "참여 기회 제공"],
     ],
     delay: ".06s",
   },
@@ -170,14 +170,14 @@ export default function Career() {
     <section id="career" className="scroll-mt-20 py-20 md:py-28">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">EMPLOYMENT OUTCOME</p>
+          <p className="eyebrow justify-center">OUTCOME</p>
           <h2 className="section-title mt-3 !leading-snug">
             우수한 교육은
             <br className="hidden sm:block" />
             취업 성과로 증명합니다
           </h2>
           <p className="section-desc">
-            수료 이후까지 이어지는 취업지원으로 만들어낸 성과
+            전문가와 함께 AI 시대에 맞는 나의 진로를 설계해요
           </p>
         </div>
 
@@ -306,7 +306,16 @@ export default function Career() {
                 {s.items.map((it, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
-                    <span>{it}</span>
+                    <span>
+                      {Array.isArray(it)
+                        ? it.map((line, j) => (
+                            <span key={j}>
+                              {line}
+                              {j < it.length - 1 && <br />}
+                            </span>
+                          ))
+                        : it}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -322,8 +331,7 @@ export default function Career() {
             단계별 취업지원 프로그램
           </h3>
           <p className="section-desc">
-            교육생 개인별 컨설팅을 통해 적합한 진로 탐색과 구직 준비도를 높여
-            취업에 성공할 수 있도록 지원해 드립니다.
+            1:1 컨설팅을 통해 체계적으로 준비해요
           </p>
         </div>
 
@@ -390,7 +398,7 @@ export default function Career() {
             수료 이후에도 취업할 때까지 이어지는 상담·교육·채용 연계
           </p>
           <a
-            href="#"
+            href="https://www.ssafy.com/ksp/servlet/swp.content.controller.SwpContentServlet"
             className="mt-3 inline-flex items-center gap-1.5 font-bold text-brand-600 hover:text-brand-700"
           >
             취업지원 자세히 보기 <ArrowRight className="w-4 h-4" />

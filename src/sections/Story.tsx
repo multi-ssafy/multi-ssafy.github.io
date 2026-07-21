@@ -97,7 +97,7 @@ export default function Story() {
     <section id="story" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">CAREER STORY</p>
+          <p className="eyebrow justify-center">STORY</p>
           <h2 className="section-title mt-3">나와 비슷한 출발점의 취업사례</h2>
           <p className="section-desc">
             다양한 SW·AI 직무로 진출한 선배 기수들의 후기를 참고해보세요

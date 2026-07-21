@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 // CAMPUS & TRACK — 상단 중앙 탭 + 소개영상·사진·소개글·트랙 한눈에
 
@@ -86,6 +86,24 @@ const CAMPUSES: Campus[] = [
 function CampusPanel({ campus }: { campus: Campus }) {
   return (
     <>
+      {/* 소개글 (영상·사진 위 중앙 정렬) */}
+      <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+        <p className="eyebrow justify-center">{campus.eyebrow}</p>
+        <h3 className="mt-1.5 text-xl sm:text-2xl font-extrabold text-ink-900">
+          {campus.name}
+        </h3>
+        <p className="mt-2 text-sm text-ink-500 leading-relaxed">
+          {campus.desc}
+        </p>
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
+          {campus.tags.map((t) => (
+            <span key={t} className="tag bg-brand-50 text-brand-600">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="grid lg:grid-cols-2 gap-5">
         {/* 소개영상 */}
         <div>
@@ -161,27 +179,6 @@ function CampusPanel({ campus }: { campus: Campus }) {
           </div>
         </div>
       </div>
-
-      {/* 소개글 + 운영 트랙 (세로 정렬) */}
-      <div className="mt-6 pt-6 border-t border-ink-100">
-        <p className="eyebrow">{campus.eyebrow}</p>
-        <h3 className="mt-1.5 text-xl sm:text-2xl font-extrabold text-ink-900">
-          {campus.name}
-        </h3>
-        <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-          {campus.desc}
-        </p>
-        <div className="mt-5">
-          <p className="text-xs font-bold text-ink-400 mb-2">운영 트랙</p>
-          <div className="flex flex-wrap gap-2">
-            {campus.tags.map((t) => (
-              <span key={t} className="tag bg-brand-50 text-brand-600">
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
     </>
   );
 }
@@ -191,6 +188,7 @@ type Anim = { prevKey: CampusKey; dir: 1 | -1 };
 export default function Campus() {
   const [active, setActive] = useState<CampusKey>("seoul");
   const [anim, setAnim] = useState<Anim | null>(null);
+  const tokenRef = useRef(0);
 
   const current = CAMPUSES.find((c) => c.key === active)!;
   const prev = anim ? CAMPUSES.find((c) => c.key === anim.prevKey)! : null;
@@ -209,9 +207,14 @@ export default function Campus() {
     const oldIdx = CAMPUSES.findIndex((c) => c.key === active);
     const newIdx = CAMPUSES.findIndex((c) => c.key === key);
     const dir: 1 | -1 = newIdx > oldIdx ? 1 : -1;
+    const token = ++tokenRef.current;
     setAnim({ prevKey: active, dir });
     setActive(key);
-    setTimeout(() => setAnim(null), 450);
+    // 실제 제거는 슬라이드가 끝나는 순간(onAnimationEnd)에 수행.
+    // 아래는 애니메이션 이벤트 누락 시를 대비한 안전장치.
+    window.setTimeout(() => {
+      if (tokenRef.current === token) setAnim(null);
+    }, 700);
   };
 
   return (
@@ -263,10 +266,12 @@ export default function Campus() {
               <CampusPanel campus={current} />
             </div>
 
-            {/* 이전 패널 — 전환 중 위에 겹쳐 반대 방향으로 빠져나감 */}
+            {/* 이전 패널 — 전환 중 위에 겹쳐 반대 방향으로 빠져나감.
+                슬라이드가 끝나 화면 밖으로 완전히 나간 순간 제거된다. */}
             {anim && prev && (
               <div
                 aria-hidden="true"
+                onAnimationEnd={() => setAnim(null)}
                 className={`absolute inset-0 ${
                   anim.dir === 1 ? "campus-out-fwd" : "campus-out-bwd"
                 }`}

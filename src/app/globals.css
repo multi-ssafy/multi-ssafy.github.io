@@ -66,8 +66,25 @@
   .animate-marquee:hover {
     animation-play-state: paused;
   }
+  /* 캠퍼스 캐러셀 슬라이드 (탭 방향에 따라 좌우 전환) */
+  .campus-in-fwd {
+    animation: campus-in-fwd 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .campus-out-fwd {
+    animation: campus-out-fwd 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .campus-in-bwd {
+    animation: campus-in-bwd 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .campus-out-bwd {
+    animation: campus-out-bwd 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
   @media (prefers-reduced-motion: reduce) {
-    .animate-marquee {
+    .animate-marquee,
+    .campus-in-fwd,
+    .campus-out-fwd,
+    .campus-in-bwd,
+    .campus-out-bwd {
       animation: none;
     }
   }
@@ -79,6 +96,41 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* 캠퍼스 캐러셀: 다음 캠퍼스(오른쪽 탭) 전환 */
+@keyframes campus-in-fwd {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes campus-out-fwd {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* 캠퍼스 캐러셀: 이전 캠퍼스(왼쪽 탭) 전환 */
+@keyframes campus-in-bwd {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes campus-out-bwd {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
 

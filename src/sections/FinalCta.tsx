@@ -28,12 +28,12 @@ export default function FinalCta() {
             17기 모집 알림 신청
           </NotifyButton>
         </div>
-        <p className="mt-4 text-xs text-ink-500">
+        {/* <p className="mt-4 text-xs text-ink-500">
           ※ 사전 알림 신청은 데모 화면이며, 입력하신 정보는 저장·전송되지
           않습니다.
-        </p>
+        </p> */}
         <p className="mt-6 text-sm text-ink-300">
-          모집 기간이라면 지금 바로{" "}
+          지금 바로{" "}
           <a
             href={APPLY_URL}
             target="_blank"

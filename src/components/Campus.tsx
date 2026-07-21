@@ -17,6 +17,7 @@ type Campus = {
   imageAlt: string;
   imagePosition: string;
   videoId: string;
+  address: string;
 };
 
 const CAMPUSES: Campus[] = [
@@ -31,6 +32,7 @@ const CAMPUSES: Campus[] = [
     imageAlt: "서울 캠퍼스 대표 사진",
     imagePosition: "center center",
     videoId: "BSFhTq6AxPY",
+    address: "서울특별시 강남구 테헤란로 212",
   },
   {
     key: "daejeon",
@@ -43,6 +45,7 @@ const CAMPUSES: Campus[] = [
     imageAlt: "대전 캠퍼스 대표 사진",
     imagePosition: "center 70%",
     videoId: "SmNfX6bY8pk",
+    address: "대전광역시 유성구 동서대로 98-39",
   },
   {
     key: "gwangju",
@@ -55,6 +58,7 @@ const CAMPUSES: Campus[] = [
     imageAlt: "광주 캠퍼스 대표 사진",
     imagePosition: "center center",
     videoId: "wIfu-6aYDTY",
+    address: "전남광주 광산구 하남산단6번로 107",
   },
   {
     key: "gumi",
@@ -67,6 +71,7 @@ const CAMPUSES: Campus[] = [
     imageAlt: "구미 캠퍼스 대표 사진",
     imagePosition: "center 70%",
     videoId: "02w81Tz4e5w",
+    address: "경북 구미시 3공단 3로 302",
   },
   {
     key: "buulgyeong",
@@ -79,6 +84,7 @@ const CAMPUSES: Campus[] = [
     imageAlt: "부울경 캠퍼스 대표 사진",
     imagePosition: "center center",
     videoId: "LZ9OR0uNBVo",
+    address: "부산광역시 강서구 송정동 녹산산업중로 333",
   },
 ];
 
@@ -170,7 +176,9 @@ function CampusPanel({ campus }: { campus: Campus }) {
               <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="text-sm font-bold text-ink-700">캠퍼스 전경</span>
+            <span className="text-sm font-bold text-ink-700">
+              {campus.address}
+            </span>
           </div>
           <div className="aspect-video rounded-2xl overflow-hidden bg-ink-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}

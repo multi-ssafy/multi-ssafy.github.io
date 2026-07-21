@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { XIcon } from "@/lib/icons";
 
 // 사전 알림 신청 모달 (데모)
@@ -13,8 +13,27 @@ export default function NotificationModal() {
   const [open, setOpen] = useState(false);
   const [done, setDone] = useState(false);
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [p1, setP1] = useState("");
+  const [p2, setP2] = useState("");
+  const [p3, setP3] = useState("");
   const [email, setEmail] = useState("");
+  const p2Ref = useRef<HTMLInputElement>(null);
+  const p3Ref = useRef<HTMLInputElement>(null);
+
+  // 전화번호 3칸 입력 (3·4·4) — 최대 길이를 채우면 다음 칸으로 이동
+  const handleP1 = (v: string) => {
+    const d = v.replace(/\D/g, "").slice(0, 3);
+    setP1(d);
+    if (d.length === 3) p2Ref.current?.focus();
+  };
+  const handleP2 = (v: string) => {
+    const d = v.replace(/\D/g, "").slice(0, 4);
+    setP2(d);
+    if (d.length === 4) p3Ref.current?.focus();
+  };
+  const handleP3 = (v: string) => {
+    setP3(v.replace(/\D/g, "").slice(0, 4));
+  };
   const [agree1, setAgree1] = useState(false);
   const [agree2, setAgree2] = useState(false);
   const [showErr, setShowErr] = useState(false);
@@ -31,7 +50,9 @@ export default function NotificationModal() {
     setTimeout(() => {
       setDone(false);
       setName("");
-      setPhone("");
+      setP1("");
+      setP2("");
+      setP3("");
       setEmail("");
       setAgree1(false);
       setAgree2(false);
@@ -54,7 +75,8 @@ export default function NotificationModal() {
   }, [open]);
 
   const nameOk = name.trim().length > 0;
-  const phoneOk = /^01[016789][-\s]?\d{3,4}[-\s]?\d{4}$/.test(phone.trim());
+  const phoneOk =
+    /^01\d$/.test(p1) && /^\d{3,4}$/.test(p2) && /^\d{4}$/.test(p3);
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   const consentOk = agree1 && agree2;
   const valid = nameOk && phoneOk && emailOk && consentOk;
@@ -83,18 +105,16 @@ export default function NotificationModal() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* 헤더 */}
-        <div className="shrink-0 flex items-center justify-between px-6 py-5 border-b border-ink-100">
-          <div>
-            <p className="text-xs font-bold text-brand-600">SSAFY 17기</p>
-            <h3 className="text-lg font-extrabold text-ink-900">
-              사전 알림 신청
-            </h3>
-          </div>
+        <div className="shrink-0 relative px-6 py-5 border-b border-ink-100 text-center">
+          <p className="text-xs font-bold text-brand-600">SSAFY 17기</p>
+          <h3 className="text-xl sm:text-2xl font-extrabold text-ink-900">
+            사전 알림 신청
+          </h3>
           <button
             type="button"
             onClick={close}
             aria-label="닫기"
-            className="w-9 h-9 rounded-full hover:bg-ink-100 flex items-center justify-center text-ink-500"
+            className="absolute top-4 right-4 w-9 h-9 rounded-full hover:bg-ink-100 flex items-center justify-center text-ink-500"
           >
             <XIcon className="w-5 h-5" />
           </button>
@@ -176,15 +196,42 @@ export default function NotificationModal() {
               >
                 전화번호
               </label>
-              <input
-                id="notify-phone"
-                type="tel"
-                inputMode="numeric"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="010-1234-5678"
-                className="w-full rounded-xl border border-ink-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
-              />
+              <div className="flex items-center gap-2">
+                <input
+                  id="notify-phone"
+                  type="tel"
+                  inputMode="numeric"
+                  value={p1}
+                  onChange={(e) => handleP1(e.target.value)}
+                  maxLength={3}
+                  placeholder="010"
+                  className="w-full flex-1 rounded-xl border border-ink-200 px-3 py-3 text-sm text-center focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                />
+                <span className="text-ink-300">-</span>
+                <input
+                  ref={p2Ref}
+                  type="tel"
+                  inputMode="numeric"
+                  value={p2}
+                  onChange={(e) => handleP2(e.target.value)}
+                  maxLength={4}
+                  placeholder="1234"
+                  aria-label="전화번호 가운데 자리"
+                  className="w-full flex-1 rounded-xl border border-ink-200 px-3 py-3 text-sm text-center focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                />
+                <span className="text-ink-300">-</span>
+                <input
+                  ref={p3Ref}
+                  type="tel"
+                  inputMode="numeric"
+                  value={p3}
+                  onChange={(e) => handleP3(e.target.value)}
+                  maxLength={4}
+                  placeholder="5678"
+                  aria-label="전화번호 마지막 자리"
+                  className="w-full flex-1 rounded-xl border border-ink-200 px-3 py-3 text-sm text-center focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                />
+              </div>
               {showErr && !phoneOk && (
                 <p className="mt-1.5 text-xs text-coral-500">
                   올바른 휴대폰 번호를 입력해 주세요.

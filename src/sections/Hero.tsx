@@ -20,7 +20,7 @@ export default function Hero() {
           <span className="text-ink-300">·</span>
           <span>전국 5개 캠퍼스</span>
           <span className="text-ink-300">·</span>
-          <span>180여 개 채용 우대기업</span>
+          <span>170여 개 채용 우대기업</span>
         </div>
 
         <h1 className="reveal in-view mt-7 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">

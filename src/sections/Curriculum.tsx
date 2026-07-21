@@ -11,12 +11,12 @@ export default function Curriculum() {
       <div className="max-w-content mx-auto px-5 sm:px-8">
         {/* 섹션 제목 */}
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">AI·SW CURRICULUM</p>
+          <p className="eyebrow justify-center">AI</p>
           <h2 className="section-title mt-3">
-            AI를 이해하고, 활용하고, 설계하는 과정
+            AI 커리큘럼
           </h2>
           <p className="section-desc">
-            체험부터 핵심 이론, 실전 프로젝트까지 단계적으로 AI 역량을 완성합니다.
+            도구를 넘어 AI가 적용된 서비스를 구현하는 역량을 갖추도록 설계했어요
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export default function Curriculum() {
             AI 모델 실습
           </span>
           <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
-          <span className="px-3 py-1.5 rounded-full bg-brand-600 text-white">
+          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
             AI 서비스 설계
           </span>
         </div>
@@ -126,11 +126,11 @@ export default function Curriculum() {
 
           {/* STEP 3 */}
           <div className="reveal" style={{ animationDelay: ".16s" }}>
-            <div className="card p-7 h-full bg-brand-600 border-brand-600 hover:shadow-card-hover hover:-translate-y-1">
+            <div className="card p-7 h-full hover:shadow-card-hover hover:-translate-y-1">
               <div className="flex items-center justify-between">
-                <span className="tag bg-white/15 text-white">STEP 3</span>
+                <span className="tag bg-brand-50 text-brand-600">STEP 3</span>
               </div>
-              <div className="mt-6 w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center text-white">
+              <div className="mt-6 w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
                 <svg
                   className="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -148,19 +148,19 @@ export default function Curriculum() {
                   <path d="m8 11 2-2 2 2 4-4" />
                 </svg>
               </div>
-              <h3 className="mt-5 text-xl font-extrabold text-white">
+              <h3 className="mt-5 text-xl font-extrabold text-ink-900">
                 프로젝트로 증명하는 AI 역량
               </h3>
-              <p className="mt-2 text-sm text-brand-100 leading-relaxed">
+              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
                 다양한 AI 기술을 프로젝트에 적용해 실제로 작동하는 AI 서비스를
                 완성합니다.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
-                <span className="tag bg-white/15 text-white">컴퓨터 비전</span>
-                <span className="tag bg-white/15 text-white">LLM</span>
-                <span className="tag bg-white/15 text-white">파인튜닝</span>
-                <span className="tag bg-white/15 text-white">AI 에이전트</span>
-                <span className="tag bg-white/15 text-white">MLOps</span>
+                <span className="tag bg-ink-50 text-ink-600">컴퓨터 비전</span>
+                <span className="tag bg-ink-50 text-ink-600">LLM</span>
+                <span className="tag bg-ink-50 text-ink-600">파인튜닝</span>
+                <span className="tag bg-ink-50 text-ink-600">AI 에이전트</span>
+                <span className="tag bg-ink-50 text-ink-600">MLOps</span>
               </div>
             </div>
           </div>
@@ -171,11 +171,12 @@ export default function Curriculum() {
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/3">
               <h3 className="mt-2 text-xl font-extrabold text-ink-900">
-                오직 실습에만 집중할 수 있는 AI 학습 환경을 제공해요
+                오직 실습에만 집중할 수 있는 
+                <br />AI 학습 환경 제공
               </h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
+              {/* <p className="mt-2 text-sm text-ink-500 leading-relaxed">
                 학습부터 프로젝트 구현까지
-              </p>
+              </p> */}
             </div>
 
             <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -191,8 +192,8 @@ export default function Curriculum() {
                 <p className="text-sm font-extrabold text-ink-900">학습 데이터</p>
                 <p className="mt-1 text-xs text-ink-500">데이터 통합 관리</p>
               </div>
-              <div className="rounded-2xl bg-brand-50 px-4 py-4 border border-brand-100">
-                <p className="text-sm font-extrabold text-brand-600">
+              <div className="rounded-2xl bg-ink-50 px-4 py-4">
+                <p className="text-sm font-extrabold text-ink-900">
                   GPU 인프라
                 </p>
                 <p className="mt-1 text-xs text-ink-500">AI 프로젝트 지원</p>

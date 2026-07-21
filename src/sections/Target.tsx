@@ -21,7 +21,7 @@ const TARGETS = [
     ),
     title: "전공자라면",
     desc: "심화·실전 프로젝트로 바로 도약",
-    tags: ["AI 심화", "기업연계 프로젝트"],
+    tags: ["AI 심화", "시스템 성능 개선"],
     delay: undefined,
   },
   {
@@ -77,10 +77,10 @@ export default function Target() {
     <section id="target" className="scroll-mt-20 py-20 md:py-28">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">WHO IS IT FOR</p>
+          <p className="eyebrow justify-center">WHO</p>
           <h2 className="section-title mt-3">나도 가능할까?</h2>
           <p className="section-desc">
-            출발점이 어디든, 실전형 SW·AI 인재로 성장합니다
+            출발점이 어디든 1년 후에는 실전형 인재로 성장할 수 있어요
           </p>
         </div>
 

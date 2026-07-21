@@ -7,10 +7,10 @@ export default function WhySSAFY() {
     <section id="why" className="scroll-mt-20 py-20 md:py-28">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">WHY SSAFY</p>
+          <p className="eyebrow justify-center">WHY</p>
           <h2 className="section-title mt-3">SSAFY는 무엇이 다른가?</h2>
           <p className="section-desc">
-            교육–프로젝트–취업이 하나의 과정으로 연결됩니다
+            교육 + 프로젝트 + 취업을 하나의 과정으로 끝내요
           </p>
         </div>
 
@@ -25,12 +25,12 @@ export default function WhySSAFY() {
                 <Users className="w-5 h-5" />
               </div>
               <h3 className="mt-5 text-lg font-bold text-ink-900 leading-snug">
-                16기 동안 쌓아온
+                16기 동안 검증된
                 <br />
-                성장의 시스템
+                집합교육의 힘
               </h3>
-              <p className="mt-3 text-sm text-ink-500 leading-relaxed">
-                전국 5개 캠퍼스와 약 1,000명의 동기가 함께하는 오프라인 몰입교육
+              <p className="mt-3 text-sm text-ink-700 leading-relaxed">
+                AI 교육은 새로워야 하지만<br />사람을 성장시키는 과정은 검증되어야 합니다.
               </p>
               <div className="mt-6 flex items-center gap-1.5 text-[11px] font-bold text-ink-400">
                 <span className="px-2 py-1 rounded-full bg-ink-50">1기</span>
@@ -63,8 +63,8 @@ export default function WhySSAFY() {
                 <br />
                 체계적인 AI·SW 교육
               </h3>
-              <p className="mt-3 text-sm text-ink-500 leading-relaxed">
-                비전공자도 기초부터 실전까지 단계적으로 역량을 완성
+              <p className="mt-3 text-sm text-ink-700 leading-relaxed">
+                비전공자도 기초부터 실전까지 단계적으로 역량을 완성할 수 있도록 교육과정을 설계했습니다.
               </p>
               <div className="mt-6 flex items-center gap-2 text-[11px] font-bold text-brand-600">
                 <span className="px-2.5 py-1 rounded-full bg-brand-50">
@@ -100,7 +100,10 @@ export default function WhySSAFY() {
                 실전형 프로젝트
               </h3>
               <p className="mt-3 text-sm text-ink-500 leading-relaxed">
-                기업 멘토와 소통하며 실제 요구사항을 서비스로 구현
+                기업 멘토와 소통하며 
+                <br />
+                실제 현업에서의 과제를 해결합니다.
+                <br />
               </p>
               <div className="mt-6 flex items-center gap-2 text-ink-400">
                 <Building2 className="w-4 h-4" />

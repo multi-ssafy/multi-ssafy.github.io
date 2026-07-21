@@ -32,7 +32,7 @@ export default function RecruitInfo() {
               <p className="mt-2 text-base font-bold text-brand-50 leading-snug">
                 4년제 대학 졸업(예정)자
                 <br className="hidden sm:block lg:hidden xl:block" />{" "}
-                <span className="text-brand-200 font-semibold">· 전공무관</span>
+                / 국내지정 마이스터고 졸업자
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function RecruitInfo() {
             </div>
           </div>
         </div>
-        <p className="reveal text-center text-xs text-ink-400 mt-6">
+        <p className="reveal text-center text-sm text-ink-400 mt-6">
           ※ 상세 지원 자격과 단계별 일정은 하단{" "}
           <a
             href="#apply"
@@ -79,7 +79,7 @@ export default function RecruitInfo() {
           >
             지원자격 및 선발 프로세스
           </a>
-          에서 확인하세요.
+          에서 확인
         </p>
       </div>
     </section>

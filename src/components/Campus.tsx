@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-// CAMPUS & TRACK — 캠퍼스 선택 탭 + 소개 영상 + 상세 패널
+// CAMPUS & TRACK — 상단 중앙 탭 + 소개영상·사진·소개글·트랙 한눈에
 
 type CampusKey = "seoul" | "daejeon" | "gwangju" | "gumi" | "buulgyeong";
 
@@ -110,87 +110,126 @@ export default function Campus() {
           </p>
         </div>
 
-        <div className="mt-14 grid lg:grid-cols-2 gap-8 items-start">
-          {/* 캠퍼스 소개 영상 */}
-          <div className="reveal card p-7 sm:p-8">
-            <p className="eyebrow">CAMPUS VIDEO</p>
-            <h3 className="mt-2 text-xl font-extrabold text-ink-900">
-              캠퍼스 소개 영상
-            </h3>
+        {/* 중앙 상단 캠퍼스 선택 탭 (세그먼트 컨트롤) */}
+        <div className="reveal mt-10 flex justify-center">
+          <div className="inline-flex flex-wrap justify-center gap-1.5 rounded-full bg-white border border-ink-100 shadow-card p-1.5">
+            {CAMPUSES.map((c) => {
+              const isActive = c.key === active;
+              return (
+                <button
+                  key={c.key}
+                  type="button"
+                  aria-pressed={isActive}
+                  onClick={() => onSelect(c.key)}
+                  className={`rounded-full px-5 sm:px-6 py-2.5 text-sm font-bold transition-colors ${
+                    isActive
+                      ? "bg-brand-600 text-white shadow-soft"
+                      : "text-ink-600 hover:bg-ink-50"
+                  }`}
+                >
+                  {c.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-            <a
-              href={`https://www.youtube.com/watch?v=${current.videoId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block aspect-video rounded-2xl overflow-hidden bg-ink-900 mt-5"
-              aria-label={`${current.label} 캠퍼스 소개 영상 유튜브에서 보기`}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`https://img.youtube.com/vi/${current.videoId}/maxresdefault.jpg`}
-                alt={`${current.label} 캠퍼스 소개 영상 썸네일`}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <span className="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/20" />
-              <span className="absolute inset-0 flex items-center justify-center">
+        {/* 콘텐츠 카드: 소개영상 + 사진 + 소개글 + 트랙 */}
+        <div className="reveal mt-8 card p-5 sm:p-7">
+          <div className="grid lg:grid-cols-2 gap-5">
+            {/* 소개영상 */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <svg
+                  className="w-4 h-4 text-[#ff0033]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+                </svg>
+                <span className="text-sm font-bold text-ink-700">소개영상</span>
+              </div>
+              <a
+                href={`https://www.youtube.com/watch?v=${current.videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block aspect-video rounded-2xl overflow-hidden bg-ink-900"
+                aria-label={`${current.label} 캠퍼스 소개 영상 유튜브에서 보기`}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/assets/icons/youtube-logo.svg"
-                  alt="YouTube에서 영상 보기"
-                  className="transition-transform duration-300 group-hover:scale-110"
-                  style={{
-                    width: "70px",
-                    height: "auto",
-                    filter: "drop-shadow(0 10px 18px rgba(0, 0, 0, 0.3))",
-                  }}
+                  src={`https://img.youtube.com/vi/${current.videoId}/maxresdefault.jpg`}
+                  alt={`${current.label} 캠퍼스 소개 영상 썸네일`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </span>
-            </a>
+                <span className="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/20" />
+                <span className="absolute inset-0 flex items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/assets/icons/youtube-logo.svg"
+                    alt="YouTube에서 영상 보기"
+                    className="transition-transform duration-300 group-hover:scale-110"
+                    style={{
+                      width: "64px",
+                      height: "auto",
+                      filter: "drop-shadow(0 10px 18px rgba(0, 0, 0, 0.3))",
+                    }}
+                  />
+                </span>
+              </a>
+            </div>
 
-            {/* 캠퍼스 선택 탭 */}
-            <div className="mt-6 grid grid-cols-5 gap-2">
-              {CAMPUSES.map((c) => {
-                const isActive = c.key === active;
-                return (
-                  <button
-                    key={c.key}
-                    type="button"
-                    aria-pressed={isActive}
-                    onClick={() => onSelect(c.key)}
-                    className={`campus-tab tag justify-center !py-2.5 w-full ${
-                      isActive
-                        ? "bg-brand-600 text-white"
-                        : "bg-white text-ink-600 border border-ink-200"
-                    }`}
-                  >
-                    {c.label}
-                  </button>
-                );
-              })}
+            {/* 캠퍼스 전경 사진 */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <svg
+                  className="w-4 h-4 text-brand-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span className="text-sm font-bold text-ink-700">캠퍼스 전경</span>
+              </div>
+              <div className="aspect-video rounded-2xl overflow-hidden bg-ink-100">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={current.image}
+                  alt={current.imageAlt}
+                  className={`w-full h-full object-cover transition-opacity duration-300 ${
+                    fading ? "opacity-0" : ""
+                  }`}
+                  style={{ objectPosition: current.imagePosition }}
+                />
+              </div>
             </div>
           </div>
 
-          {/* 캠퍼스 상세 패널 */}
-          <div className="reveal card p-7 sm:p-8">
-            <div className="aspect-video rounded-2xl overflow-hidden mb-6 bg-ink-100">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={current.image}
-                alt={current.imageAlt}
-                className={`w-full h-full object-cover transition-opacity duration-300 ${
-                  fading ? "opacity-0" : ""
-                }`}
-                style={{ objectPosition: current.imagePosition }}
-              />
-            </div>
-
-            <div>
+          {/* 소개글 + 운영 트랙 */}
+          <div className="mt-6 pt-6 border-t border-ink-100 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
+            <div className="min-w-0">
               <p className="eyebrow">{current.eyebrow}</p>
-              <h3 className="mt-2 text-xl font-extrabold text-ink-900">
+              <h3 className="mt-1.5 text-xl sm:text-2xl font-extrabold text-ink-900">
                 {current.name}
               </h3>
-              <p className="mt-2 text-sm text-ink-500">{current.desc}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
+                {current.desc}
+              </p>
+            </div>
+            <div className="shrink-0">
+              <p className="text-xs font-bold text-ink-400 mb-2 sm:text-right">
+                운영 트랙
+              </p>
+              <div className="flex flex-wrap gap-2 sm:justify-end">
                 {current.tags.map((t) => (
                   <span key={t} className="tag bg-brand-50 text-brand-600">
                     {t}

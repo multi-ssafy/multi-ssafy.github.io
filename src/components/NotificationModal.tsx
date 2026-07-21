@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { XIcon } from "@/lib/icons";
+import Image from "next/image";
 
 // 사전 알림 신청 모달 (데모)
 // - 이름 · 전화번호 · 이메일 입력 + 검증
@@ -105,11 +106,40 @@ export default function NotificationModal() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* 헤더 */}
-        <div className="shrink-0 relative px-6 py-5 border-b border-ink-100 text-center">
-          <p className="text-xs font-bold text-brand-600">SSAFY 17기</p>
+        {!done && (
+        <div className="shrink-0 relative px-6  pt-7 pb-2 text-center">
+          {/* <Image
+            src="/assets/logo/ssafy-logo-navy.png"
+            alt="SSAFY 17기"
+            width={80}
+            height={20}
+            className="mx-auto h-5 w-auto"
+            priority
+          /> */}
+          {/* <p className="text-xs font-bold text-brand-600">SSAFY 17기</p> */}
           <h3 className="text-xl sm:text-2xl font-extrabold text-ink-900">
             사전 알림 신청
           </h3>
+           {/* 테스트 A: 벨 아이콘 배지 */}
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3.5 py-1.5">
+          <svg
+            className="w-3.5 h-3.5 text-brand-600 shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+          <span className="text-xs font-bold text-brand-700">
+            모집이 오픈되면 가장 먼저 알림을 보내드려요
+          </span>
+        </div>
           <button
             type="button"
             onClick={close}
@@ -119,7 +149,7 @@ export default function NotificationModal() {
             <XIcon className="w-5 h-5" />
           </button>
         </div>
-
+        )}
         {done ? (
           // 완료 화면
           <div className="p-8 text-center">
@@ -141,13 +171,10 @@ export default function NotificationModal() {
             <h4 className="mt-5 text-xl font-extrabold text-ink-900">
               신청이 완료되었어요
             </h4>
-            <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-              17기 모집이 시작되면 입력하신 연락처로
+            <p className="mt-2 text-sm text-ink-900 leading-relaxed">
+              {name}님, 17기 모집이 시작되면 입력하신 연락처로
               <br />
               가장 먼저 안내해 드릴게요.
-            </p>
-            <p className="mt-4 text-xs text-ink-400">
-              ※ 데모 화면으로, 입력하신 정보는 저장·전송되지 않습니다.
             </p>
             <button
               type="button"
@@ -159,11 +186,7 @@ export default function NotificationModal() {
           </div>
         ) : (
           // 입력 폼
-          <form onSubmit={submit} className="p-6 overflow-y-auto">
-            <p className="text-sm text-ink-500 leading-relaxed">
-              모집 일정이 확정되면 사전 알림을 보내드려요. 아래 정보를 입력해
-              주세요.
-            </p>
+          <form onSubmit={submit} className="px-6 pb-6 overflow-y-auto">
 
             {/* 이름 */}
             <div className="mt-5">
@@ -289,8 +312,8 @@ export default function NotificationModal() {
                 </span>
               </label>
               <p className="text-[11px] text-ink-400 leading-relaxed pt-1">
-                수집 항목: 이름·전화번호·이메일 · 이용 목적: 17기 모집 사전 알림
-                안내 · 보유기간: 알림 발송 후 즉시 파기. 동의를 거부할 수 있으며,
+                수집 항목: 이름·전화번호·이메일, 이용 목적: 17기 모집 사전 알림,
+                안내 · 보유기간: 해당기간 모집 완료 후 즉시 파기. 동의를 거부할 수 있으며
                 이 경우 사전 알림 신청이 제한됩니다.
               </p>
               {showErr && !consentOk && (
@@ -303,9 +326,6 @@ export default function NotificationModal() {
             <button type="submit" className="btn-primary w-full mt-5">
               신청하기
             </button>
-            <p className="mt-3 text-xs text-ink-400 text-center">
-              ※ 데모 화면으로, 입력하신 정보는 저장·전송되지 않습니다.
-            </p>
           </form>
         )}
       </div>

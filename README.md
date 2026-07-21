@@ -41,17 +41,28 @@ legacy/              이관 이전 원본(index.html·main.js·input.css) 참조
 - **아이콘**: `src/lib/icons.tsx`에서 한 번만 정의하고 재사용합니다.
 - **섹션 추가/수정**: `src/sections/`에 컴포넌트를 만들고 `app/page.tsx`에 배치합니다.
 
-## 이관 진행 상황
+## 이관 진행 상황 (전체 완료 ✅)
 
 - [x] Next.js 스캐폴딩 (config · tsconfig · tailwind · postcss)
 - [x] 디자인 시스템 이관 (globals.css) · 폰트/에셋 public 이동
 - [x] Header (모바일 메뉴 · 스크롤 상태)
 - [x] Hero (마퀴 로고 포함)
 - [x] 모집 핵심정보(RecruitInfo)
-- [ ] 나머지 섹션: 타깃별 SSAFY · Why · 커리큘럼 · 기업연계 프로젝트 · 취업지원/취업률
-      · 취업사례 · 교육혜택 · 캠퍼스(네온 지도) · 지원자격/선발 프로세스 · 설명회/FAQ
-      · 최종 CTA · Footer · 챗봇 위젯
+- [x] 타깃별 SSAFY(Target) · Why SSAFY(WhySSAFY)
+- [x] AI 커리큘럼(Curriculum) · 기업연계 프로젝트(Project)
+- [x] 인용 배너(QuoteBanner) · 취업지원/취업률(Career)
+- [x] 취업사례(Story) · 교육지원 혜택(Benefit) · CTA 배너(CtaBanner)
+- [x] 캠퍼스 & 트랙(Campus, 탭 전환 클라이언트 컴포넌트)
+- [x] 지원자격/선발 프로세스(Apply)
+- [x] 설명회 + FAQ(Faq, 아코디언 클라이언트 컴포넌트)
+- [x] 최종 CTA(FinalCta) · Footer
+- [x] 챗봇 위젯(Chatbot, 선택형 대화 흐름 클라이언트 컴포넌트)
 
-> 남은 섹션은 동일한 패턴(섹션 컴포넌트 + 필요 시 data 분리 + 클라이언트 인터랙션 훅)으로
-> 순차 이관 예정입니다. 이관된 부분은 기존 정적 사이트와 픽셀 단위로 동일하게 렌더링됨을
-> 확인했습니다.
+> 정적 export(`next build`) 성공 및 브라우저 렌더링을 검증했으며, 기존 정적 사이트와
+> 픽셀 단위로 동일하게 렌더링됨을 확인했습니다. 캠퍼스 탭 전환 · FAQ 아코디언 · 챗봇
+> 대화 흐름 등 인터랙션도 정상 동작합니다.
+
+### 클라이언트/서버 컴포넌트 구분
+
+- **클라이언트("use client")**: Header · RevealInit · Campus · Faq · Chatbot · FinalCta(데모 폼)
+- **서버(정적)**: 나머지 모든 섹션 — 상호작용이 없어 서버에서 정적으로 렌더링됩니다.

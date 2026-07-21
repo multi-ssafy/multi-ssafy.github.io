@@ -1,7 +1,22 @@
 import Header from "@/components/Header";
 import RevealInit from "@/components/RevealInit";
+import Campus from "@/components/Campus";
+import Faq from "@/components/Faq";
+import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 import Hero from "@/sections/Hero";
 import RecruitInfo from "@/sections/RecruitInfo";
+import Target from "@/sections/Target";
+import WhySSAFY from "@/sections/WhySSAFY";
+import Curriculum from "@/sections/Curriculum";
+import Project from "@/sections/Project";
+import QuoteBanner from "@/sections/QuoteBanner";
+import Career from "@/sections/Career";
+import Story from "@/sections/Story";
+import Benefit from "@/sections/Benefit";
+import CtaBanner from "@/sections/CtaBanner";
+import Apply from "@/sections/Apply";
+import FinalCta from "@/sections/FinalCta";
 
 export default function Home() {
   return (
@@ -10,7 +25,22 @@ export default function Home() {
       <main id="top">
         <Hero />
         <RecruitInfo />
+        <Target />
+        <WhySSAFY />
+        <Curriculum />
+        <Project />
+        <QuoteBanner />
+        <Career />
+        <Story />
+        <Benefit />
+        <CtaBanner />
+        <Campus />
+        <Apply />
+        <Faq />
+        <FinalCta />
       </main>
+      <Footer />
+      <Chatbot />
       <RevealInit />
     </>
   );

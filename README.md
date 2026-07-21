@@ -1,54 +1,57 @@
-# SSAFY 모집 랜딩페이지
+# SSAFY 모집 랜딩페이지 (Next.js)
 
-삼성청년 SW·AI아카데미(SSAFY) 모집 안내를 위한 원페이지 랜딩입니다.
+삼성청년 SW·AI아카데미(SSAFY) 모집 안내 랜딩페이지.
+기존 단일 `index.html` 정적 사이트를 **Next.js(App Router) + TypeScript + Tailwind**
+구조로 이관하는 브랜치입니다. **디자인은 기존과 100% 동일하게 유지**하며 코드 구조만
+유지보수하기 쉽게 재구성합니다.
 
-## 기술 스택
+## 실행
 
-- HTML / Tailwind CSS / Vanilla JS (빌드 도구 없이 정적 배포 가능)
-- 폰트: [Pretendard](https://github.com/orioncactus/pretendard) (로컬 self-host, `assets/fonts`)
-- 아이콘: [Lucide](https://lucide.dev) SVG를 빌드 시점에 인라인 처리 (런타임 CDN 의존 없음)
+```bash
+npm install
+npm run dev      # 개발 서버 (http://localhost:3000)
+npm run build    # 정적 사이트 생성 (out/ 폴더)
+```
+
+`next.config.mjs`에서 `output: "export"`로 설정되어 있어, 빌드 시 서버 없이 배포
+가능한 정적 파일이 `out/`에 생성됩니다. (Vercel은 Next.js를 자동 감지하여 빌드)
 
 ## 폴더 구조
 
 ```
-index.html          메인 페이지 (모든 섹션 포함)
-js/main.js           인터랙션 (모바일 메뉴, 아코디언, 캠퍼스 탭, 스크롤 애니메이션 등)
-src/input.css         Tailwind 소스 (커스텀 컬러·컴포넌트 정의)
-dist/style.css        빌드된 CSS (index.html이 참조하는 실제 파일)
-assets/fonts/          Pretendard 가변 폰트
+src/
+  app/
+    layout.tsx        루트 레이아웃 · 메타데이터 · 폰트
+    page.tsx          페이지 조립 (섹션 나열)
+    globals.css       전역 스타일 (디자인 시스템 · 캠퍼스 지도 · 챗봇 · 마퀴)
+  components/         재사용 UI · 클라이언트 컴포넌트 (Header, RevealInit ...)
+  sections/          페이지 섹션 (Hero, RecruitInfo ...)
+  data/              콘텐츠 데이터 (site.ts: 네비·파트너 로고 ...)
+  lib/
+    icons.tsx        Lucide 아이콘 재사용 컴포넌트 (인라인 SVG 중복 제거)
+public/
+  assets/            폰트 · 로고 · 사진 · 이미지 (기존 경로 /assets/... 유지)
+legacy/              이관 이전 원본(index.html·main.js·input.css) 참조용 보관
 ```
 
-## 로컬 실행
+## 유지보수 포인트
 
-```bash
-npm install
-npm run build   # dist/style.css 생성
-npm run serve   # http://localhost:4173 에서 정적 서버 실행
-```
+- **콘텐츠 수정**: `src/data/*.ts` 파일의 값만 고치면 화면에 반영됩니다.
+  (예: 모집일정·네비게이션·파트너 로고 목록)
+- **아이콘**: `src/lib/icons.tsx`에서 한 번만 정의하고 재사용합니다.
+- **섹션 추가/수정**: `src/sections/`에 컴포넌트를 만들고 `app/page.tsx`에 배치합니다.
 
-콘텐츠(HTML) 또는 Tailwind 클래스를 수정한 뒤에는 `npm run build`(또는 `npm run dev`로 감시 모드)를 다시 실행해야 화면에 반영됩니다.
+## 이관 진행 상황
 
-## ⚠️ 실제 데이터로 교체가 필요한 항목 (예시/placeholder)
+- [x] Next.js 스캐폴딩 (config · tsconfig · tailwind · postcss)
+- [x] 디자인 시스템 이관 (globals.css) · 폰트/에셋 public 이동
+- [x] Header (모바일 메뉴 · 스크롤 상태)
+- [x] Hero (마퀴 로고 포함)
+- [x] 모집 핵심정보(RecruitInfo)
+- [ ] 나머지 섹션: 타깃별 SSAFY · Why · 커리큘럼 · 기업연계 프로젝트 · 취업지원/취업률
+      · 취업사례 · 교육혜택 · 캠퍼스(네온 지도) · 지원자격/선발 프로세스 · 설명회/FAQ
+      · 최종 CTA · Footer · 챗봇 위젯
 
-현재 페이지의 아래 항목들은 **초안 PDF를 참고한 예시 값**입니다. 실제 확정된 내용으로 교체해 주세요.
-
-| 섹션 | 항목 | 현재 상태 |
-| --- | --- | --- |
-| Hero | 함께하는 기업 로고 | 삼성 계열사 8개 실제 로고 이미지 적용 (참고 스크린샷에서 추출한 저해상도본, 고해상도 공식 로고 파일로 교체 권장) |
-| 모집 핵심정보 | 모집 일정 | `2026.00.00까지` — 실제 마감일 필요 |
-| 모집 핵심정보 | 지원대상 세부 조건 | 초안 PDF 값 그대로 사용, 최신 공고 기준 재확인 필요 |
-| 취업률 통계 | 85% 및 13~17기 그래프 수치 | 가상의 성장 추이 데이터, 실제 수치로 교체 필요 |
-| 취업사례 | 전공자/비전공자 카드 | 인물 사진 없음(이니셜 placeholder), 실제 인터뷰이 사진·소속 확인 필요 |
-| 교육지원 혜택 | 6개 항목 펼침 설명 | 문구 전부 예시, 실제 지원 내용으로 교체 필요 |
-| 캠퍼스 & 트랙 | 지도 이미지 | 점선 placeholder 박스, 실제 지도/캠퍼스 사진 삽입 필요 |
-| 캠퍼스 & 트랙 | 대전·광주·구미·부울경 상세 | 서울 캠퍼스만 실제 문구 있음, 나머지는 예시 트랙 태그만 존재 |
-| 지원가이드 | 지원자격 3개 항목 | 예시 문구, 최종 모집공고 기준으로 교체 필요 |
-| 지원가이드 | 교육 일정 | `2027.01~2027.12 (예정)` — 확정값 필요 |
-| 설명회 & FAQ | 설명회 영상 | 회색 placeholder, 실제 영상 embed 또는 링크 필요 |
-| 설명회 & FAQ | FAQ 답변 5개 | 전부 예시 답변, 실제 답변으로 교체 필요 |
-| 최종 CTA | 이메일 신청 폼 | 프론트엔드만 존재(제출 로직 없음), 실제 알림 신청 API/이메일 연동 필요 |
-| Footer | 사업자 정보 | 상호명·사업자등록번호·주소·연락처 전부 placeholder |
-| Footer | SNS 링크 | 유튜브/인스타그램/블로그 링크 모두 `#` (실제 URL 필요) |
-| 전체 | 실제 사진(캠퍼스, 인물, 프로젝트) | 현재 모두 그라디언트/아이콘 placeholder로 대체됨 |
-
-이 외에도 텍스트 내 `(예시)` 표기가 붙은 부분은 모두 동일하게 검토가 필요합니다.
+> 남은 섹션은 동일한 패턴(섹션 컴포넌트 + 필요 시 data 분리 + 클라이언트 인터랙션 훅)으로
+> 순차 이관 예정입니다. 이관된 부분은 기존 정적 사이트와 픽셀 단위로 동일하게 렌더링됨을
+> 확인했습니다.

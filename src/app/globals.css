@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("/assets/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink-900 antialiased;
+  }
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wide uppercase text-brand-600;
+  }
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-ink-900 leading-tight;
+  }
+  .section-desc {
+    @apply mt-4 text-base sm:text-lg text-ink-500 leading-relaxed;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-all duration-200 whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white shadow-soft hover:bg-brand-700 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply btn border-2 border-ink-200 text-ink-700 hover:border-brand-500 hover:text-brand-600 bg-white;
+  }
+  .btn-white {
+    @apply btn bg-white text-brand-700 hover:bg-brand-50 hover:-translate-y-0.5;
+  }
+  .card {
+    @apply rounded-3xl border border-ink-100 bg-white shadow-card transition-all duration-300;
+  }
+  .reveal {
+    opacity: 0;
+  }
+  .reveal.in-view {
+    @apply animate-fade-up;
+  }
+  .tag {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-bold;
+  }
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 캠퍼스 네온 지도 */
+.campus-map-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(91, 126, 179, 0.22);
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(36, 76, 145, 0.24),
+      transparent 48%
+    ),
+    #070b12;
+  box-shadow:
+    0 24px 60px rgba(10, 20, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.campus-map-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(103, 225, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 225, 255, 0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  pointer-events: none;
+}
+
+.campus-map {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.campus-map-shape {
+  fill: url("#campus-map-fill");
+  stroke: #b7ff5f;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 5px rgba(183, 255, 95, 0.64));
+}
+
+.campus-map-point {
+  cursor: pointer;
+  outline: none;
+}
+
+.campus-map-line {
+  stroke: rgba(177, 255, 97, 0.58);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 4 5;
+  transition:
+    stroke 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.campus-map-dot {
+  fill: #68dfff;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 5px rgba(104, 223, 255, 0.75));
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    fill 0.3s ease,
+    filter 0.3s ease;
+}
+
+.campus-map-pulse {
+  fill: none;
+  stroke: #b7ff5f;
+  stroke-width: 2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.campus-map-label {
+  fill: rgba(255, 255, 255, 0.72);
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    fill 0.3s ease,
+    filter 0.3s ease;
+}
+
+.campus-map-point:hover .campus-map-dot,
+.campus-map-point:focus-visible .campus-map-dot {
+  transform: scale(1.2);
+}
+
+.campus-map-point:hover .campus-map-label,
+.campus-map-point:focus-visible .campus-map-label {
+  fill: #ffffff;
+}
+
+.campus-map-point.is-active .campus-map-dot {
+  fill: #b7ff5f;
+  transform: scale(1.45);
+  filter:
+    drop-shadow(0 0 5px rgba(183, 255, 95, 0.95))
+    drop-shadow(0 0 12px rgba(104, 223, 255, 0.7));
+}
+
+.campus-map-point.is-active .campus-map-line {
+  stroke: #b7ff5f;
+  opacity: 1;
+}
+
+.campus-map-point.is-active .campus-map-label {
+  fill: #ffffff;
+  filter: drop-shadow(0 0 4px rgba(183, 255, 95, 0.45));
+}
+
+.campus-map-point.is-active .campus-map-pulse {
+  animation: campus-map-pulse 1.15s ease-out 2;
+}
+
+.campus-map-guide {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 0.8rem;
+  left: 1rem;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+@keyframes campus-map-pulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.35);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
+@media (max-width: 640px) {
+  .campus-map-label {
+    font-size: 17px;
+  }
+
+  .campus-map-guide {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campus-map-point.is-active .campus-map-pulse {
+    animation: none;
+  }
+
+  .campus-map-dot {
+    transition: none;
+  }
+}
+.campus-map-base {
+  pointer-events: none;
+  transform: translateY(65px) scale(1.17);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.campus-map-guide {
+  display: none;
+}
+#campus-tabs .campus-tab {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  #campus-tabs .campus-tab {
+    font-size: 13px;
+  }
+}
+
+/* 챗봇 위젯 */
+#chatbot-panel {
+  transform-origin: bottom right;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+#chatbot-panel.is-closed {
+  opacity: 0;
+  transform: translateY(10px) scale(0.96);
+  pointer-events: none;
+}
+#chatbot-messages {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 23, 42, 0.18) transparent;
+}
+#chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+#chatbot-messages::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border-radius: 9999px;
+}
+.chatbot-bubble {
+  animation: chatbot-bubble-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes chatbot-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #chatbot-panel {
+    transition: opacity 0.15s ease;
+  }
+  #chatbot-panel.is-closed {
+    transform: none;
+  }
+  .chatbot-bubble {
+    animation: none;
+  }
+}

@@ -214,22 +214,18 @@ export default function Campus() {
             </div>
           </div>
 
-          {/* 소개글 + 운영 트랙 */}
-          <div className="mt-6 pt-6 border-t border-ink-100 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5">
-            <div className="min-w-0">
-              <p className="eyebrow">{current.eyebrow}</p>
-              <h3 className="mt-1.5 text-xl sm:text-2xl font-extrabold text-ink-900">
-                {current.name}
-              </h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-                {current.desc}
-              </p>
-            </div>
-            <div className="shrink-0">
-              <p className="text-xs font-bold text-ink-400 mb-2 sm:text-right">
-                운영 트랙
-              </p>
-              <div className="flex flex-wrap gap-2 sm:justify-end">
+          {/* 소개글 + 운영 트랙 (세로 정렬) */}
+          <div className="mt-6 pt-6 border-t border-ink-100">
+            <p className="eyebrow">{current.eyebrow}</p>
+            <h3 className="mt-1.5 text-xl sm:text-2xl font-extrabold text-ink-900">
+              {current.name}
+            </h3>
+            <p className="mt-2 text-sm text-ink-500 leading-relaxed">
+              {current.desc}
+            </p>
+            <div className="mt-5">
+              <p className="text-xs font-bold text-ink-400 mb-2">운영 트랙</p>
+              <div className="flex flex-wrap gap-2">
                 {current.tags.map((t) => (
                   <span key={t} className="tag bg-brand-50 text-brand-600">
                     {t}

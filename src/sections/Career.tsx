@@ -172,9 +172,9 @@ export default function Career() {
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">EMPLOYMENT OUTCOME</p>
           <h2 className="section-title mt-3 !leading-snug">
-            교육과 취업지원의 결과,
+            우수한 교육은
             <br className="hidden sm:block" />
-            취업률은 꾸준히 성장했습니다
+            취업 성과로 증명합니다
           </h2>
           <p className="section-desc">
             수료 이후까지 이어지는 취업지원으로 만들어낸 성과
@@ -184,60 +184,57 @@ export default function Career() {
         {/* 상단 통계 3종 + 취업률 성장 추이 */}
         <div className="reveal mt-14 card p-8 md:p-10">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <p className="text-sm font-bold text-ink-500">수료생 취업실적</p>
+            <p className="text-lg font-bold text-ink-900">수료생 취업실적</p>
             <span className="text-xs font-semibold text-ink-400">
-              * &apos;25.12월 기준
+              * 25.12월 기준
             </span>
           </div>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-            {/* 취업률 (카운터 애니메이션 유지) */}
-            <div className="rounded-2xl bg-brand-50/70 border border-brand-100 px-5 py-7 text-center flex flex-col justify-center">
-              <p
-                className="text-5xl md:text-6xl font-black text-brand-600 leading-none"
-                data-counter
-                data-target="85"
-              >
-                0<span className="text-3xl align-top">%</span>
-              </p>
-              <p className="mt-3 text-sm font-bold text-ink-600">취업률</p>
-            </div>
+          {/* 취업률 */}
+          <div className="relative min-h-[180px] rounded-2xl bg-brand-50/70 border border-brand-100 px-5 py-7 text-center flex flex-col items-center justify-center">
+            <p
+              className="relative inline-block text-5xl md:text-6xl font-black text-brand-600 leading-none"
+              data-counter
+              data-target="85"
+            >
+              0
+              <span className="absolute left-full top-0 ml-0.5 text-3xl">%</span>
+            </p>
 
-            {/* 취업 기업 수 */}
-            <div className="rounded-2xl bg-ink-50 px-5 py-7 text-center flex flex-col justify-center">
-              <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
-                2,300
-                <span className="text-2xl font-extrabold align-top ml-0.5">
-                  여개
-                </span>
-              </p>
-              <p className="mt-3 text-sm font-bold text-ink-600">취업 기업 수</p>
-            </div>
-
-            {/* 우대 기업 수 */}
-            <div className="rounded-2xl bg-ink-50 px-5 py-7 text-center flex flex-col justify-center">
-              <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
-                170
-                <span className="text-2xl font-extrabold align-top ml-0.5">
-                  여개
-                </span>
-              </p>
-              <p className="mt-3 text-sm font-bold text-ink-600">우대 기업 수</p>
-              <p className="mt-1 text-[11px] text-ink-400 leading-snug">
-                * 채용시 특별전형, 서류가점 등
-              </p>
-            </div>
+            <p className="mt-3 text-sm font-bold text-ink-600">취업률</p>
           </div>
+
+          {/* 취업 기업 수 */}
+          <div className="relative min-h-[180px] rounded-2xl bg-ink-50 px-5 py-7 text-center flex flex-col items-center justify-center">
+            <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
+              2,300
+            </p>
+            <p className="mt-3 text-sm font-bold text-ink-600">취업 기업 수</p>
+          </div>
+
+          {/* 우대 기업 수 */}
+          <div className="relative min-h-[180px] rounded-2xl bg-ink-50 px-5 py-7 text-center flex flex-col items-center justify-center">
+            <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
+              170
+            </p>
+            <p className="mt-3 text-sm font-bold text-ink-600">우대 기업 수</p>
+
+            <p className="absolute bottom-3 left-4 right-4 text-[11px] text-ink-400 leading-snug">
+              * 채용 시 특별전형, 서류 가점 등
+            </p>
+          </div>
+        </div>
 
           {/* 취업률 성장 추이 */}
           <div className="mt-8 pt-8 border-t border-ink-100 grid md:grid-cols-[auto_1fr] gap-8 md:gap-10 items-center">
             <div className="text-center md:text-left">
-              <p className="text-sm font-bold text-ink-900">취업률 성장 추이</p>
-              <p className="mt-1.5 text-sm text-ink-400 leading-relaxed">
+              <p className="text-lg font-bold text-ink-900">취업률 성장 추이</p>
+              <p className="mt-1.5 text-sm text-ink-600 leading-relaxed">
                 기수를 거듭하며 꾸준히 상승
-                <span className="block text-ink-300">
-                  (그래프는 예시 데이터입니다)
-                </span>
+                {/* <span className="block text-ink-300">
+                  
+                </span> */}
               </p>
             </div>
             <div
@@ -270,49 +267,53 @@ export default function Career() {
             취업 실전 교육과 개인별 상담·컨설팅으로 취업 성공까지 함께합니다
           </p>
         </div>
+        
         <div className="mt-10 grid md:grid-cols-3 gap-6">
-          {SOLUTIONS.map((s) => (
-            <div
-              key={s.title}
-              className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col"
-              style={s.delay ? { animationDelay: s.delay } : undefined}
-            >
-              {/* 헤더: 실사진 또는 브랜드 그라디언트 */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-ink-50">
-                {s.photo ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={s.photo.src}
-                    alt={s.photo.alt}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-brand-600 to-brand-800 relative overflow-hidden">
-                    <div className="pointer-events-none absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-                  </div>
-                )}
-                {/* 아이콘 배지 */}
-                <div className="absolute left-5 bottom-5 w-11 h-11 rounded-2xl bg-white text-brand-600 flex items-center justify-center shadow-card">
-                  {s.icon}
+        {SOLUTIONS.map((s) => (
+          <div
+            key={s.title}
+            className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col"
+            style={s.delay ? { animationDelay: s.delay } : undefined}
+          >
+            {/* 사진 영역 */}
+            <div className="relative aspect-[16/10] overflow-hidden bg-ink-50">
+              {s.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={s.photo.src}
+                  alt={s.photo.alt}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-brand-600 to-brand-800 relative overflow-hidden">
+                  <div className="pointer-events-none absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
                 </div>
+              )}
+            </div>
+
+            {/* 카드 내용 */}
+            <div className="p-7 flex-1 flex flex-col">
+              {/* 제목 위 아이콘 */}
+              <div className="mb-4 w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
+                {s.icon}
               </div>
 
-              <div className="p-7 flex-1 flex flex-col">
-                <h4 className="text-lg font-extrabold text-ink-900">
-                  {s.title}
-                </h4>
-                <ul className="mt-4 space-y-2.5 text-sm text-ink-600 leading-relaxed">
-                  {s.items.map((it, i) => (
-                    <li key={i} className="flex items-start gap-2.5">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
-                      <span>{it}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h4 className="text-lg font-extrabold text-ink-900">
+                {s.title}
+              </h4>
+
+              <ul className="mt-4 space-y-2.5 text-sm text-ink-600 leading-relaxed">
+                {s.items.map((it, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
+                    <span>{it}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
 
         {/* 단계별 취업지원 프로그램 (STEP 1~4) */}
         <div className="mt-20 text-center max-w-2xl mx-auto reveal">

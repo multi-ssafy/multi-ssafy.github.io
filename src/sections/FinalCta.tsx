@@ -1,8 +1,7 @@
-"use client";
-
 import { APPLY_URL } from "@/data/site";
+import NotifyButton from "@/components/NotifyButton";
 
-// 최종 CTA — 17기 모집 알림 신청 (데모 폼)
+// 최종 CTA — 17기 모집 알림 신청 (모달 트리거)
 
 export default function FinalCta() {
   return (
@@ -24,26 +23,14 @@ export default function FinalCta() {
           17기 모집 소식을 가장 먼저 받아보세요.
         </p>
 
-        <form
-          className="mt-9 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <label htmlFor="alert-email" className="sr-only">
-            이메일 주소
-          </label>
-          <input
-            id="alert-email"
-            type="email"
-            required
-            placeholder="이메일 주소를 입력하세요"
-            className="flex-1 rounded-full px-5 py-3.5 text-sm bg-white/10 text-white placeholder:text-ink-400 border border-white/15 focus:outline-none focus:ring-2 focus:ring-brand-500"
-          />
-          <button type="submit" className="btn-primary shrink-0">
+        <div className="mt-9">
+          <NotifyButton className="btn-primary text-base !px-8 !py-4">
             17기 모집 알림 신청
-          </button>
-        </form>
+          </NotifyButton>
+        </div>
         <p className="mt-4 text-xs text-ink-500">
-          ※ 신청 폼은 데모용이며, 실제 알림 연동은 추후 설정 예정입니다.
+          ※ 사전 알림 신청은 데모 화면이며, 입력하신 정보는 저장·전송되지
+          않습니다.
         </p>
         <p className="mt-6 text-sm text-ink-300">
           모집 기간이라면 지금 바로{" "}

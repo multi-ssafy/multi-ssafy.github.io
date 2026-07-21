@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/data/site";
 import { MenuIcon, XIcon } from "@/lib/icons";
+import NotifyButton from "@/components/NotifyButton";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,12 +50,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href="#recruit-alert"
-              className="btn-primary hidden sm:inline-flex !py-2.5 !px-5 text-[13px]"
-            >
+            <NotifyButton className="btn-primary hidden sm:inline-flex !py-2.5 !px-5 text-[13px]">
               17기 모집 알림 신청
-            </a>
+            </NotifyButton>
             <button
               type="button"
               aria-label="메뉴 열기"
@@ -88,13 +86,12 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#recruit-alert"
+            <NotifyButton
               onClick={() => setMenuOpen(false)}
               className="btn-primary justify-center mt-3"
             >
               17기 모집 알림 신청
-            </a>
+            </NotifyButton>
           </nav>
         </div>
       )}

@@ -82,16 +82,6 @@ export default function RecruitInfo() {
             </div>
           </div>
         </div>
-        <p className="reveal text-center text-sm text-ink-400 mt-6">
-          ※ 상세 지원 자격과 단계별 일정은 하단{" "}
-          <a
-            href="#apply"
-            className="font-bold text-brand-600 hover:text-brand-700"
-          >
-            지원자격 및 선발 프로세스
-          </a>
-          에서 확인
-        </p>
       </div>
     </section>
   );

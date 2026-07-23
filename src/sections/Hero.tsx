@@ -65,9 +65,6 @@ export default function Hero() {
             지원하기
             <ArrowUpRight className="w-4 h-4" />
           </a>
-          <a href="#recruit-info" className="btn-outline w-full sm:w-auto">
-            모집 핵심정보 보기
-          </a>
         </div>
 
         {/* 함께하는 기업 (삼성 계열사) - 자동 스크롤 로고 마퀴 */}

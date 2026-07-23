@@ -1,27 +1,19 @@
-import {
-  CalendarDays,
-  GraduationCap,
-  FilePen,
-  MessageSquare,
-  Handshake,
-  ArrowRight,
-} from "@/lib/icons";
+import { CalendarDays, GraduationCap, ArrowRight } from "@/lib/icons";
 
 // EMPLOYMENT OUTCOME — 취업지원 서비스
 // 1) 상단 통계 3종 (취업률 카운터 + 취업/우대 기업 수)
-// 2) 취업 솔루션 3카드 (취업특강 · 취업상담/컨설팅 · Job Fair)
-// 3) 단계별 취업지원 프로그램 (STEP 1~4 타임라인)
+// 2) 취업 솔루션 3카드 (단계별 취업지원 프로그램 내용 통합)
 
-/* ---------- 취업 솔루션 3카드 ---------- */
+/* ---------- 취업 솔루션 3카드 (단계별 프로그램 내용 통합) ---------- */
 const SOLUTIONS = [
   {
     title: "취업특강",
-    photo: { src: "/assets/photos/career-session.jpg", alt: "1:1 취업 상담·컨설팅 모습" },
+    photo: { src: "/assets/photos/career-session.jpg", alt: "취업 실전 교육 현장" },
     icon: <GraduationCap className="w-5 h-5" />,
     items: [
       "단계별 취업 경쟁력 제고 교육",
       "비즈니스 매너 및 직무 지식 함양",
-      "맞춤형 취업 실전 프로그램 제공",
+      "자기소개서·IT 포트폴리오 작성 지원",
     ],
     delay: undefined,
   },
@@ -45,8 +37,9 @@ const SOLUTIONS = [
       </svg>
     ),
     items: [
-      "우수한 기업들의 채용 설명회 상시 진행",
-      ["특별전형, 서류가점 등 우대 기업 정보 및 채용 전형", "참여 기회 제공"],
+      "직업 심리검사·취업역량 진단으로 진로 설계",
+      "전문 컨설턴트 1:1 상담 · 면접 클리닉",
+      "특별전형·서류가점 등 우대 기업 채용 정보 제공",
     ],
     delay: ".06s",
   },
@@ -55,74 +48,11 @@ const SOLUTIONS = [
     photo: { src: "/assets/photos/job-fair.jpg", alt: "SSAFY 채용박람회 현장" },
     icon: <CalendarDays className="w-5 h-5" />,
     items: [
-      "개인별 진로 코칭, 맞춤형 경력 설계",
-      "채용정보 제공, 취업활동 지원",
-      "채용박람회 개최, 기업탐방 기회 제공",
+      "채용박람회·캠퍼스 리크루팅·기업탐방",
+      "우수 IT·AI기업 채용정보 제공",
+      "개인별 진로 코칭, 취업활동 지원",
     ],
     delay: ".12s",
-  },
-];
-
-/* ---------- 단계별 취업지원 프로그램 STEP 1~4 ---------- */
-const STEPS = [
-  {
-    step: "STEP 1",
-    title: "자기이해 및 진로 설정",
-    icon: (
-      <svg
-        className="w-6 h-6"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" />
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-    ),
-    items: [
-      "직업 심리검사 및 취업역량 진단",
-      "전공 및 진단결과 기반 직무 추천",
-    ],
-    highlight: false,
-    delay: undefined,
-  },
-  {
-    step: "STEP 2",
-    title: "취업역량 강화",
-    icon: <FilePen className="w-6 h-6" />,
-    items: [
-      "단계별 취업 경쟁력 제고 교육 실시",
-      "자기소개서 작성법, IT 포트폴리오 구성 방법 등",
-    ],
-    highlight: false,
-    delay: ".08s",
-  },
-  {
-    step: "STEP 3",
-    title: "맞춤형 취업 컨설팅",
-    icon: <MessageSquare className="w-6 h-6" />,
-    items: [
-      "전문 컨설턴트의 진로 및 취업상담",
-      "면접 클리닉, 취업준비 전략 수립 등",
-    ],
-    highlight: false,
-    delay: ".16s",
-  },
-  {
-    step: "STEP 4",
-    title: "JOB 매칭",
-    icon: <Handshake className="w-6 h-6" />,
-    items: [
-      "채용박람회, 캠퍼스 리크루팅, 기업탐방 등 취업 기회 제공",
-      "SSAFY 우대 및 우수 IT·AI기업 채용정보 제공",
-    ],
-    highlight: true,
-    delay: ".24s",
   },
 ];
 
@@ -237,16 +167,7 @@ export default function Career() {
                 {s.items.map((it, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
-                    <span>
-                      {Array.isArray(it)
-                        ? it.map((line, j) => (
-                            <span key={j}>
-                              {line}
-                              {j < it.length - 1 && <br />}
-                            </span>
-                          ))
-                        : it}
-                    </span>
+                    <span>{it}</span>
                   </li>
                 ))}
               </ul>
@@ -254,75 +175,6 @@ export default function Career() {
           </div>
         ))}
       </div>
-
-        {/* 단계별 취업지원 프로그램 (STEP 1~4) */}
-        <div className="mt-20 text-center max-w-2xl mx-auto reveal">
-          <p className="eyebrow justify-center">STEP BY STEP</p>
-          <h3 className="mt-3 text-2xl font-extrabold text-ink-900">
-            단계별 취업지원 프로그램
-          </h3>
-          <p className="section-desc">
-            1:1 컨설팅을 통해 체계적으로 준비해요
-          </p>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {STEPS.map((s) => (
-            <div
-              key={s.step}
-              className="reveal"
-              style={s.delay ? { animationDelay: s.delay } : undefined}
-            >
-              <div
-                className={`card p-7 h-full hover:shadow-card-hover hover:-translate-y-1 ${
-                  s.highlight ? "bg-brand-600 border-brand-600" : ""
-                }`}
-              >
-                <span
-                  className={`tag ${
-                    s.highlight
-                      ? "bg-white/15 text-white"
-                      : "bg-brand-50 text-brand-600"
-                  }`}
-                >
-                  {s.step}
-                </span>
-                <div
-                  className={`mt-6 w-12 h-12 rounded-2xl flex items-center justify-center ${
-                    s.highlight
-                      ? "bg-white/15 text-white"
-                      : "bg-brand-50 text-brand-600"
-                  }`}
-                >
-                  {s.icon}
-                </div>
-                <h4
-                  className={`mt-5 text-lg font-extrabold leading-snug ${
-                    s.highlight ? "text-white" : "text-ink-900"
-                  }`}
-                >
-                  {s.title}
-                </h4>
-                <ul
-                  className={`mt-4 space-y-2.5 text-sm leading-relaxed ${
-                    s.highlight ? "text-brand-100" : "text-ink-600"
-                  }`}
-                >
-                  {s.items.map((it, i) => (
-                    <li key={i} className="flex items-start gap-2.5">
-                      <span
-                        className={`mt-2 w-1.5 h-1.5 rounded-full shrink-0 ${
-                          s.highlight ? "bg-white/70" : "bg-brand-400"
-                        }`}
-                      />
-                      <span>{it}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
 
         <div className="reveal text-center mt-14">
           <p className="text-sm text-ink-500">

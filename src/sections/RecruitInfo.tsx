@@ -18,7 +18,7 @@ export default function RecruitInfo() {
           <p className="section-desc">지원에 필요한 핵심 내용을 먼저 확인하세요</p>
         </div>
 
-        <div className="mt-12 reveal grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="mt-12 reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* 지원 대상 (featured tile) */}
           <div className="rounded-4xl bg-gradient-to-br from-brand-600 to-brand-800 p-8 text-white shadow-soft hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center relative overflow-hidden">
             <div className="pointer-events-none absolute -top-10 -right-10 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
@@ -45,6 +45,17 @@ export default function RecruitInfo() {
             </p>
             <span className="tag bg-coral-50 text-coral-500 mt-3 w-fit">
               전일제 몰입교육
+            </span>
+          </div>
+
+          {/* 교육지원금 */}
+          <div className="card p-8 hover:shadow-card-hover hover:-translate-y-1 flex flex-col justify-center">
+            <p className="text-sm font-bold text-ink-400">교육지원금</p>
+            <p className="mt-4 text-2xl font-extrabold text-brand-600 leading-snug">
+              월 최대 160만원
+            </p>
+            <span className="tag bg-brand-50 text-brand-600 mt-3 w-fit">
+              교육 기간 매월 지급
             </span>
           </div>
 

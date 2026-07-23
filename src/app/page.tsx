@@ -13,7 +13,6 @@ import Project from "@/sections/Project";
 import QuoteBanner from "@/sections/QuoteBanner";
 import Career from "@/sections/Career";
 import Story from "@/sections/Story";
-import Benefit from "@/sections/Benefit";
 import CtaBanner from "@/sections/CtaBanner";
 import Apply from "@/sections/Apply";
 import FinalCta from "@/sections/FinalCta";
@@ -31,7 +30,6 @@ export default function Home() {
         <QuoteBanner />
         <Career />
         <Story />
-        <Benefit />
         <CtaBanner />
         <Campus />
         <Apply />

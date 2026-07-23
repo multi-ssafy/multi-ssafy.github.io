@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import RevealInit from "@/components/RevealInit";
 import Campus from "@/components/Campus";
 import Faq from "@/components/Faq";
@@ -22,7 +21,6 @@ import FinalCta from "@/sections/FinalCta";
 export default function Home() {
   return (
     <>
-      <Header />
       <main id="top">
         <Hero />
         <RecruitInfo />

@@ -6,7 +6,7 @@ export default function Hero() {
   const marqueeLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center pt-20">
+    <section className="relative overflow-hidden min-h-screen flex items-center">
       {/* 배경 장식 (그라디언트 블롭) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-brand-100 rounded-full blur-3xl opacity-70" />

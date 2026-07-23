@@ -12,45 +12,6 @@ import {
 // 2) 취업 솔루션 3카드 (취업특강 · 취업상담/컨설팅 · Job Fair)
 // 3) 단계별 취업지원 프로그램 (STEP 1~4 타임라인)
 
-/* ---------- 취업률 성장 바 차트 (Tailwind JIT는 리터럴만 스캔 → 클래스 완전형 보관) ---------- */
-const BARS = [
-  {
-    gen: "13기",
-    height: "40%",
-    barClass:
-      "w-full max-w-[44px] bg-gradient-to-t from-brand-200 to-brand-100 rounded-t-lg origin-bottom scale-y-0 transition-transform duration-700",
-    labelClass: "text-[11px] font-bold text-ink-400",
-  },
-  {
-    gen: "14기",
-    height: "55%",
-    barClass:
-      "w-full max-w-[44px] bg-gradient-to-t from-brand-300 to-brand-200 rounded-t-lg origin-bottom scale-y-0 transition-transform duration-700 delay-100",
-    labelClass: "text-[11px] font-bold text-ink-400",
-  },
-  {
-    gen: "15기",
-    height: "68%",
-    barClass:
-      "w-full max-w-[44px] bg-gradient-to-t from-brand-400 to-brand-300 rounded-t-lg origin-bottom scale-y-0 transition-transform duration-700 delay-200",
-    labelClass: "text-[11px] font-bold text-ink-400",
-  },
-  {
-    gen: "16기",
-    height: "82%",
-    barClass:
-      "w-full max-w-[44px] bg-gradient-to-t from-brand-500 to-brand-400 rounded-t-lg origin-bottom scale-y-0 transition-transform duration-700 delay-300",
-    labelClass: "text-[11px] font-bold text-ink-400",
-  },
-  {
-    gen: "17기",
-    height: "100%",
-    barClass:
-      "w-full max-w-[52px] bg-gradient-to-t from-brand-700 to-brand-500 rounded-t-lg origin-bottom scale-y-0 transition-transform duration-700 delay-500",
-    labelClass: "text-[11px] font-bold text-brand-600",
-  },
-];
-
 /* ---------- 취업 솔루션 3카드 ---------- */
 const SOLUTIONS = [
   {
@@ -226,36 +187,6 @@ export default function Career() {
           </div>
         </div>
 
-          {/* 취업률 성장 추이 */}
-          <div className="mt-8 pt-8 border-t border-ink-100 grid md:grid-cols-[auto_1fr] gap-8 md:gap-10 items-center">
-            <div className="text-center md:text-left">
-              <p className="text-lg font-bold text-ink-900">취업률 성장 추이</p>
-              <p className="mt-1.5 text-sm text-ink-600 leading-relaxed">
-                기수를 거듭하며 꾸준히 상승
-                {/* <span className="block text-ink-300">
-                  
-                </span> */}
-              </p>
-            </div>
-            <div
-              className="flex items-end justify-between gap-3 sm:gap-5 h-36 md:h-44 border-b border-ink-100 pb-0"
-              id="bar-chart"
-            >
-              {BARS.map((b) => (
-                <div
-                  key={b.gen}
-                  className="flex-1 flex flex-col items-center gap-2 h-full justify-end"
-                >
-                  <div
-                    className={b.barClass}
-                    style={{ height: b.height }}
-                    data-bar
-                  />
-                  <span className={b.labelClass}>{b.gen}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* 취업 솔루션 3카드 */}

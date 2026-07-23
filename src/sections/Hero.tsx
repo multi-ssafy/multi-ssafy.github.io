@@ -15,15 +15,7 @@ export default function Hero() {
       </div>
 
       <div className="max-w-content mx-auto px-5 sm:px-8 py-16 text-center">
-        <div className="reveal in-view inline-flex flex-wrap items-center justify-center gap-2 rounded-full bg-white border border-ink-100 shadow-card px-4 py-2 text-xs sm:text-sm font-bold text-ink-600">
-          <span className="text-brand-600">취업률 85%</span>
-          <span className="text-ink-300">·</span>
-          <span>전국 5개 캠퍼스</span>
-          <span className="text-ink-300">·</span>
-          <span>170여 개 채용 우대기업</span>
-        </div>
-
-        <h1 className="reveal in-view mt-7 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
+        <h1 className="reveal in-view text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
           차세대 SW·AI 인재
           <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
@@ -32,9 +24,36 @@ export default function Hero() {
           에서 시작됩니다
         </h1>
 
-        <p className="reveal in-view mt-6 text-base sm:text-lg md:text-xl text-ink-500 leading-relaxed max-w-2xl mx-auto">
-          비전공자도 기초부터 실전까지, 교육부터 취업까지 이어지는 성장 시스템
-        </p>
+        {/* 핵심 지표 3종 (강조) */}
+        <div className="reveal in-view mt-9 sm:mt-11 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-14">
+          <div className="text-center">
+            <p className="text-4xl sm:text-5xl font-black text-brand-600 leading-none">
+              85<span className="text-2xl sm:text-3xl align-top">%</span>
+            </p>
+            <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
+              취업률
+            </p>
+          </div>
+          <span className="hidden sm:block w-px h-12 bg-ink-200" />
+          <div className="text-center">
+            <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
+              5<span className="text-2xl sm:text-3xl align-top ml-0.5">개</span>
+            </p>
+            <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
+              전국 캠퍼스
+            </p>
+          </div>
+          <span className="hidden sm:block w-px h-12 bg-ink-200" />
+          <div className="text-center">
+            <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
+              170
+              <span className="text-2xl sm:text-3xl align-top ml-0.5">여 개</span>
+            </p>
+            <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
+              채용 우대기업
+            </p>
+          </div>
+        </div>
 
         <div className="reveal in-view mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a

@@ -1,5 +1,6 @@
 import { APPLY_URL, PARTNER_LOGOS } from "@/data/site";
 import { ArrowUpRight } from "@/lib/icons";
+import NotifyButton from "@/components/NotifyButton";
 
 export default function Hero() {
   // 무한 스크롤 마퀴용 로고 복제본
@@ -65,6 +66,23 @@ export default function Hero() {
             지원하기
             <ArrowUpRight className="w-4 h-4" />
           </a>
+          <NotifyButton className="btn bg-white border-2 border-brand-600 text-brand-600 hover:bg-brand-50 hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto">
+            <svg
+              className="w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
+            알림 신청하기
+          </NotifyButton>
         </div>
 
         {/* 함께하는 기업 (삼성 계열사) - 자동 스크롤 로고 마퀴 */}

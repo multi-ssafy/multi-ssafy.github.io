@@ -1,7 +1,7 @@
 import RevealInit from "@/components/RevealInit";
 import Campus from "@/components/Campus";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
+import Sponsors from "@/components/Sponsors";
 import Chatbot from "@/components/Chatbot";
 import NotificationModal from "@/components/NotificationModal";
 import Hero from "@/sections/Hero";
@@ -38,7 +38,7 @@ export default function Home() {
         <Faq />
         <FinalCta />
       </main>
-      <Footer />
+      <Sponsors />
       <Chatbot />
       <NotificationModal />
       <RevealInit />

@@ -37,14 +37,14 @@ export default function RecruitInfo() {
             </div>
           </div>
 
-          {/* 모집 일정 */}
+          {/* 교육 기간 */}
           <div className="card p-8 hover:shadow-card-hover hover:-translate-y-1 flex flex-col justify-center">
-            <p className="text-sm font-bold text-ink-400">모집 일정</p>
-            <p className="mt-4 text-2xl font-extrabold text-ink-900 leading-snug tracking-tight whitespace-nowrap">
-              2026.04.27<span className="text-ink-300 mx-1">~</span>05.11
+            <p className="text-sm font-bold text-ink-400">교육 기간</p>
+            <p className="mt-4 text-2xl font-extrabold text-ink-900 leading-snug">
+              1년 과정
             </p>
             <span className="tag bg-coral-50 text-coral-500 mt-3 w-fit">
-              17시 서류 마감
+              전일제 몰입교육
             </span>
           </div>
 

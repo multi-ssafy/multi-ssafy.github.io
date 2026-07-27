@@ -13,6 +13,11 @@ const SPONSORS: { src: string; alt: string; className?: string }[] = [
     className: "h-9 sm:h-11",
   },
   {
+    src: "/assets/logo/partners/samsung.png",
+    alt: "삼성",
+    className: "h-8 sm:h-9",
+  },
+  {
     src: "/assets/logo/sponsors/children-future.webp",
     alt: "아이들과미래재단",
     className: "h-9 sm:h-11",
@@ -28,11 +33,7 @@ export default function Sponsors() {
   return (
     <section className="py-16 md:py-20 border-t border-ink-100 bg-white">
       <div className="max-w-content mx-auto px-5 sm:px-8 text-center">
-        <p className="text-lg font-bold tracking-wide">
-          함께하는 후원 기관
-        </p>
-
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16">
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16">
           {SPONSORS.map((s) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img

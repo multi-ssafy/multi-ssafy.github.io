@@ -20,13 +20,13 @@ export default function IntroVideo() {
       <div className="mx-auto max-w-content px-5 sm:px-8">
         {/* 뒤 희미한 SSAFY 워터마크 + 타이틀 (타이틀이 워터마크 하단과 맞닿게) */}
         <div className="reveal mx-auto max-w-4xl text-center">
-          <span
+          {/* <span
             aria-hidden="true"
             className="block select-none font-black leading-[0.7] tracking-tighter text-brand-600/[0.07] text-[24vw] md:text-[9rem]"
           >
             SSAFY
-          </span>
-          <h2 className="relative -mt-[0.25em] break-keep text-2xl leading-snug tracking-wide text-ink-900 sm:text-3xl md:text-4xl font-black">
+          </span> */}
+          <h2 className="relative mt-[1.0em] break-keep text-2xl leading-snug tracking-wide text-ink-900 sm:text-3xl md:text-4xl font-black">
             <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               AI
             </span>

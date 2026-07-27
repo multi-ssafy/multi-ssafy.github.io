@@ -10,17 +10,17 @@ const SPONSORS: { src: string; alt: string; className?: string }[] = [
   {
     src: "/assets/logo/sponsors/moel.png",
     alt: "고용노동부",
-    className: "h-14 sm:h-16",
+    className: "h-9 sm:h-11",
   },
   {
     src: "/assets/logo/sponsors/children-future.webp",
     alt: "아이들과미래재단",
-    className: "h-8 sm:h-9",
+    className: "h-9 sm:h-11",
   },
   {
     src: "/assets/logo/sponsors/ja-korea.png",
     alt: "JA Korea",
-    className: "h-10 sm:h-12",
+    className: "h-9 sm:h-11",
   },
 ];
 

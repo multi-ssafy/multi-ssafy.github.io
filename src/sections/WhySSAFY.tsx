@@ -82,7 +82,7 @@ export default function WhySSAFY() {
                 <span className="text-brand-600"> 지원</span>
               </h3>
               <p className="mt-3 text-sm text-ink-700 leading-relaxed">
-                교육에만 집중할 수 있도록 매월 교육지원금을 지급합니다.
+                교육에만 집중할 수 있도록 매월 지원금을 지급합니다.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-2 text-[11px] font-bold text-brand-600">
                 <span className="px-2.5 py-1 rounded-full bg-brand-50">

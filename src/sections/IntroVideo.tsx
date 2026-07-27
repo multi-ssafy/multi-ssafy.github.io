@@ -9,7 +9,7 @@ export default function IntroVideo() {
   return (
     <section
       id="intro"
-      className="scroll-mt-16 relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-brand-50/70 via-brand-50/20 to-white"
+      className="scroll-mt-16 relative overflow-hidden py-8 md:py-8 bg-gradient-to-b from-brand-50/70 via-brand-50/20 to-white"
     >
       {/* 배경 장식 (은은한 블롭 + 도트 패턴) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -22,11 +22,11 @@ export default function IntroVideo() {
         <div className="reveal mx-auto max-w-4xl text-center">
           <span
             aria-hidden="true"
-            className="block select-none font-black leading-[0.7] tracking-tighter text-brand-600/[0.07] text-[32vw] md:text-[17rem]"
+            className="block select-none font-black leading-[0.7] tracking-tighter text-brand-600/[0.07] text-[24vw] md:text-[9rem]"
           >
             SSAFY
           </span>
-          <h2 className="relative -mt-[0.25em] break-keep text-2xl leading-snug tracking-wide text-ink-900 sm:text-4xl md:text-5xl font-black">
+          <h2 className="relative -mt-[0.25em] break-keep text-2xl leading-snug tracking-wide text-ink-900 sm:text-3xl md:text-4xl font-black">
             <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               AI
             </span>
@@ -43,14 +43,14 @@ export default function IntroVideo() {
         </div>
 
         {/* 미미미누 영상 */}
-        <div className="reveal mx-auto mt-7 max-w-4xl sm:mt-9">
+        <div className="reveal mx-auto mt-5 max-w-2xl sm:mt-6">
           {/* 영상 안내 (메인 문구 · 링크 아님) */}
-          <div className="mb-7 text-center sm:mb-8">
-            <p className="text-xl font-black tracking-wide text-ink-900 sm:text-3xl">
+          <div className="mb-4 text-center sm:mb-5">
+            <p className="text-lg font-black tracking-wide text-ink-900 sm:text-2xl">
               미미미누와 함께한{" "}
               <span className="text-brand-600">SSAFY</span> 영상 보러가기
             </p>
-            <ChevronDown className="mx-auto mt-4 h-7 w-7 animate-bounce text-brand-600" />
+            <ChevronDown className="mx-auto mt-2 h-6 w-6 animate-bounce text-brand-600" />
           </div>
 
           <a

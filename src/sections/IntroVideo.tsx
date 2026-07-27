@@ -22,7 +22,7 @@ export default function IntroVideo() {
         <div className="reveal mx-auto max-w-4xl text-center">
           <span
             aria-hidden="true"
-            className="block select-none font-black leading-[0.75] tracking-tighter text-brand-600/[0.07] text-[24vw] md:text-[12rem]"
+            className="block select-none font-black leading-[0.7] tracking-tighter text-brand-600/[0.07] text-[32vw] md:text-[17rem]"
           >
             SSAFY
           </span>
@@ -43,7 +43,7 @@ export default function IntroVideo() {
         </div>
 
         {/* 미미미누 영상 */}
-        <div className="reveal mx-auto mt-14 max-w-4xl sm:mt-16">
+        <div className="reveal mx-auto mt-7 max-w-4xl sm:mt-9">
           {/* 영상 안내 (메인 문구 · 링크 아님) */}
           <div className="mb-7 text-center sm:mb-8">
             <p className="text-xl font-black tracking-wide text-ink-900 sm:text-3xl">

@@ -36,10 +36,10 @@ export default function IntroVideo() {
             </span>
             에서 배워야 하는 이유!
           </h2>
-          <p className="mt-6 text-base font-bold tracking-wide text-ink-600 sm:mt-7 sm:text-xl">
+          {/* <p className="mt-6 text-base font-bold tracking-wide text-ink-600 sm:mt-7 sm:text-xl">
             기업이 찾는 인재가 되고 싶다면?{" "}
             <span className="text-brand-600">SSAFY</span>
-          </p>
+          </p> */}
         </div>
 
         {/* 미미미누 영상 */}

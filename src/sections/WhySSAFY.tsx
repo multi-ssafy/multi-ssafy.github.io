@@ -1,4 +1,4 @@
-import { Users, Cpu, Handshake, Building2, MessageSquare, Code2, Rocket, ArrowRight } from "@/lib/icons";
+import { Users, Handshake, Building2, MessageSquare, Code2, Rocket } from "@/lib/icons";
 
 // WHY SSAFY — SSAFY는 무엇이 다른가? (01/02/03 카드)
 
@@ -56,29 +56,46 @@ export default function WhySSAFY() {
             </span>
             <div className="relative">
               <div className="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center shadow-soft">
-                <Cpu className="w-5 h-5" />
+                <svg
+                  className="w-5 h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="12" x="2" y="6" rx="2" />
+                  <circle cx="12" cy="12" r="2" />
+                  <path d="M6 12h.01M18 12h.01" />
+                </svg>
               </div>
               <h3 className="mt-5 text-lg font-bold text-ink-900 leading-snug">
-                삼성의 현업 경험을 담은
+                교육에만 집중하도록
                 <br />
-                체계적인 AI·SW 교육
+                <span className="text-brand-600">월 최대 </span>
+                <span className="text-2xl font-extrabold text-brand-600">
+                  160만원
+                </span>
+                <span className="text-brand-600"> 지원</span>
               </h3>
               <p className="mt-3 text-sm text-ink-700 leading-relaxed">
-                비전공자도 기초부터 실전까지 단계적으로 역량을 완성할 수 있도록 교육과정을 설계했습니다.
+                교육에만 집중할 수 있도록 매월 교육지원금을 지급합니다.
               </p>
-              <div className="mt-6 flex items-center gap-2 text-[11px] font-bold text-brand-600">
+              <div className="mt-6 flex flex-wrap items-center gap-2 text-[11px] font-bold text-brand-600">
                 <span className="px-2.5 py-1 rounded-full bg-brand-50">
-                  기초
+                  교육지원금 100만원
                 </span>
-                <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
+                <span className="text-ink-300">+</span>
                 <span className="px-2.5 py-1 rounded-full bg-brand-50">
-                  심화
-                </span>
-                <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
-                <span className="px-2.5 py-1 rounded-full bg-brand-50">
-                  실전
+                  KDT 훈련장려금 최대 60만원
                 </span>
               </div>
+              <p className="mt-2 text-[11px] font-semibold text-ink-400">
+                * 캠퍼스별 상이
+              </p>
             </div>
           </div>
 

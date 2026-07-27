@@ -16,7 +16,7 @@ export default function Curriculum() {
             AI 커리큘럼
           </h2>
           <p className="section-desc">
-            도구를 넘어 AI가 적용된 서비스를 구현하는 역량을 갖추도록 설계했어요
+            삼성의 현업 경험을 담아, 도구를 넘어 AI가 적용된 서비스를 구현하는 역량까지 설계했어요
           </p>
         </div>
 

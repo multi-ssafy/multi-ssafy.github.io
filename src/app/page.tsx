@@ -1,4 +1,5 @@
 import RevealInit from "@/components/RevealInit";
+import SectionNav from "@/components/SectionNav";
 import Campus from "@/components/Campus";
 import Faq from "@/components/Faq";
 import Sponsors from "@/components/Sponsors";
@@ -23,6 +24,7 @@ export default function Home() {
       <main id="top">
         <Hero />
         <RecruitInfo />
+        <SectionNav />
         <Target />
         <WhySSAFY />
         <Curriculum />

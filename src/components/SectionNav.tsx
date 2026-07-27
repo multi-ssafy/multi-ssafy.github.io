@@ -6,22 +6,27 @@ import { useEffect, useState } from "react";
 // 모집 핵심정보와 '나도 가능할까?' 사이에 배치되어, 그 지점부터 상단에 고정된다.
 // (position: sticky 이므로 그 윗부분에서는 나타나지 않음)
 
+// id = 클릭 시 이동할 대표 섹션, spy = 이 항목이 활성화되는 섹션들(끊김 없는 하이라이트)
 const NAV = [
-  { id: "why", label: "SSAFY 소개" },
-  { id: "curriculum", label: "AI 커리큘럼" },
-  { id: "project", label: "프로젝트" },
-  { id: "career", label: "취업지원" },
-  { id: "campus", label: "캠퍼스" },
-  { id: "apply", label: "모집안내" },
+  { id: "why", label: "SSAFY 소개", spy: ["target", "why"] },
+  { id: "curriculum", label: "AI 커리큘럼", spy: ["curriculum"] },
+  { id: "project", label: "프로젝트", spy: ["project"] },
+  { id: "career", label: "취업지원", spy: ["career", "story"] },
+  { id: "campus", label: "캠퍼스", spy: ["campus"] },
+  { id: "apply", label: "모집안내", spy: ["apply", "faq", "recruit-alert"] },
 ];
 
 export default function SectionNav() {
   const [active, setActive] = useState<string>("");
 
   useEffect(() => {
-    const sections = NAV.map((n) => document.getElementById(n.id)).filter(
-      (el): el is HTMLElement => !!el
-    );
+    // 관찰 섹션 id → 네비 항목 id 매핑
+    const sectionToNav = new Map<string, string>();
+    NAV.forEach((n) => n.spy.forEach((sid) => sectionToNav.set(sid, n.id)));
+
+    const sections = [...sectionToNav.keys()]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
     if (!sections.length) return;
 
     const observer = new IntersectionObserver(
@@ -32,7 +37,8 @@ export default function SectionNav() {
           visible.sort(
             (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
           );
-          setActive(visible[0].target.id);
+          const navId = sectionToNav.get(visible[0].target.id);
+          if (navId) setActive(navId);
         }
       },
       { rootMargin: "-25% 0px -65% 0px", threshold: 0 }

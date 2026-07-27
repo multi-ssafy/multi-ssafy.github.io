@@ -11,11 +11,11 @@ export default function RecruitInfo() {
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">
-            <Timer className="w-4 h-4" />
-            지원 전 30초 확인
+            <Timer className="w-6 h-6" />
+            {/* 지원 전 30초 확인 */}
           </p>
           <h2 className="section-title mt-3">모집 핵심정보</h2>
-          <p className="section-desc">지원에 필요한 핵심 내용을 먼저 확인하세요</p>
+          <p className="section-desc">지원에 필요한 핵심 내용을 빠르게 확인하세요</p>
         </div>
 
         <div className="mt-12 reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

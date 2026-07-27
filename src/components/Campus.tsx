@@ -31,7 +31,7 @@ const CAMPUSES: Campus[] = [
     image: "/assets/images/campus-seoul.jpg",
     imageAlt: "서울 캠퍼스 대표 사진",
     imagePosition: "center center",
-    videoId: "BSFhTq6AxPY",
+    videoId: "XIoPeobfuhE",
     address: "서울특별시 강남구 테헤란로 212",
   },
   {

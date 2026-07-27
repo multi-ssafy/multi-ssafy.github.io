@@ -7,6 +7,7 @@ import Chatbot from "@/components/Chatbot";
 import NotificationModal from "@/components/NotificationModal";
 import Hero from "@/sections/Hero";
 import RecruitInfo from "@/sections/RecruitInfo";
+import IntroVideo from "@/sections/IntroVideo";
 import Target from "@/sections/Target";
 import WhySSAFY from "@/sections/WhySSAFY";
 import Curriculum from "@/sections/Curriculum";
@@ -25,6 +26,7 @@ export default function Home() {
         <Hero />
         <RecruitInfo />
         <SectionNav />
+        <IntroVideo />
         <Target />
         <WhySSAFY />
         <Curriculum />

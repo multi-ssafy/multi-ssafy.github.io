@@ -14,7 +14,7 @@ export default function RecruitInfo() {
             <Timer className="w-4 h-4" />
             지원 전 30초 확인
           </p>
-          <h2 className="section-title mt-3">17기 모집 핵심정보</h2>
+          <h2 className="section-title mt-3">모집 핵심정보</h2>
           <p className="section-desc">지원에 필요한 핵심 내용을 먼저 확인하세요</p>
         </div>
 
@@ -44,7 +44,7 @@ export default function RecruitInfo() {
               1년 과정
             </p>
             <span className="tag bg-coral-50 text-coral-500 mt-3 w-fit">
-              전일제 몰입교육
+              9 to 6 몰입교육
             </span>
           </div>
 

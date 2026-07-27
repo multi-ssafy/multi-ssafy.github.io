@@ -28,7 +28,7 @@ export default function Sponsors() {
   return (
     <section className="py-16 md:py-20 border-t border-ink-100 bg-white">
       <div className="max-w-content mx-auto px-5 sm:px-8 text-center">
-        <p className="text-sm font-bold tracking-wide text-ink-400">
+        <p className="text-lg font-bold tracking-wide">
           함께하는 후원 기관
         </p>
 

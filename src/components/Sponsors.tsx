@@ -20,7 +20,7 @@ const SPONSORS: { src: string; alt: string; className?: string }[] = [
   {
     src: "/assets/logo/sponsors/ja-korea.png",
     alt: "JA Korea",
-    className: "h-12 sm:h-14",
+    className: "h-14 sm:h-16",
   },
 ];
 

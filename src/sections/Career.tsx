@@ -177,9 +177,9 @@ export default function Career() {
       </div>
 
         <div className="reveal text-center mt-14">
-          <p className="text-sm text-ink-500">
+          {/* <p className="text-sm text-ink-500">
             수료 이후에도 취업할 때까지 이어지는 상담·교육·채용 연계
-          </p>
+          </p> */}
           <a
             href="https://www.ssafy.com/ksp/servlet/swp.content.controller.SwpContentServlet"
             className="mt-3 inline-flex items-center gap-1.5 font-bold text-brand-600 hover:text-brand-700"

@@ -15,7 +15,7 @@ export default function RecruitInfo() {
             {/* 지원 전 30초 확인 */}
           </p>
           <h2 className="section-title mt-3">모집 핵심정보</h2>
-          <p className="section-desc">지원에 필요한 핵심 내용을 빠르게 확인하세요</p>
+          {/* <p className="section-desc">지원 전 한눈에 확인하세요</p> */}
         </div>
 
         <div className="mt-12 reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

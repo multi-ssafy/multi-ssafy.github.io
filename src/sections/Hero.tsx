@@ -16,13 +16,16 @@ export default function Hero() {
       </div>
 
       <div className="max-w-content mx-auto px-5 sm:px-8 py-16 text-center">
-        <h1 className="reveal in-view text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
-          차세대 SW·AI 인재
+        <h1 className="reveal in-view break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
+          <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
+            AI
+          </span>
+          로 연결되는 기회,
           <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
             SSAFY
           </span>
-          에서 시작됩니다
+          로 완성되는 미래
         </h1>
 
         {/* 핵심 지표 3종 (강조) */}

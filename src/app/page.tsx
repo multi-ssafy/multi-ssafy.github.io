@@ -8,6 +8,7 @@ import FloatingApplyBar from "@/components/FloatingApplyBar";
 import NotificationModal from "@/components/NotificationModal";
 import CompanyVoices from "@/components/CompanyVoices";
 import Hero from "@/sections/Hero";
+import IntroMessage from "@/sections/IntroMessage";
 import IntroVideo from "@/sections/IntroVideo";
 import Roadmap from "@/sections/Roadmap";
 import WhySSAFY from "@/sections/WhySSAFY";
@@ -25,6 +26,7 @@ export default function Home() {
     <>
       <main id="top">
         <Hero />
+        <IntroMessage />
         <SectionNav />
         <IntroVideo />
         <Roadmap />

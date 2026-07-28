@@ -68,7 +68,7 @@ export default function Project() {
     setActive((v) => (v + dir + STAGES.length) % STAGES.length);
 
   return (
-    <section id="project" className="scroll-mt-20 py-20 md:py-28">
+    <section id="project" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">PROJECT</p>

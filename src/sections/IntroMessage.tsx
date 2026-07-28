@@ -5,7 +5,7 @@ export default function IntroMessage() {
   return (
     <section
       id="intro-message"
-      className="relative overflow-hidden py-24 md:py-32 bg-gradient-to-b from-brand-50/50 to-white"
+      className="relative overflow-hidden py-24 md:py-32 bg-ink-50/60"
     >
       {/* 배경 장식 */}
       <div className="pointer-events-none absolute inset-0 -z-10">

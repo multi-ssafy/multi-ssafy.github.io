@@ -9,7 +9,7 @@ export default function IntroVideo() {
   return (
     <section
       id="intro"
-      className="scroll-mt-16 relative overflow-hidden py-8 md:py-8 bg-gradient-to-b from-brand-50/70 via-brand-50/20 to-white"
+      className="scroll-mt-16 relative overflow-hidden py-8 md:py-8 bg-white"
     >
       {/* 배경 장식 (은은한 블롭 + 도트 패턴) */}
       <div className="pointer-events-none absolute inset-0 -z-10">

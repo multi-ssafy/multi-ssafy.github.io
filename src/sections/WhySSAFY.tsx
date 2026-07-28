@@ -1,5 +1,5 @@
-// 교육 혜택 — 다크 배경 + 세로로 이어지는 pill(알약) 형태
-// (카드 그리드 대신 세로 흐름 디자인)
+// 교육 혜택 — 그레이 배경 + 세로로 이어지는 흰색 pill (왼쪽 체크 아이콘)
+// (다크+가운데 정렬 pill 대신, 밝은 배경 + 좌측 아이콘 리스트형)
 
 type Benefit = { text: React.ReactNode };
 
@@ -50,25 +50,12 @@ const BENEFITS: Benefit[] = [
 
 export default function WhySSAFY() {
   return (
-    <section
-      id="why"
-      className="scroll-mt-20 relative overflow-hidden py-20 md:py-28 bg-ink-900"
-    >
-      {/* 배경 장식 */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-[420px] w-[620px] rounded-full bg-brand-600/25 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.06)_1px,transparent_0)] [background-size:30px_30px]" />
-      </div>
-
-      <div className="relative max-w-content mx-auto px-5 sm:px-8">
+    <section id="why" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
+      <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <p className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wide uppercase text-brand-300">
-            BENEFIT
-          </p>
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-white leading-tight">
-            교육 혜택
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-ink-300 leading-relaxed">
+          <p className="eyebrow justify-center">BENEFIT</p>
+          <h2 className="section-title mt-3">교육 혜택</h2>
+          <p className="section-desc">
             배움부터 취업까지, SSAFY가 확실하게 지원합니다
           </p>
         </div>
@@ -77,9 +64,23 @@ export default function WhySSAFY() {
           {BENEFITS.map((b, i) => (
             <div
               key={i}
-              className="reveal rounded-full bg-white px-6 py-4 sm:py-5 text-center shadow-xl shadow-black/20 transition-transform duration-300 hover:-translate-y-0.5"
+              className="reveal flex items-center gap-4 rounded-full bg-white px-5 sm:px-6 py-3.5 sm:py-4 shadow-card ring-1 ring-ink-100 transition-transform duration-300 hover:-translate-y-0.5"
               style={i > 0 ? { animationDelay: `${i * 0.06}s` } : undefined}
             >
+              <span className="shrink-0 flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-white">
+                <svg
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </span>
               <p className="text-base sm:text-lg font-bold text-ink-900 leading-snug break-keep">
                 {b.text}
               </p>

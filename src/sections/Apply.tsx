@@ -13,7 +13,7 @@ const SELECT_STEPS = ["지원서 접수", "SW 적성진단", "인터뷰", "교�
 
 export default function Apply() {
   return (
-    <section id="apply" className="scroll-mt-20 py-20 md:py-28 bg-cream-50">
+    <section id="apply" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <h2 className="section-title mt-3">지원자격 및 선발 프로세스</h2>

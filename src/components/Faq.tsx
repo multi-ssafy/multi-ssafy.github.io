@@ -7,7 +7,7 @@ export default function Faq() {
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">MORE INFORMATION</p>
           <h2 className="section-title mt-3">설명회 다시보기</h2>
-          <p className="section-desc">놓친 온라인 설명회를 영상으로 다시 확인해보세요</p>
+          <p className="section-desc">싸피에 대해서 더 알고싶다면? 영상으로 확인해보세요</p>
         </div>
 
         {/* 설명회 영상 */}

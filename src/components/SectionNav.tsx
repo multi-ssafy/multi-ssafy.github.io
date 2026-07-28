@@ -51,7 +51,7 @@ export default function SectionNav() {
 
   return (
     <nav className="sticky top-0 z-40 border-y border-ink-100 bg-white/90 backdrop-blur-md">
-      <div className="max-w-content mx-auto px-2 sm:px-8 flex items-center gap-2">
+      <div className="max-w-content mx-auto px-2 sm:px-8 relative flex items-center gap-2">
         <ul className="flex-1 min-w-0 flex items-center justify-start sm:justify-center gap-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {NAV.map((n) => {
             const isActive = active === n.id;
@@ -82,7 +82,7 @@ export default function SectionNav() {
           href={APPLY_URL}
           target="_blank"
           rel="noopener"
-          className="btn-glow shrink-0 inline-flex items-center gap-1 rounded-lg bg-brand-600 px-4 sm:px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-700"
+          className="btn-glow shrink-0 sm:absolute sm:right-8 sm:top-1/2 sm:-translate-y-1/2 inline-flex items-center gap-1 rounded-lg bg-brand-600 px-4 sm:px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-700"
         >
           지원하기
           <ArrowUpRight className="w-3.5 h-3.5" />

@@ -82,7 +82,7 @@ export default function SectionNav() {
           href={APPLY_URL}
           target="_blank"
           rel="noopener"
-          className="btn-glow shrink-0 inline-flex items-center gap-1 rounded-full bg-brand-600 px-4 sm:px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-700"
+          className="btn-glow shrink-0 inline-flex items-center gap-1 rounded-lg bg-brand-600 px-4 sm:px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-700"
         >
           지원하기
           <ArrowUpRight className="w-3.5 h-3.5" />

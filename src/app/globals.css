@@ -375,21 +375,15 @@
 
 /* 네비바 지원하기 버튼 테두리 발광 펄스(번쩍번쩍) */
 .btn-glow {
-  animation: btn-glow 1.5s ease-in-out infinite;
+  animation: btn-glow 1.6s ease-in-out infinite;
 }
 @keyframes btn-glow {
   0%,
   100% {
-    box-shadow:
-      0 0 0 1px rgba(255, 255, 255, 0.45) inset,
-      0 0 0 2px rgba(33, 69, 240, 0.5),
-      0 0 8px 1px rgba(33, 69, 240, 0.4);
+    box-shadow: 0 0 4px 0 rgba(33, 69, 240, 0.35);
   }
   50% {
-    box-shadow:
-      0 0 0 1px rgba(255, 255, 255, 0.85) inset,
-      0 0 0 3px rgba(33, 69, 240, 0.95),
-      0 0 24px 6px rgba(96, 130, 255, 0.9);
+    box-shadow: 0 0 13px 1px rgba(33, 69, 240, 0.7);
   }
 }
 @media (prefers-reduced-motion: reduce) {

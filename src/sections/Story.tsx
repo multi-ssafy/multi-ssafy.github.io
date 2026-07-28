@@ -1,93 +1,51 @@
-// CAREER STORY — 나와 비슷한 출발점의 취업사례 (4개 카드)
+import { ArrowUpRight } from "@/lib/icons";
+
+// CAREER STORY — 나의 전공으로 탑티어가 되는 지름길
+// 다양한 전공에서 AI 직무로 진출한 케이스 (예시 — 실제 인터뷰 사례로 교체 예정)
+// '후기 바로가기'는 임시로 ssafy.com 으로 연결
+
+const REVIEW_URL = "https://www.ssafy.com";
 
 type Story = {
   photo: string;
   photoAlt: string;
-  badge: string;
-  badgeClass: string;
-  campus: string;
-  title: React.ReactNode;
-  logo: string;
-  logoAlt: string;
-  logoWrapClass: string;
-  role: string;
+  major: string; // 전공
+  role: string; // AI 직무
+  story: string; // 한 줄 스토리
   delay?: string;
 };
 
 const STORIES: Story[] = [
   {
-    photo: "/assets/photos/story-gwangju.jpg",
-    photoAlt: "광주캠퍼스 12기 수료생",
-    badge: "전공자",
-    badgeClass: "tag bg-brand-50 text-brand-600",
-    campus: "광주캠퍼스 12기 수료",
-    title: (
-      <>
-        생성형 AI 활용에서
-        <br />
-        서비스 성능 개선까지
-      </>
-    ),
-    logo: "/assets/logo/companies/kb-data-system.png",
-    logoAlt: "KB데이타시스템",
-    logoWrapClass: "h-4 flex items-center",
-    role: "신기술사업부 재직",
+    photo: "/assets/photos/story-seoul.jpg",
+    photoAlt: "AI 비즈니스 기획자 수료생",
+    major: "경영학",
+    role: "AI 비즈니스 기획자",
+    story: "비전공에서 출발해 AI로 신사업을 설계하는 기획자로 성장했어요.",
+    delay: undefined,
   },
   {
-    photo: "/assets/photos/story-seoul.jpg",
-    photoAlt: "서울캠퍼스 12기 수료생",
-    badge: "비전공자",
-    badgeClass: "tag bg-coral-50 text-coral-500",
-    campus: "서울캠퍼스 12기 수료",
-    title: (
-      <>
-        영어교육·언어학에
-        <br />
-        AI 문제 해결 능력을 더하다
-      </>
-    ),
-    logo: "/assets/logo/companies/iportfolio.png",
-    logoAlt: "아이포트폴리오",
-    logoWrapClass: "h-4 flex items-center",
-    role: "AI Product Manager 재직",
+    photo: "/assets/photos/story-gwangju.jpg",
+    photoAlt: "데이터 분석가 수료생",
+    major: "통계학",
+    role: "데이터 분석가",
+    story: "전공 지식에 AI 역량을 더해 데이터로 의사결정을 이끕니다.",
     delay: ".06s",
   },
   {
     photo: "/assets/photos/story-gumi.jpg",
-    photoAlt: "구미캠퍼스 14기 수료생",
-    badge: "전공자",
-    badgeClass: "tag bg-brand-50 text-brand-600",
-    campus: "구미캠퍼스 14기",
-    title: (
-      <>
-        SSAFY 1학기 과정 수강 후
-        <br />
-        바로 금융권 최종 합격
-      </>
-    ),
-    logo: "/assets/logo/companies/kdb.jpg",
-    logoAlt: "한국산업은행",
-    logoWrapClass: "h-6 flex items-center",
-    role: "한국산업은행 IT 네트워크 관리 재직",
+    photoAlt: "HR 인사 전략 기획자 수료생",
+    major: "심리학",
+    role: "HR 인사 전략 기획자",
+    story: "사람에 대한 이해에 데이터·AI를 접목한 인사 전략가로 일해요.",
     delay: ".12s",
   },
   {
     photo: "/assets/photos/story-buulgyeong.jpg",
-    photoAlt: "부울경캠퍼스 8기 수료생",
-    badge: "비전공자",
-    badgeClass: "tag bg-coral-50 text-coral-500",
-    campus: "부울경캠퍼스 8기",
-    title: (
-      <>
-        SSAFY로 시작된
-        <br />
-        SW 커리어 여정
-      </>
-    ),
-    logo: "/assets/logo/companies/ourbank.png",
-    logoAlt: "우리은행",
-    logoWrapClass: "h-4 flex items-center",
-    role: "우리은행 기업인터넷뱅킹 개발부 재직",
+    photoAlt: "IT·AI 기술 세일즈 수료생",
+    major: "국제통상학",
+    role: "IT·AI 기술 세일즈",
+    story: "기술을 이해하고 시장을 연결하는 AI 기술 세일즈로 진출했어요.",
     delay: ".18s",
   },
 ];
@@ -98,20 +56,22 @@ export default function Story() {
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">STORY</p>
-          <h2 className="section-title mt-3">나와 비슷한 출발점의 취업사례</h2>
+          <h2 className="section-title mt-3">
+            나의 전공으로 탑티어가 되는 지름길
+          </h2>
           <p className="section-desc">
-            다양한 SW·AI 직무로 진출한 선배 기수들의 후기를 참고해보세요
+            전공과 경험, 지역이 달라도 각자의 출발점에서 성장할 수 있어요
           </p>
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 gap-6">
           {STORIES.map((s) => (
             <div
-              key={s.campus}
+              key={s.role}
               className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex"
               style={s.delay ? { animationDelay: s.delay } : undefined}
             >
-              <div className="w-[38%] sm:w-[42%] shrink-0">
+              <div className="w-[36%] sm:w-[40%] shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={s.photo}
@@ -120,36 +80,36 @@ export default function Story() {
                 />
               </div>
               <div className="flex-1 p-5 sm:p-7 flex flex-col justify-center min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className={s.badgeClass}>{s.badge}</span>
-                  <span className="text-sm font-bold text-ink-700">
-                    {s.campus}
-                  </span>
+                <div className="flex items-center gap-1.5 text-sm font-bold">
+                  <span className="tag bg-ink-100 text-ink-600">{s.major}</span>
+                  <span className="text-ink-300">→</span>
+                  <span className="text-brand-600">{s.role}</span>
                 </div>
-                <p className="mt-3 text-lg sm:text-xl font-extrabold text-ink-900 leading-snug">
-                  {s.title}
+                <p className="mt-3 text-base sm:text-lg font-extrabold text-ink-900 leading-snug">
+                  {s.story}
                 </p>
-                <div className="mt-7 flex items-center gap-3">
-                  <div className={s.logoWrapClass}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={s.logo}
-                      alt={s.logoAlt}
-                      className="h-full w-auto shrink-0"
-                    />
-                  </div>
-                  <p className="text-sm font-semibold text-ink-700 leading-snug">
-                    {s.role}
-                  </p>
-                </div>
+                <a
+                  href={REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-5 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 w-fit"
+                >
+                  후기 바로가기
+                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
               </div>
             </div>
           ))}
         </div>
 
         <div className="reveal text-center mt-10">
-          <a href="#" className="btn-outline">
-            더 많은 취업사례 보기
+          <a
+            href={REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            더 많은 취업 후기 보기
           </a>
         </div>
       </div>

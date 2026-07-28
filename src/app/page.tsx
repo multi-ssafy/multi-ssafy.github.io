@@ -6,8 +6,10 @@ import Sponsors from "@/components/Sponsors";
 import Chatbot from "@/components/Chatbot";
 import FloatingApplyBar from "@/components/FloatingApplyBar";
 import NotificationModal from "@/components/NotificationModal";
+import CompanyVoices from "@/components/CompanyVoices";
 import Hero from "@/sections/Hero";
 import IntroVideo from "@/sections/IntroVideo";
+import Roadmap from "@/sections/Roadmap";
 import WhySSAFY from "@/sections/WhySSAFY";
 import Curriculum from "@/sections/Curriculum";
 import Project from "@/sections/Project";
@@ -25,12 +27,14 @@ export default function Home() {
         <Hero />
         <SectionNav />
         <IntroVideo />
+        <Roadmap />
         <WhySSAFY />
         <Curriculum />
         <Project />
         <QuoteBanner />
         <Career />
         <Story />
+        <CompanyVoices />
         <CtaBanner />
         <Campus />
         <Apply />

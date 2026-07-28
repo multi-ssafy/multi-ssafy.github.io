@@ -1,5 +1,4 @@
 import {
-  CalendarDays,
   MonitorSmartphone,
   ClipboardCheck,
   ListChecks,
@@ -26,8 +25,8 @@ export default function Apply() {
           </p>
         </div>
 
-        {/* 4개 박스 */}
-        <div className="reveal mt-14 grid sm:grid-cols-2 gap-5">
+        {/* 카드 (세로 배치) */}
+        <div className="reveal mt-14 max-w-2xl mx-auto grid gap-5">
           {/* 1. 지원 자격 */}
           <div className="card p-6 sm:p-7">
             <div className="flex items-center gap-2.5">
@@ -57,23 +56,7 @@ export default function Apply() {
             </ul>
           </div>
 
-          {/* 2. 모집 기간 */}
-          <div className="card p-6 sm:p-7">
-            <div className="flex items-center gap-2.5">
-              <div className="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
-                <CalendarDays className="w-5 h-5" />
-              </div>
-              <h3 className="text-lg font-extrabold text-ink-900">모집 기간</h3>
-            </div>
-            <p className="mt-4 text-xl font-extrabold text-ink-900 leading-snug">
-              2026.04.27 ~ 05.11
-            </p>
-            <span className="tag bg-coral-50 text-coral-500 mt-3 w-fit">
-              17시 서류 마감
-            </span>
-          </div>
-
-          {/* 3. 지원 방법 */}
+          {/* 2. 지원 방법 */}
           <div className="card p-6 sm:p-7">
             <div className="flex items-center gap-2.5">
               <div className="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
@@ -94,12 +77,9 @@ export default function Apply() {
               ) 접속 후 지원서 작성
             </p>
             <p className="mt-1.5 text-sm text-ink-400">모바일로 간편 지원 가능</p>
-            <span className="tag bg-brand-50 text-brand-600 mt-3 w-fit">
-              3분이면 지원 끝
-            </span>
           </div>
 
-          {/* 4. 선발 프로세스 */}
+          {/* 3. 선발 프로세스 */}
           <div className="card p-6 sm:p-7">
             <div className="flex items-center gap-2.5">
               <div className="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">

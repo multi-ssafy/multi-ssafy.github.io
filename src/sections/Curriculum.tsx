@@ -6,7 +6,7 @@ export default function Curriculum() {
   return (
     <section
       id="curriculum"
-      className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60"
+      className="scroll-mt-20 py-20 md:py-28"
     >
       <div className="max-w-content mx-auto px-5 sm:px-8">
         {/* 섹션 제목 */}

@@ -29,16 +29,16 @@ export default function Home() {
         <IntroMessage />
         <SectionNav />
         <IntroVideo />
-        <Roadmap />
         <WhySSAFY />
+        <Roadmap />
         <Curriculum />
+        <Campus />
         <Project />
         <QuoteBanner />
         <Career />
         <Story />
         <CompanyVoices />
         <CtaBanner />
-        <Campus />
         <Apply />
         <Faq />
         <FinalCta />

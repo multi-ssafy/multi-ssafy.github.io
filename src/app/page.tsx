@@ -4,6 +4,7 @@ import Campus from "@/components/Campus";
 import Faq from "@/components/Faq";
 import Sponsors from "@/components/Sponsors";
 import Chatbot from "@/components/Chatbot";
+import FloatingApplyBar from "@/components/FloatingApplyBar";
 import NotificationModal from "@/components/NotificationModal";
 import Hero from "@/sections/Hero";
 import RecruitInfo from "@/sections/RecruitInfo";
@@ -42,6 +43,7 @@ export default function Home() {
       </main>
       <Sponsors />
       <Chatbot />
+      <FloatingApplyBar />
       <NotificationModal />
       <RevealInit />
     </>

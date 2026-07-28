@@ -391,3 +391,13 @@
     animation: none;
   }
 }
+
+/* 하단 지원 바가 보일 때, 모바일에서 챗봇 버블을 바 위로 올림 */
+#chatbot {
+  transition: bottom 0.4s ease;
+}
+@media (max-width: 639.98px) {
+  body.apply-bar-visible #chatbot {
+    bottom: 5.75rem;
+  }
+}

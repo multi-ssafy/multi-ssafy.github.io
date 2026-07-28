@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { APPLY_URL } from "@/data/site";
+import { ArrowUpRight } from "@/lib/icons";
 
 // 섹션 바로가기 네비게이션 (스크롤 스파이)
 // 모집 핵심정보와 '나도 가능할까?' 사이에 배치되어, 그 지점부터 상단에 고정된다.
@@ -49,8 +51,8 @@ export default function SectionNav() {
 
   return (
     <nav className="sticky top-0 z-40 border-y border-ink-100 bg-white/90 backdrop-blur-md">
-      <div className="max-w-content mx-auto px-2 sm:px-8">
-        <ul className="flex items-center justify-start sm:justify-center gap-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div className="max-w-content mx-auto px-2 sm:px-8 flex items-center gap-2">
+        <ul className="flex-1 min-w-0 flex items-center justify-start sm:justify-center gap-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {NAV.map((n) => {
             const isActive = active === n.id;
             return (
@@ -74,6 +76,17 @@ export default function SectionNav() {
             );
           })}
         </ul>
+
+        {/* 지원하기 버튼 (반짝임) */}
+        <a
+          href={APPLY_URL}
+          target="_blank"
+          rel="noopener"
+          className="btn-shine shrink-0 inline-flex items-center gap-1 rounded-full bg-brand-600 px-4 sm:px-5 py-2 text-sm font-bold text-white shadow-soft shadow-brand-600/20 transition-all hover:bg-brand-700 hover:-translate-y-0.5 active:translate-y-0"
+        >
+          지원하기
+          <ArrowUpRight className="w-3.5 h-3.5" />
+        </a>
       </div>
     </nav>
   );

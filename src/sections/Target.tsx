@@ -87,7 +87,7 @@ export default function Target() {
           </h2>
 
           <p className="section-desc">
-            전공과 경험, 지역이 달라도 각자의 출발점에서 성장할 수
+            어떤 스토리를 갖고 있더라도 각자의 출발점에서 함께 성장할 수
             있어요
           </p>
         </div>

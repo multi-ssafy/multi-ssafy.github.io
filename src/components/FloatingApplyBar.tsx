@@ -12,7 +12,7 @@ export default function FloatingApplyBar() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const el = document.getElementById("recruit-info");
+    const el = document.getElementById("hero");
     if (!el) return;
     const io = new IntersectionObserver(
       ([entry]) =>

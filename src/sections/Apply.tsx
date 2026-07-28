@@ -19,7 +19,10 @@ export default function Apply() {
         <div className="text-center max-w-2xl mx-auto reveal">
           <h2 className="section-title mt-3">지원자격 및 선발 프로세스</h2>
           <p className="section-desc">
-            지원 전, 핵심 요건과 선발 과정을 한눈에 확인하세요
+            <span className="font-bold text-brand-600">
+              3분이면 끝나는 온라인 간편 지원
+            </span>
+            , 지금 바로 시작하세요
           </p>
         </div>
 
@@ -91,6 +94,9 @@ export default function Apply() {
               ) 접속 후 지원서 작성
             </p>
             <p className="mt-1.5 text-sm text-ink-400">PC·모바일 모두 지원 가능</p>
+            <span className="tag bg-brand-50 text-brand-600 mt-3 w-fit">
+              ⏱ 3분이면 지원 끝
+            </span>
           </div>
 
           {/* 4. 선발 프로세스 */}
@@ -119,7 +125,13 @@ export default function Apply() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-ink-400">
+            <p className="mt-3 text-sm text-ink-600 leading-relaxed">
+              인터뷰는 <span className="font-bold text-ink-900">자유 발표</span>로
+              진행되며, 여러분의{" "}
+              <span className="font-bold text-ink-900">가능성을 발견</span>하는
+              시간입니다.
+            </p>
+            <p className="mt-2 text-xs text-ink-400">
               * 세부 일정은 단계별 합격자에게 개별 안내됩니다.
             </p>
           </div>

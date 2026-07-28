@@ -7,7 +7,7 @@ export default function Hero() {
   const marqueeLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center">
+    <section id="hero" className="relative overflow-hidden min-h-screen flex items-center">
       {/* 배경 장식 (그라디언트 블롭) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-brand-100 rounded-full blur-3xl opacity-70" />
@@ -38,10 +38,11 @@ export default function Hero() {
           <span className="hidden sm:block w-px h-12 bg-ink-200" />
           <div className="text-center">
             <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
-              5<span className="text-2xl sm:text-3xl align-top ml-0.5">개</span>
+              1,700
+              <span className="text-2xl sm:text-3xl align-top ml-0.5">시간</span>
             </p>
             <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
-              전국 캠퍼스
+              AI 교육 시간
             </p>
           </div>
           <span className="hidden sm:block w-px h-12 bg-ink-200" />

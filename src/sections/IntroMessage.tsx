@@ -26,7 +26,7 @@ export default function IntroMessage() {
         <p className="reveal mt-7 break-keep text-base leading-relaxed text-ink-500 sm:text-xl">
           <span className="font-bold text-ink-800">삼성이 만든 SSAFY</span>가{" "}
           <span className="font-bold text-ink-800">전문 AI 교육</span>과{" "}
-          <span className="font-bold text-brand-600">월 100만원</span>의 든든한
+          <span className="font-bold text-brand-600">월 최대 160만원</span>의 든든한
           지원금으로 함께합니다.
         </p>
 
@@ -63,7 +63,7 @@ export default function IntroMessage() {
               <circle cx="12" cy="12" r="2" />
               <path d="M6 12h.01M18 12h.01" />
             </svg>
-            월 100만원 지원금
+            월 최대 160만원 지원금
           </span>
         </div>
       </div>

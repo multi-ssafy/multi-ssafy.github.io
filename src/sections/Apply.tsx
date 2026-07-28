@@ -93,9 +93,9 @@ export default function Apply() {
               </a>
               ) 접속 후 지원서 작성
             </p>
-            <p className="mt-1.5 text-sm text-ink-400">PC·모바일 모두 지원 가능</p>
+            <p className="mt-1.5 text-sm text-ink-400">모바일로 간편 지원 가능</p>
             <span className="tag bg-brand-50 text-brand-600 mt-3 w-fit">
-              ⏱ 3분이면 지원 끝
+              3분이면 지원 끝
             </span>
           </div>
 
@@ -125,13 +125,7 @@ export default function Apply() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-sm text-ink-600 leading-relaxed">
-              인터뷰는 <span className="font-bold text-ink-900">자유 발표</span>로
-              진행되며, 여러분의{" "}
-              <span className="font-bold text-ink-900">가능성을 발견</span>하는
-              시간입니다.
-            </p>
-            <p className="mt-2 text-xs text-ink-400">
+            <p className="mt-3 text-xs text-ink-400">
               * 세부 일정은 단계별 합격자에게 개별 안내됩니다.
             </p>
           </div>

@@ -15,6 +15,8 @@ const VOICES: Voice[] = [
     role: "인사담당자",
     quote:
       "경력직 이상의 퍼포먼스와 우수한 적응력, 협업에서 인정받는 인재는 단연 SSAFY 출신입니다.",
+    logo: "/assets/logo/companies/nongsim.png",
+    delay: ".08s",
   },
   {
     company: "우리은행",

@@ -130,7 +130,7 @@ export default function Project() {
                 <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-ink-900">
                   {stage.title}
                 </h3>
-                <p className="mt-4 text-sm sm:text-base text-ink-500 leading-relaxed">
+                <p className="mt-4 text-sm sm:text-base leading-relaxed">
                   {stage.desc}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">

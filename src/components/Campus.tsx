@@ -253,7 +253,7 @@ export default function Campus() {
                   type="button"
                   aria-pressed={isActive}
                   onClick={() => onSelect(c.key)}
-                  className={`rounded-full px-5 sm:px-6 py-2.5 text-sm font-bold transition-colors ${
+                  className={`rounded-full px-5 sm:px-6 py-2.5 text-lg font-bold transition-colors ${
                     isActive
                       ? "bg-brand-600 text-white shadow-soft"
                       : "text-ink-600 hover:bg-ink-50"

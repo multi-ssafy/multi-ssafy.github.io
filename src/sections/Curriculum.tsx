@@ -16,15 +16,15 @@ export default function Curriculum() {
           <p className="section-desc">
             1년의 밀도 있는 몰입 과정을 통해
             <br />
-            AI를 이해하고 AI 서비스를 완성해요
+            AI를 이해하고 서비스를 완성해요
           </p>
         </div>
 
         {/* AI 역량 로드맵 */}
         <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
-          <p className="text-center text-lg font-bold text-brand-600 mb-6">
+          {/* <p className="text-center text-lg font-bold text-brand-600 mb-6">
             AI 역량 성장 로드맵
-          </p>
+          </p> */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/images/ai-roadmap.png"

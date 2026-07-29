@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   MonitorSmartphone,
   ClipboardCheck,
@@ -8,9 +11,11 @@ import { APPLY_URL } from "@/data/site";
 
 // APPLICATION GUIDE — 지원자격 및 선발 프로세스 (4개 박스로 압축)
 
-const SELECT_STEPS = ["지원서 접수", "SW 적성진단", "인터뷰", "교육 시작"];
+const SELECT_STEPS = ["지원서 접수", "SSAFY 적성진단", "인터뷰", "교육 시작"];
 
 export default function Apply() {
+  const [showAptitudeModal, setShowAptitudeModal] = useState(false);
+
   return (
     <section id="apply" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
       <div className="max-w-content mx-auto px-5 sm:px-8">
@@ -103,13 +108,62 @@ export default function Apply() {
                 </div>
               ))}
             </div>
+
+            {/* 적성진단 예시문제 확인 버튼 */}
+            <button
+              type="button"
+              onClick={() => setShowAptitudeModal(true)}
+              className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 underline underline-offset-2"
+            >
+              SSAFY 적성진단 테스트 예시문제
+              {/* <ChevronRight className="w-3.5 h-3.5" /> */}
+            </button>
+
             <p className="mt-3 text-medium">
               * 세부 일정은 단계별 합격자에게 개별 안내됩니다.
             </p>
           </div>
         </div>
-
       </div>
+
+      {/* 적성진단 예시문제 모달 */}
+      {showAptitudeModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60"
+          onClick={() => setShowAptitudeModal(false)}
+        >
+          <div
+            className="relative max-w-2xl w-full max-h-[85vh] overflow-auto rounded-2xl bg-white p-4 sm:p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowAptitudeModal(false)}
+              aria-label="닫기"
+              className="absolute top-3 right-3 w-9 h-9 rounded-full bg-ink-50 flex items-center justify-center hover:bg-ink-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5 text-ink-700"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            <img
+              src="/assets/images/test.png"
+              alt="적성진단 테스트 예시문제"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

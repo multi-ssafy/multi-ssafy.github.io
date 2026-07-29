@@ -15,14 +15,14 @@ export default function IntroMessage() {
 
       <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
         <h2 className="reveal break-keep text-2xl font-black tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem]">
-          <span className="block mb-5">저마다의 전공과 배경은 달라도</span>
-          <span className="block mt-2">
+          <span className="block mb-5">전공과 배경은 달라도</span>
+          <span className="block mb-5">
             <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               AI 시대가 원하는 인재
             </span>
             로
           </span>
-          <span className="block mt-2">새롭게 시작하세요</span>
+          <span className="block mt-2">성장합니다</span>
         </h2>
         {/* 홍보 영상 (삽입 예정) */}
         <div className="reveal mt-14 max-w-2xl mx-auto">
@@ -47,8 +47,8 @@ export default function IntroMessage() {
 
         
         <p className="reveal mt-28 break-keep text-base leading-relaxed sm:whitespace-nowrap sm:text-xl">
-          <span className="font-bold text-ink-800">삼성이 만든 SSAFY</span>가{" "}
-          <span className="font-bold text-ink-800">전문 AI 교육</span>과{" "}
+          <span className="font-bold text-ink-800">SSAFY</span>는{" "}
+          <span className="font-bold text-ink-800">삼성이 만든 전문 AI 교육</span>과{" "}
           <span className="font-bold text-brand-600">
             월 최대 <span className="text-xl sm:text-4xl">160만원</span>
           </span>

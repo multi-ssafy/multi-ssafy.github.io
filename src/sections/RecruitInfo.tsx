@@ -1,6 +1,6 @@
 import { Timer, ChevronRight } from "@/lib/icons";
 
-const PROCESS = ["지원서 접수", "SW 적성진단", "인터뷰", "입과"];
+const PROCESS = ["지원서 접수", "SAFFY 적성진단", "인터뷰", "입과"];
 
 export default function RecruitInfo() {
   return (

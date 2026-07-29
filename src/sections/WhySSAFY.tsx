@@ -21,12 +21,12 @@ const BENEFITS: Benefit[] = [
     badge: "bg-sky-100 text-sky-700",
   },
   {
-    emoji: "🖨️",
+    emoji: "🗃️",
     title: (
       <>
-        전국 캠퍼스
+        100만원 상당
         <br />
-        3D 프린터·스캐너 제공
+        교보재 제공
       </>
     ),
     badge: "bg-emerald-100 text-emerald-700",

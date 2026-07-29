@@ -6,25 +6,23 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-        삼성이 기획한 AI 교육 커리큘럼으로{" "}
-        <span className="text-brand-600">현업 실무 수준의 AI 역량</span>을
-        학습합니다.
+         삼성의 AI 인증 체계 기반 교육 커리큘럼으로{" "}
+        <span className="text-brand-600">현업 수준의 AI 인재</span>로 성장합니다.
       </>
     ),
   },
   {
     text: (
       <>
-        16기까지 쌓아온 노하우,{" "}
-        <span className="text-brand-600">매년 2,000여 명</span>의 교육생이
-        SSAFY를 증명합니다.
+        16기 동안 쌓은 교육 노하우,{" "}
+        <span className="text-brand-600">85% {" "}</span>취업률로 증명합니다.
       </>
     ),
   },
   {
     text: (
       <>
-        전담 취업 컨설턴트가 취업 전 과정을{" "}
+        취업 전 과정을 전담 컨설턴트가{" "}
         <span className="text-brand-600">1:1 취업과외</span>로 지원합니다.
       </>
     ),

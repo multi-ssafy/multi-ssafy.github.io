@@ -20,24 +20,6 @@ export default function Curriculum() {
           </p>
         </div>
 
-        {/* AI 역량 로드맵 */}
-        <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
-          {/* <p className="text-center text-lg font-bold text-brand-600 mb-6">
-            AI 역량 성장 로드맵
-          </p> */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/assets/images/ai-roadmap.png"
-            alt="AI 역량 성장 로드맵: 입과 전 AI 이해부터 2학기 AI 서비스 설계 능력까지 5단계"
-            className="w-full max-w-xl mx-auto h-auto"
-          />
-        </div>
-
-        {/* 로드맵 → 3단계 커리큘럼 연결 문구 */}
-        <p className="reveal mt-24 mb-24 text-center text-lg font-semibold">
-          이 성장 과정은 아래 3단계 커리큘럼으로 진행돼요
-        </p>
-
         {/* 3단계 커리큘럼 */}
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {/* STEP 1 */}
@@ -220,6 +202,19 @@ export default function Curriculum() {
           </div>
         </div>
       </div>
+      
+        {/* AI 역량 로드맵 */}
+        <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
+          {/* <p className="text-center text-lg font-bold text-brand-600 mb-6">
+            AI 역량 성장 로드맵
+          </p> */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/images/ai-roadmap.png"
+            alt="AI 역량 성장 로드맵: 입과 전 AI 이해부터 2학기 AI 서비스 설계 능력까지 5단계"
+            className="w-full max-w-xl mx-auto h-auto"
+          />
+        </div>
     </section>
   );
 }

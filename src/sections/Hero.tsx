@@ -16,8 +16,8 @@ export default function Hero() {
         {/* 아카데미명 — 크게, 양옆 구분선으로 분리 */}
         <div className="reveal in-view flex items-center justify-center gap-4 sm:gap-5 mb-5">
           <span className="w-8 sm:w-12 bg-ink-300" />
-            <p className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider">
-              삼성청년SW·AI아카데미
+            <p className="text-3xl font-bold text-brand-600 tracking-wider">
+              AI로 연결되는 기회, SSAFY로 완성되는 미래
             </p>
           <span className="w-8 sm:w-12 bg-ink-300" />
         </div>
@@ -25,7 +25,7 @@ export default function Hero() {
         {/* 메인 헤드라인 — 얇은 테두리 박스, 장식 없음 */}
         <div className="reveal in-view border border-ink-200 rounded-[1.75rem] px-6 py-8 sm:px-12 sm:py-10">
           <h1 className="break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
-            <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
+            {/* <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               AI
             </span>
             로 연결되는 기회
@@ -33,7 +33,8 @@ export default function Hero() {
             <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               SSAFY
             </span>
-            로 완성되는 미래
+            로 완성되는 미래 */}
+          삼성청년SW·AI아카데미
           </h1>
         </div>
 

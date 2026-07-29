@@ -103,7 +103,7 @@ export default function Story() {
                   {s.role}
                 </h3>
                 <p className="mt-1.5 text-sm font-bold ">
-                  {s.name} · {s.major}
+                  {s.major}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed break-keep">
                   {s.story}

@@ -24,28 +24,35 @@ export default function IntroMessage() {
           </span>
           <span className="block mt-2">새롭게 시작하세요</span>
         </h2>
-        {/* SSAFY 가디언즈 */}
-        <div className="reveal mt-14">
-          <div className="grid grid-cols-2 items-end justify-items-center gap-x-8 gap-y-6 sm:gap-x-12 sm:gap-y-8 max-w-lg mx-auto">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/images/guardians/statty.png" alt="스타티" className="w-full max-w-[12rem] h-auto" />
-            <img src="/assets/images/guardians/alg.png" alt="알지" className="w-full max-w-[12rem] h-auto" />
-            <img src="/assets/images/guardians/fit.png" alt="핏" className="w-full max-w-[12rem] h-auto" />
-            <img src="/assets/images/guardians/wise.png" alt="와이즈" className="w-full max-w-[12rem] h-auto" />
+        {/* 홍보 영상 (삽입 예정) */}
+        <div className="reveal mt-14 max-w-2xl mx-auto">
+          <div className="relative flex aspect-video w-full items-center justify-center rounded-3xl bg-ink-900">
+            <div className="flex flex-col items-center gap-3 text-white/70">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/10">
+                <svg
+                  className="ml-1 h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+              <span className="text-base font-bold sm:text-lg">
+                홍보 영상 삽입 예정
+              </span>
+            </div>
           </div>
-          {/* <p className="mt-6 text-center text-base sm:text-lg font-bold text-ink-700 break-keep leading-relaxed">
-            도전하고, 고민하고, 함께 성장하는
-            <br />
-            여러분의 순간을 닮은 SSAFY 가디언즈
-          </p> */}
         </div>
 
         
         <p className="reveal mt-28 break-keep text-base leading-relaxed sm:text-xl">
           <span className="font-bold text-ink-800">삼성이 만든 SSAFY</span>가{" "}
           <span className="font-bold text-ink-800">전문 AI 교육</span>과{" "}
-          <span className="font-bold text-brand-600">월 최대 160만원</span>의 든든한
-          지원금으로 함께합니다.
+          <span className="font-bold text-brand-600">
+            월 최대 <span className="text-xl sm:text-2xl">160만원</span>
+          </span>
+          의 든든한 지원금으로 함께합니다.
         </p>
 
       </div>

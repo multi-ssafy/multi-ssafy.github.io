@@ -5,6 +5,7 @@ type Voice = {
   company: string;
   role: string;
   quote: string;
+  logo?: string;
   delay?: string;
 };
 
@@ -20,33 +21,35 @@ const VOICES: Voice[] = [
     role: "채용담당자",
     quote:
       "프로젝트 경험 기반의 압도적인 기술 이해도와 협업 역량을 갖춘, 빠르게 성장하는 인재입니다.",
+    logo: "/assets/logo/companies/ourbank.png",
     delay: ".08s",
   },
   {
-    company: "아이",
+    company: "아이포트폴리오",
     role: "채용담당자",
     quote:
       "채용 박람회에서 지원자들의 주도적인 태도와 긍정적인 에너지를 보며, 함께 일하고 싶은 인재라고 생각했고, 계획에 없던 채용 포지션을 오픈하여 영입했습니다.",
+    logo: "/assets/logo/companies/iportfolio.png",
     delay: ".16s",
   },
 ];
 
-function Avatar() {
+function LogoBadge({ company, logo }: { company: string; logo?: string }) {
+  if (!logo) {
+    return (
+      <div className="shrink-0 w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-sm font-black shadow-soft">
+        {company.slice(0, 2)}
+      </div>
+    );
+  }
   return (
-    <div className="shrink-0 w-12 h-12 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-soft">
-      <svg
-        className="w-6 h-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-      </svg>
+    <div className="shrink-0 w-14 h-14 rounded-2xl bg-white ring-1 ring-ink-100 p-2 flex items-center justify-center shadow-soft">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={logo}
+        alt={`${company} 로고`}
+        className="max-w-full max-h-full object-contain"
+      />
     </div>
   );
 }
@@ -77,7 +80,7 @@ export default function CompanyVoices() {
               }`}
               style={v.delay ? { animationDelay: v.delay } : undefined}
             >
-              <Avatar />
+              <LogoBadge company={v.company} logo={v.logo} />
               <div
                 className={`card p-6 sm:p-7 flex-1 ${
                   i % 2 === 1 ? "md:rounded-tr-none" : "md:rounded-tl-none"

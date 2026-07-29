@@ -22,7 +22,7 @@ export default function Hero() {
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
             AI
           </span>
-          로 연결되는 기회,
+          로 연결되는 기회
           <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
             SSAFY

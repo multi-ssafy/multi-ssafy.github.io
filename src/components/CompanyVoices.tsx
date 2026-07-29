@@ -60,13 +60,12 @@ export default function CompanyVoices() {
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">COMPANY VOICE</p>
-          <h2 className="section-title mt-3">
-            기업이 먼저 알아본 SSAFY!
-            <br />
-            <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-              현업의 목소리
-            </span>
-          </h2>
+            <h2 className="section-title mt-3">
+              기업이 먼저 알아본 SSAFY!
+              <span className="block mt-2 bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
+                현업의 목소리
+              </span>
+            </h2>
         </div>
 
         <div className="mt-14 max-w-3xl mx-auto flex flex-col gap-6">

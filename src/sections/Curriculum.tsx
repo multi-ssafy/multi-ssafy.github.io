@@ -184,36 +184,38 @@ export default function Curriculum() {
         </div>
 
         {/* AI 학습 지원 환경 — STEP과 구분되는 별도 카테고리임을 명시 */}
-        <div className="reveal mt-16 card p-6 sm:p-7">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-            <div className="lg:w-1/3">
-              <span className="tag bg-brand-50 text-brand-600">SUPPORT</span>
-              <h3 className="mt-3 text-xl font-extrabold text-ink-900">
-                오직 실습에만 집중할 수 있는
-                <br />
-                AI 학습 환경 제공
-              </h3>
-            </div>
+        <div className="reveal mt-16 card p-6 sm:p-8">
+          <div className="text-center sm:text-left">
+            <span className="tag bg-brand-50 text-brand-600">SUPPORT</span>
+            <h3 className="mt-3 text-xl sm:text-2xl font-extrabold text-ink-900">
+              오직 실습에만 집중할 수 있는 AI 학습 환경 제공
+            </h3>
+          </div>
 
-            <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-medium font-extrabold">AI 전문가</p>
-                <p className="mt-1 text-sm">강사진·멘토링 체계 구축</p>
-              </div>
-              <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-medium font-extrabold">AI 포털</p>
-                <p className="mt-1 text-sm">강의·학습 콘텐츠 라이브러리 제공</p>
-              </div>
-              <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-medium font-extrabold">학습 데이터</p>
-                <p className="mt-1 text-sm">SSAFY 데이터셋 통합 관리 및 제공</p>
-              </div>
-              <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-medium font-extrabold">
-                  GPU 인프라
-                </p>
-                <p className="mt-1 text-sm">AI 프로젝트 지원</p>
-              </div>
+          <div className="mt-7 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="rounded-2xl bg-ink-50 px-5 py-5">
+              <p className="text-base font-extrabold text-ink-900">AI 전문가</p>
+              <p className="mt-1.5 text-sm leading-relaxed break-keep">
+                강사진·멘토링 체계 구축
+              </p>
+            </div>
+            <div className="rounded-2xl bg-ink-50 px-5 py-5">
+              <p className="text-base font-extrabold text-ink-900">AI 포털</p>
+              <p className="mt-1.5 text-sm leading-relaxed break-keep">
+                강의·학습 콘텐츠 라이브러리 제공
+              </p>
+            </div>
+            <div className="rounded-2xl bg-ink-50 px-5 py-5">
+              <p className="text-base font-extrabold text-ink-900">학습 데이터</p>
+              <p className="mt-1.5 text-sm leading-relaxed break-keep">
+                SSAFY 데이터셋 통합 관리 및 제공
+              </p>
+            </div>
+            <div className="rounded-2xl bg-ink-50 px-5 py-5">
+              <p className="text-base font-extrabold text-ink-900">GPU 인프라</p>
+              <p className="mt-1.5 text-sm leading-relaxed break-keep">
+                AI 프로젝트 지원
+              </p>
             </div>
           </div>
         </div>

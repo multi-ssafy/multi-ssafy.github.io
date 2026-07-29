@@ -1,50 +1,49 @@
-// 교육 혜택 — 그레이 배경 + 세로로 이어지는 흰색 pill (왼쪽 체크 아이콘)
-// (다크+가운데 정렬 pill 대신, 밝은 배경 + 좌측 아이콘 리스트형)
+// 교육 혜택 — 혜택 카드 그리드 (레퍼런스 스타일: 혜택 배지 + 이모지 + 문구)
+// 이미 다른 파트에서 언급된 혜택(교육지원금, 취업률85%·취업컨설팅)은 제외
 
-type Benefit = { text: React.ReactNode };
+type Benefit = {
+  emoji: string;
+  title: React.ReactNode;
+  note?: string;
+  badge: string;
+};
 
 const BENEFITS: Benefit[] = [
   {
-    text: (
-      <>
-        <span className="text-brand-600">전액 무료</span>로 배우는 AI·SW 교육
-      </>
-    ),
+    emoji: "🖥️",
+    title: "고사양 NVIDIA GPU 서버 보유",
+    badge: "bg-sky-100 text-sky-700",
   },
   {
-    text: (
-      <>
-        <span className="text-brand-600">삼성 표준 AI 인증체계</span> 기반의 체계적 커리큘럼
-      </>
-    ),
+    emoji: "🖨️",
+    title: "전국 캠퍼스 3D 프린터·스캐너 제공",
+    badge: "bg-emerald-100 text-emerald-700",
   },
   {
-    text: (
-      <>
-        조건 없이 매월 <span className="text-brand-600">최대 160만원</span> 교육지원금 지급
-      </>
-    ),
+    emoji: "⚡",
+    title: "1인 1GPU 제공",
+    note: "* 5060급",
+    badge: "bg-amber-100 text-amber-700",
   },
   {
-    text: (
-      <>
-        학습에 필요한 <span className="text-brand-600">OO만원 상당</span> 교보재 제공
-      </>
-    ),
+    emoji: "🎤",
+    title: "국내 최고 대학 AI 교수의 라이브강의",
+    badge: "bg-violet-100 text-violet-700",
   },
   {
-    text: (
-      <>
-        <span className="text-brand-600">1:1 취업과외</span>부터 맞춤형 취업지원 서비스까지
-      </>
-    ),
+    emoji: "📊",
+    title: "삼성 SW 역량 테스트 응시 기회 제공",
+    badge: "bg-brand-100 text-brand-700",
   },
   {
-    text: (
-      <>
-        삼성·네이버·카카오·금융권까지, <span className="text-brand-600">무차별 취업 등용문</span>
-      </>
-    ),
+    emoji: "🏆",
+    title: "삼성·5대은행 등 기업 연계 프로젝트",
+    badge: "bg-coral-100 text-coral-600",
+  },
+  {
+    emoji: "📚",
+    title: "실무형 프로젝트 포트폴리오",
+    badge: "bg-rose-100 text-rose-700",
   },
 ];
 
@@ -60,30 +59,25 @@ export default function WhySSAFY() {
           </p>
         </div>
 
-        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto flex flex-col gap-3.5 sm:gap-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {BENEFITS.map((b, i) => (
             <div
               key={i}
-              className="reveal flex items-center gap-4 rounded-full bg-white px-5 sm:px-6 py-3.5 sm:py-4 shadow-card ring-1 ring-ink-100 transition-transform duration-300 hover:-translate-y-0.5"
-              style={i > 0 ? { animationDelay: `${i * 0.06}s` } : undefined}
+              className="reveal card p-6 flex flex-col items-center text-center hover:shadow-card-hover hover:-translate-y-1"
+              style={i > 0 ? { animationDelay: `${i * 0.05}s` } : undefined}
             >
-              <span className="shrink-0 flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-white">
-                <svg
-                  className="h-5 w-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-              </span>
-              <p className="text-base sm:text-lg font-bold text-ink-900 leading-snug break-keep">
-                {b.text}
+              <span className={`tag ${b.badge}`}>혜택 {i + 1}</span>
+              <div className="mt-4 text-4xl sm:text-5xl" aria-hidden="true">
+                {b.emoji}
+              </div>
+              <p className="mt-3 text-base sm:text-lg font-bold text-ink-900 leading-snug break-keep">
+                {b.title}
               </p>
+              {b.note && (
+                <p className="mt-1 text-xs font-semibold text-ink-400">
+                  {b.note}
+                </p>
+              )}
             </div>
           ))}
         </div>

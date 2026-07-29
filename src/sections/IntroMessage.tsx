@@ -28,10 +28,10 @@ export default function IntroMessage() {
         <div className="reveal mt-14">
           <div className="flex flex-wrap items-end justify-center gap-6 sm:gap-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/images/guardians/statty.png" alt="스타티" className="w-20 sm:w-28 h-auto" />
-            <img src="/assets/images/guardians/alg.png" alt="알지" className="w-20 sm:w-28 h-auto" />
-            <img src="/assets/images/guardians/fit.png" alt="핏" className="w-20 sm:w-28 h-auto" />
-            <img src="/assets/images/guardians/wise.png" alt="와이즈" className="w-20 sm:w-28 h-auto" />
+            <img src="/assets/images/guardians/statty.png" alt="스타티" className="w-40 sm:w-48 h-auto" />
+            <img src="/assets/images/guardians/alg.png" alt="알지" className="w-40 sm:w-48 h-auto" />
+            <img src="/assets/images/guardians/fit.png" alt="핏" className="w-40 sm:w-48 h-auto" />
+            <img src="/assets/images/guardians/wise.png" alt="와이즈" className="w-40 sm:w-48 h-auto" />
           </div>
           {/* <p className="mt-6 text-center text-base sm:text-lg font-bold text-ink-700 break-keep leading-relaxed">
             도전하고, 고민하고, 함께 성장하는

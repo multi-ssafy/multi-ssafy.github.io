@@ -401,3 +401,12 @@
     bottom: 5.75rem;
   }
 }
+
+/* 챗봇 닫힌 패널이 페이지 우측 클릭(예: 프로젝트 화살표)을 가로채지 않도록 */
+#chatbot {
+  pointer-events: none;
+}
+#chatbot > button,
+#chatbot-panel:not(.is-closed) {
+  pointer-events: auto;
+}

@@ -96,7 +96,7 @@ export default function CompanyVoices() {
                     {v.role}
                   </span>
                 </div>
-                <blockquote className="mt-3 text-base sm:text-lg font-bold text-ink-800 leading-[1.75] text-pretty break-keep">
+                <blockquote className="mt-3 text-base sm:text-lg font-bold text-ink-800 leading-[2] text-pretty break-keep">
                   “{v.quote}”
                 </blockquote>
               </div>

@@ -14,7 +14,7 @@ export default function IntroMessage() {
       </div>
 
       <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
-        <h2 className="reveal break-keep text-2xl font-black leading-[1.5] tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem]">
+        <h2 className="reveal break-keep text-2xl font-black leading-[1.7] tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem]">
           저마다의 전공과 배경은 달라도
           <br />
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">

@@ -197,22 +197,22 @@ export default function Curriculum() {
 
             <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-sm font-extrabold text-ink-900">AI 전문가</p>
-                <p className="mt-1 text-xs text-ink-500">강의·멘토링</p>
+                <p className="text-medium font-extrabold">AI 전문가</p>
+                <p className="mt-1 text-sm">강사진·멘토링 체계 구축</p>
               </div>
               <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-sm font-extrabold text-ink-900">AI 포털</p>
-                <p className="mt-1 text-xs text-ink-500">강의·학습 콘텐츠</p>
+                <p className="text-medium font-extrabold">AI 포털</p>
+                <p className="mt-1 text-sm">강의·학습 콘텐츠 라이브러리 제공</p>
               </div>
               <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-sm font-extrabold text-ink-900">학습 데이터</p>
-                <p className="mt-1 text-xs text-ink-500">데이터 통합 관리</p>
+                <p className="text-medium font-extrabold">학습 데이터</p>
+                <p className="mt-1 text-sm">SSAFY 데이터셋 통합 관리 및 제공</p>
               </div>
               <div className="rounded-2xl bg-ink-50 px-4 py-4">
-                <p className="text-sm font-extrabold text-ink-900">
+                <p className="text-medium font-extrabold">
                   GPU 인프라
                 </p>
-                <p className="mt-1 text-xs text-ink-500">AI 프로젝트 지원</p>
+                <p className="mt-1 text-sm">AI 프로젝트 지원</p>
               </div>
             </div>
           </div>

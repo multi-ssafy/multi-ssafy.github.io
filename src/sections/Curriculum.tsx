@@ -1,14 +1,5 @@
 // AI·SW CURRICULUM — AI 역량 로드맵 + 3단계 커리큘럼 + AI 학습 지원 환경
 
-// 입과 전 → 1학기 → 2학기로 이어지는 AI 역량 성장 로드맵 (아래=기초, 위=고급)
-const LEVELS = [
-  { label: "AI 서비스 설계 능력", phase: "", w: "58%", bar: "bg-brand-700", text: "text-white" },
-  { label: "AI 서비스 구축 능력", phase: "2학기", w: "69%", bar: "bg-brand-600", text: "text-white" },
-  { label: "AI 서비스 활용 능력", phase: "", w: "80%", bar: "bg-brand-500", text: "text-white" },
-  { label: "AI 모델 실습", phase: "1학기", w: "91%", bar: "bg-brand-300", text: "text-ink-900" },
-  { label: "AI 이해", phase: "입과 전", w: "100%", bar: "bg-brand-100", text: "text-ink-800" },
-];
-
 export default function Curriculum() {
   return (
     <section
@@ -29,29 +20,17 @@ export default function Curriculum() {
           </p>
         </div>
 
-        {/* AI 역량 로드맵 */}
+        {/* AI 역량 로드맵 (레퍼런스 이미지) */}
         <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
           <p className="text-center text-sm font-bold text-brand-600 mb-6">
             AI 역량 성장 로드맵
           </p>
-          <div className="flex flex-col items-center gap-2.5">
-            {LEVELS.map((lv) => (
-              <div key={lv.label} className="w-full flex items-center gap-3">
-                <span className="w-14 shrink-0 text-right text-[11px] font-bold text-ink-400">
-                  {lv.phase}
-                </span>
-                <div className="flex-1 flex justify-center">
-                  <div
-                    className={`rounded-xl py-3 text-center text-sm sm:text-base font-bold shadow-soft ${lv.bar} ${lv.text}`}
-                    style={{ width: lv.w }}
-                  >
-                    {lv.label}
-                  </div>
-                </div>
-                <span className="w-14 shrink-0" aria-hidden="true" />
-              </div>
-            ))}
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/images/ai-roadmap.png"
+            alt="AI 역량 성장 로드맵: 입과 전 AI 이해부터 2학기 AI 서비스 설계 능력까지 5단계"
+            className="w-full max-w-xl mx-auto h-auto"
+          />
         </div>
 
         {/* 3단계 커리큘럼 */}

@@ -85,11 +85,11 @@ export default function Apply() {
               </div>
               <h3 className="text-lg font-extrabold text-ink-900">선발 프로세스</h3>
             </div>
-            <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-xs font-bold text-ink-600">
+            <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2.5 text-sm sm:text-base font-bold text-ink-700">
               {SELECT_STEPS.map((step, i) => (
-                <div key={step} className="flex items-center gap-x-1.5">
+                <div key={step} className="flex items-center gap-x-2">
                   <span
-                    className={`px-2.5 py-1.5 rounded-full ${
+                    className={`px-3.5 py-2 rounded-full ${
                       i === SELECT_STEPS.length - 1
                         ? "bg-brand-600 text-white"
                         : "bg-ink-50"
@@ -98,7 +98,7 @@ export default function Apply() {
                     {step}
                   </span>
                   {i < SELECT_STEPS.length - 1 && (
-                    <ChevronRight className="w-3 h-3 text-ink-300 shrink-0" />
+                    <ChevronRight className="w-4 h-4 text-ink-300 shrink-0" />
                   )}
                 </div>
               ))}

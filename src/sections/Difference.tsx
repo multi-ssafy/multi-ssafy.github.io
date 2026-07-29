@@ -33,7 +33,7 @@ const ITEMS: Item[] = [
 
 export default function Difference() {
   return (
-    <section id="difference" className="scroll-mt-20 py-20 md:py-28">
+    <section id="difference" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">WHY SSAFY</p>

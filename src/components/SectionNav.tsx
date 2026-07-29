@@ -57,7 +57,7 @@ export default function SectionNav() {
               <li key={n.id} className="shrink-0">
                 <a
                   href={`#${n.id}`}
-                  className={`relative flex items-center px-3 sm:px-5 py-4 text-sm font-bold whitespace-nowrap transition-colors ${
+                  className={`relative flex items-center px-3 sm:px-5 py-4 text-[15px] sm:text-base font-bold whitespace-nowrap transition-colors ${
                     isActive
                       ? "text-brand-600"
                       : "text-ink-500 hover:text-ink-900"

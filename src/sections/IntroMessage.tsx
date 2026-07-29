@@ -50,7 +50,7 @@ export default function IntroMessage() {
           <span className="font-bold text-ink-800">삼성이 만든 SSAFY</span>가{" "}
           <span className="font-bold text-ink-800">전문 AI 교육</span>과{" "}
           <span className="font-bold text-brand-600">
-            월 최대 <span className="text-xl sm:text-2xl">160만원</span>
+            월 최대 <span className="text-xl sm:text-4xl">160만원</span>
           </span>
           의 든든한 지원금으로 함께합니다.
         </p>

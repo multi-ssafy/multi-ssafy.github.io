@@ -20,7 +20,6 @@ export default function Apply() {
             <span className="font-bold text-brand-600">
               3분이면 끝나는 온라인 간편 지원
             </span>
-            , 지금 바로 시작하세요
           </p>
         </div>
 
@@ -34,7 +33,7 @@ export default function Apply() {
               </div>
               <h3 className="text-lg font-extrabold text-ink-900">지원 자격</h3>
             </div>
-            <ul className="mt-4 space-y-2 text-sm text-ink-600 leading-relaxed">
+            <ul className="mt-4 space-y-2 text-medium leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
                 만 29세 이하 미취업자
@@ -47,7 +46,7 @@ export default function Apply() {
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
                 <span>
                   전공 무관{" "}
-                  <span className="text-ink-400">
+                  <span>
                     (병역필 또는 면제자)
                   </span>
                 </span>
@@ -63,7 +62,7 @@ export default function Apply() {
               </div>
               <h3 className="text-lg font-extrabold text-ink-900">지원 방법</h3>
             </div>
-            <p className="mt-4 text-sm text-ink-600 leading-relaxed">
+            <p className="mt-4 text-medium leading-relaxed">
               홈페이지(
               <a
                 href={APPLY_URL}
@@ -75,7 +74,7 @@ export default function Apply() {
               </a>
               ) 접속 후 지원서 작성
             </p>
-            <p className="mt-1.5 text-sm text-ink-400">모바일로 간편 지원 가능</p>
+            <p className="mt-1.5 text-medium">* 모바일로 간편 지원 가능</p>
           </div>
 
           {/* 3. 선발 프로세스 */}
@@ -104,7 +103,7 @@ export default function Apply() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-ink-400">
+            <p className="mt-3 text-medium">
               * 세부 일정은 단계별 합격자에게 개별 안내됩니다.
             </p>
           </div>

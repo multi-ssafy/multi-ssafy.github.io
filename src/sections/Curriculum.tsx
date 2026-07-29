@@ -16,13 +16,13 @@ export default function Curriculum() {
           <p className="section-desc">
             1년의 밀도 있는 몰입 과정을 통해
             <br />
-            AI를 이해하고 AI 서비스를 완성하는 사람이 됩니다.
+            AI를 이해하고 AI 서비스를 완성해요
           </p>
         </div>
 
-        {/* AI 역량 로드맵 (레퍼런스 이미지) */}
+        {/* AI 역량 로드맵 */}
         <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
-          <p className="text-center text-sm font-bold text-brand-600 mb-6">
+          <p className="text-center text-lg font-bold text-brand-600 mb-6">
             AI 역량 성장 로드맵
           </p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -33,8 +33,13 @@ export default function Curriculum() {
           />
         </div>
 
+        {/* 로드맵 → 3단계 커리큘럼 연결 문구 */}
+        <p className="reveal mt-24 mb-24 text-center text-lg font-semibold">
+          이 성장 과정은 아래 3단계 커리큘럼으로 진행돼요
+        </p>
+
         {/* 3단계 커리큘럼 */}
-        <div className="mt-16 grid md:grid-cols-3 gap-5">
+        <div className="mt-6 grid md:grid-cols-3 gap-5">
           {/* STEP 1 */}
           <div className="reveal relative">
             <div className="card p-7 h-full hover:shadow-card-hover hover:-translate-y-1">
@@ -61,15 +66,20 @@ export default function Curriculum() {
               <h3 className="mt-5 text-xl font-extrabold text-ink-900">
                 AI 인사이트 기르기
               </h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-                다양한 체험과 미니 프로젝트를 통해 AI의 원리와 활용 가능성을
-                발견합니다.
+              <p className="mt-2 text-sm font-bold text-brand-600">
+                체험으로 시작하는 AI 맛보기
               </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed">
+                <li>· AI와 SW세계에 대해 배우는 첫 단계</li>
+                <li>· AI 트렌드, 노하우 습득</li>
+                <li>· 미니프로젝트로 체험해보는 AI</li>
+              </ul>
               <div className="mt-5 flex flex-wrap gap-2">
-                <span className="tag bg-ink-50 text-ink-600">AI 기본 이해</span>
-                <span className="tag bg-ink-50 text-ink-600">디자인 사고</span>
+                <span className="tag bg-ink-50 text-ink-600">AI 거버넌스</span>
+                <span className="tag bg-ink-50 text-ink-600">AI 디자인 사고</span>
+                <span className="tag bg-ink-50 text-ink-600">AI 아이디어톤</span>
                 <span className="tag bg-ink-50 text-ink-600">
-                  AI 아이디에이션
+                  AI 스마트 팩토리 로봇 퀘스트
                 </span>
               </div>
             </div>
@@ -106,17 +116,22 @@ export default function Curriculum() {
                 </svg>
               </div>
               <h3 className="mt-5 text-xl font-extrabold text-ink-900">
-                AI 핵심 이론과 모델 실습
+                AI 핵심 이론 + 알고리즘
               </h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-                AI·머신러닝의 기본 개념부터 생성형 AI와 주요 모델 활용법까지
-                체계적으로 학습합니다.
+              <p className="mt-2 text-sm font-bold text-brand-600">
+                기본 개념 학습부터 시작하는 AI 첫걸음
               </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed">
+                <li>· AI / 머신러닝 기본 원리 이해</li>
+                <li>· 생성형 AI와 프롬프트 이해</li>
+                <li>· 다양한 AI 모델 이해</li>
+              </ul>
               <div className="mt-5 flex flex-wrap gap-2">
-                <span className="tag bg-ink-50 text-ink-600">AI·머신러닝</span>
-                <span className="tag bg-ink-50 text-ink-600">생성형 AI</span>
+                <span className="tag bg-ink-50 text-ink-600">AI 기초</span>
                 <span className="tag bg-ink-50 text-ink-600">프롬프트</span>
+                <span className="tag bg-ink-50 text-ink-600">LangChain</span>
                 <span className="tag bg-ink-50 text-ink-600">RAG</span>
+                <span className="tag bg-ink-50 text-ink-600">머신러닝</span>
                 <span className="tag bg-ink-50 text-ink-600">알고리즘</span>
               </div>
             </div>
@@ -147,12 +162,16 @@ export default function Curriculum() {
                 </svg>
               </div>
               <h3 className="mt-5 text-xl font-extrabold text-ink-900">
-                프로젝트로 증명하는 AI 역량
+                프로젝트로 증명하는 AI 실전 경험
               </h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-                다양한 AI 기술을 프로젝트에 적용해 실제로 작동하는 AI 서비스를
-                완성합니다.
+              <p className="mt-2 text-sm font-bold text-brand-600">
+                AI 프로젝트로 완성하는 실무형 포트폴리오
               </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed">
+                <li>· 다양한 AI를 활용한 프로젝트 경험</li>
+                <li>· AI 모델 성능 개선 실습</li>
+                <li>· AI 서비스 배포와 운영</li>
+              </ul>
               <div className="mt-5 flex flex-wrap gap-2">
                 <span className="tag bg-ink-50 text-ink-600">컴퓨터 비전</span>
                 <span className="tag bg-ink-50 text-ink-600">LLM</span>
@@ -164,17 +183,16 @@ export default function Curriculum() {
           </div>
         </div>
 
-        {/* AI 학습 지원 환경 */}
-        <div className="reveal mt-8 card p-6 sm:p-7">
+        {/* AI 학습 지원 환경 — STEP과 구분되는 별도 카테고리임을 명시 */}
+        <div className="reveal mt-16 card p-6 sm:p-7">
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/3">
-              <h3 className="mt-2 text-xl font-extrabold text-ink-900">
-                오직 실습에만 집중할 수 있는 
-                <br />AI 학습 환경 제공
+              <span className="tag bg-brand-50 text-brand-600">SUPPORT</span>
+              <h3 className="mt-3 text-xl font-extrabold text-ink-900">
+                오직 실습에만 집중할 수 있는
+                <br />
+                AI 학습 환경 제공
               </h3>
-              {/* <p className="mt-2 text-sm text-ink-500 leading-relaxed">
-                학습부터 프로젝트 구현까지
-              </p> */}
             </div>
 
             <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">

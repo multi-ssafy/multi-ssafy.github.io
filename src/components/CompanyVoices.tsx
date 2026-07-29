@@ -23,7 +23,7 @@ const VOICES: Voice[] = [
     delay: ".08s",
   },
   {
-    company: "아이포트폴리오",
+    company: "아이",
     role: "채용담당자",
     quote:
       "채용 박람회에서 지원자들의 주도적인 태도와 긍정적인 에너지를 보며, 함께 일하고 싶은 인재라고 생각했고, 계획에 없던 채용 포지션을 오픈하여 영입했습니다.",
@@ -91,7 +91,7 @@ export default function CompanyVoices() {
                   <span className="tag bg-brand-600 text-white">
                     {v.company}
                   </span>
-                  <span className="text-sm font-bold text-ink-500">
+                  <span className="text-sm font-bold">
                     {v.role}
                   </span>
                 </div>

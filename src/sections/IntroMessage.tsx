@@ -15,7 +15,7 @@ export default function IntroMessage() {
 
       <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
         <h2 className="reveal break-keep text-2xl font-black tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem]">
-          <span className="block">저마다의 전공과 배경은 달라도</span>
+          <span className="block mb-5">저마다의 전공과 배경은 달라도</span>
           <span className="block mt-2">
             <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               AI 시대가 원하는 인재
@@ -24,50 +24,30 @@ export default function IntroMessage() {
           </span>
           <span className="block mt-2">새롭게 시작하세요</span>
         </h2>
+        {/* SSAFY 가디언즈 */}
+        <div className="reveal mt-14">
+          <div className="flex flex-wrap items-end justify-center gap-6 sm:gap-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/images/guardians/statty.png" alt="스타티" className="w-20 sm:w-28 h-auto" />
+            <img src="/assets/images/guardians/alg.png" alt="알지" className="w-20 sm:w-28 h-auto" />
+            <img src="/assets/images/guardians/fit.png" alt="핏" className="w-20 sm:w-28 h-auto" />
+            <img src="/assets/images/guardians/wise.png" alt="와이즈" className="w-20 sm:w-28 h-auto" />
+          </div>
+          {/* <p className="mt-6 text-center text-base sm:text-lg font-bold text-ink-700 break-keep leading-relaxed">
+            도전하고, 고민하고, 함께 성장하는
+            <br />
+            여러분의 순간을 닮은 SSAFY 가디언즈
+          </p> */}
+        </div>
 
-        <p className="reveal mt-7 break-keep text-base leading-relaxed text-ink-500 sm:text-xl">
+        
+        <p className="reveal mt-28 break-keep text-base leading-relaxed sm:text-xl">
           <span className="font-bold text-ink-800">삼성이 만든 SSAFY</span>가{" "}
           <span className="font-bold text-ink-800">전문 AI 교육</span>과{" "}
           <span className="font-bold text-brand-600">월 최대 160만원</span>의 든든한
           지원금으로 함께합니다.
         </p>
 
-        {/* 포인트 칩 */}
-        <div className="reveal mt-9 flex flex-wrap items-center justify-center gap-3">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-bold text-ink-800 shadow-soft ring-1 ring-ink-100">
-            <svg
-              className="h-4 w-4 text-brand-600"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-              <path d="M6 12v5c3 3 9 3 12 0v-5" />
-            </svg>
-            전문 AI 교육
-          </span>
-          <span className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-4 py-2.5 text-sm font-bold text-white shadow-soft">
-            <svg
-              className="h-4 w-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <rect width="20" height="12" x="2" y="6" rx="2" />
-              <circle cx="12" cy="12" r="2" />
-              <path d="M6 12h.01M18 12h.01" />
-            </svg>
-            월 최대 160만원 지원금
-          </span>
-        </div>
       </div>
     </section>
   );

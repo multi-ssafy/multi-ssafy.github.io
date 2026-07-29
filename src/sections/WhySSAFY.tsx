@@ -11,12 +11,24 @@ type Benefit = {
 const BENEFITS: Benefit[] = [
   {
     emoji: "🖥️",
-    title: "고사양 NVIDIA GPU 서버 보유",
+    title: (
+      <>
+        고사양 NVIDIA
+        <br />
+        GPU 서버 보유
+      </>
+    ),
     badge: "bg-sky-100 text-sky-700",
   },
   {
     emoji: "🖨️",
-    title: "전국 캠퍼스 3D 프린터·스캐너 제공",
+    title: (
+      <>
+        전국 캠퍼스
+        <br />
+        3D 프린터·스캐너 제공
+      </>
+    ),
     badge: "bg-emerald-100 text-emerald-700",
   },
   {
@@ -32,19 +44,31 @@ const BENEFITS: Benefit[] = [
   },
   {
     emoji: "📊",
-    title: "삼성 SW 역량 테스트 응시 기회 제공",
+    title: (
+      <>
+        삼성 SW 역량 테스트
+        <br />
+        응시 기회 제공
+      </>
+    ),
     badge: "bg-brand-100 text-brand-700",
   },
   {
     emoji: "🏆",
-    title: "삼성·5대은행 등 기업 연계 프로젝트",
+    title: (
+      <>
+        삼성·5대은행 등
+        <br />
+        기업 연계 프로젝트
+      </>
+    ),
     badge: "bg-coral-100 text-coral-600",
-  },
-  {
-    emoji: "📚",
-    title: "실무형 프로젝트 포트폴리오",
-    badge: "bg-rose-100 text-rose-700",
-  },
+  }
+  // {
+  //   emoji: "📚",
+  //   title: "실무형 프로젝트 포트폴리오",
+  //   badge: "bg-rose-100 text-rose-700",
+  // },
 ];
 
 export default function WhySSAFY() {
@@ -55,15 +79,15 @@ export default function WhySSAFY() {
           <p className="eyebrow justify-center">BENEFIT</p>
           <h2 className="section-title mt-3">교육 혜택</h2>
           <p className="section-desc">
-            배움부터 취업까지, SSAFY가 확실하게 지원합니다
+            학습부터 취업까지 SSAFY가 확실하게 지원할게요
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 flex flex-wrap justify-center gap-5 max-w-[790px] mx-auto">
           {BENEFITS.map((b, i) => (
             <div
               key={i}
-              className="reveal card p-6 flex flex-col items-center text-center hover:shadow-card-hover hover:-translate-y-1"
+              className="reveal card p-6 flex flex-col items-center justify-center aspect-square w-[250px] text-center hover:shadow-card-hover hover:-translate-y-1"
               style={i > 0 ? { animationDelay: `${i * 0.05}s` } : undefined}
             >
               <span className={`tag ${b.badge}`}>혜택 {i + 1}</span>

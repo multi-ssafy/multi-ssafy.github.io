@@ -38,9 +38,9 @@ export default function Difference() {
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">WHY SSAFY</p>
           <h2 className="section-title mt-3">SSAFY는 무엇이 다른가?</h2>
-          <p className="section-desc">
-            교육·검증·취업까지, SSAFY만의 확실한 차이
-          </p>
+          {/* <p className="section-desc">
+            쉽게 따라할 수 없는 확실한 차별점을 갖고 있어요
+          </p> */}
         </div>
 
         <div className="mt-12 sm:mt-14 max-w-2xl mx-auto flex flex-col gap-3.5 sm:gap-4">

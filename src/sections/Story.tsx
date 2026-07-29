@@ -58,10 +58,10 @@ const STORIES: Story[] = [
     photoAlt: "IT·AI 기술 세일즈 수료생",
     cohort: "8기",
     majorType: "비전공",
-    major: "국제통상학과",
-    name: "김서연",
+    major: "기계/금속공학과",
+    name: "황산나래",
     role: "IT·AI 기술 세일즈",
-    story: "해외영업 경험에 AI를 더해, 기술과 시장을 잇는 세일즈로 진출했어요. (예시)",
+    story: "기계·금속공학에 AI 이해력을 더해, AI 데이터 분석으로 조선업의 IT/AI 기술을 세일즈합니다!",
     delay: ".18s",
   },
 ];
@@ -96,19 +96,19 @@ export default function Story() {
                 />
               </div>
               <div className="flex-1 p-5 sm:p-7 flex flex-col justify-center min-w-0">
-                <span className="tag bg-brand-50 text-brand-600 w-fit">
+                <span className="tag bg-brand-50 w-fit">
                   {s.cohort} · {s.majorType}
                 </span>
-                <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-ink-900 leading-tight break-keep">
+                <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-brand-600 leading-tight break-keep">
                   {s.role}
                 </h3>
-                <p className="mt-1.5 text-sm font-bold text-ink-700">
+                <p className="mt-1.5 text-sm font-bold ">
                   {s.name} · {s.major}
                 </p>
-                <p className="mt-2 text-sm text-ink-500 leading-relaxed break-keep">
+                <p className="mt-2 text-sm leading-relaxed break-keep">
                   {s.story}
                 </p>
-                <a
+                {/* <a
                   href={REVIEW_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -116,7 +116,7 @@ export default function Story() {
                 >
                   후기 바로가기
                   <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
+                </a> */}
               </div>
             </div>
           ))}

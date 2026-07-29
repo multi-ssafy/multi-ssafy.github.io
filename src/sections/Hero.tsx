@@ -2,12 +2,10 @@ import { PARTNER_LOGOS } from "@/data/site";
 import NotifyButton from "@/components/NotifyButton";
 
 export default function Hero() {
-  // 무한 스크롤 마퀴용 로고 복제본
   const marqueeLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
 
   return (
     <section id="hero" className="relative overflow-hidden min-h-screen flex items-center">
-      {/* 배경 장식 (그라디언트 블롭) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-brand-100 rounded-full blur-3xl opacity-70" />
         <div className="absolute top-10 right-0 w-[380px] h-[380px] bg-coral-100 rounded-full blur-3xl opacity-60" />
@@ -15,22 +13,31 @@ export default function Hero() {
       </div>
 
       <div className="max-w-content mx-auto px-5 sm:px-8 py-16 text-center">
-        <span className="reveal in-view inline-flex items-center rounded-full bg-brand-50 px-4 py-1.5 text-sm sm:text-base font-bold text-brand-600 mb-5">
-          삼성청년SW·AI아카데미
-        </span>
-        <h1 className="reveal in-view break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
-          <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-            AI
-          </span>
-          로 연결되는 기회
-          <br className="hidden sm:block" />
-          <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-            SSAFY
-          </span>
-          로 완성되는 미래
-        </h1>
+        {/* 아카데미명 — 크게, 양옆 구분선으로 분리 */}
+        <div className="reveal in-view flex items-center justify-center gap-4 sm:gap-5 mb-5">
+          <span className="w-8 sm:w-12 bg-ink-300" />
+            <p className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider">
+              삼성청년SW·AI아카데미
+            </p>
+          <span className="w-8 sm:w-12 bg-ink-300" />
+        </div>
 
-        {/* 핵심 지표 3종 (강조) */}
+        {/* 메인 헤드라인 — 얇은 테두리 박스, 장식 없음 */}
+        <div className="reveal in-view border border-ink-200 rounded-[1.75rem] px-6 py-8 sm:px-12 sm:py-10">
+          <h1 className="break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
+            <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
+              AI
+            </span>
+            로 연결되는 기회
+            <br className="hidden sm:block" />
+            <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
+              SSAFY
+            </span>
+            로 완성되는 미래
+          </h1>
+        </div>
+
+        {/* 핵심 지표 3종 */}
         <div className="reveal in-view mt-9 sm:mt-11 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-14">
           <div className="text-center">
             <p className="text-4xl sm:text-5xl font-black text-brand-600 leading-none">
@@ -82,7 +89,6 @@ export default function Hero() {
           </NotifyButton>
         </div>
 
-        {/* 함께하는 기업 (삼성 계열사) - 자동 스크롤 로고 마퀴 */}
         <div className="reveal in-view mt-20 sm:mt-28 relative overflow-hidden marquee-mask -mx-5 sm:-mx-8">
           <div className="flex w-max items-center gap-14 animate-marquee px-7">
             {marqueeLogos.map((logo, i) => (

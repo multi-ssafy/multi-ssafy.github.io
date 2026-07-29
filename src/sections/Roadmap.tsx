@@ -41,7 +41,7 @@ export default function Roadmap() {
           <p className="eyebrow justify-center">ROADMAP</p>
           <h2 className="section-title mt-3">1년의 학습 로드맵</h2>
           <p className="section-desc">
-            기초부터 취업까지, 12개월 성장 여정을 함께합니다
+            취업까지 12개월 성장 여정을 함께해요
           </p>
         </div>
 
@@ -92,16 +92,16 @@ export default function Roadmap() {
               <h3 className="mt-4 text-lg font-extrabold text-ink-900">
                 {s.title}
               </h3>
-              <p className="mt-2 text-sm text-ink-500 leading-relaxed">
+              <p className="mt-2 text-sm leading-relaxed">
                 {s.desc}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="reveal mt-6 text-center text-sm font-semibold text-ink-400">
+        {/* <p className="reveal mt-6 text-center text-sm font-semibold text-ink-400">
           총 12개월 · AI 활용 능력과 문제 해결 능력을 갖춘 차세대 SW·AI 인재로 성장
-        </p>
+        </p> */}
       </div>
     </section>
   );

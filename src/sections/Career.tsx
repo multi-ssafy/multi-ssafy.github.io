@@ -75,8 +75,8 @@ export default function Career() {
         {/* 상단 통계 3종 + 취업률 성장 추이 */}
         <div className="reveal mt-14 card p-8 md:p-10">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <p className="text-lg font-bold text-ink-900">수료생 취업실적</p>
-            <span className="text-xs font-semibold text-ink-400">
+            <p className="text-[22px] font-bold">수료생 취업실적</p>
+            <span className="text-medium font-semibold">
               * 25.12월 기준
             </span>
           </div>
@@ -93,7 +93,7 @@ export default function Career() {
               <span className="absolute left-full top-0 ml-0.5 text-3xl">%</span>
             </p>
 
-            <p className="mt-3 text-sm font-bold text-ink-600">취업률</p>
+            <p className="mt-3 text-lg font-bold">취업률</p>
           </div>
 
           {/* 취업 기업 수 */}
@@ -101,7 +101,7 @@ export default function Career() {
             <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
               2,300
             </p>
-            <p className="mt-3 text-sm font-bold text-ink-600">취업 기업 수</p>
+            <p className="mt-3 text-lg font-bold">취업 기업 수</p>
           </div>
 
           {/* 우대 기업 수 */}
@@ -109,9 +109,9 @@ export default function Career() {
             <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
               170
             </p>
-            <p className="mt-3 text-sm font-bold text-ink-600">우대 기업 수</p>
+            <p className="mt-3 text-lg font-bold">우대 기업 수</p>
 
-            <p className="absolute bottom-3 left-4 right-4 text-[11px] text-ink-400 leading-snug">
+            <p className="absolute bottom-3 left-4 right-4 text-medium leading-snug">
               * 채용 시 특별전형, 서류 가점 등
             </p>
           </div>
@@ -124,12 +124,12 @@ export default function Career() {
           <h3 className="text-2xl font-extrabold text-ink-900">
             SSAFY만의 확실한 취업 솔루션
           </h3>
-          <p className="mt-3 text-ink-500">
-            취업 실전 교육과 개인별 상담·컨설팅으로 취업 성공까지 함께합니다
+          <p className="mt-3">
+            취업 실전 교육과 개인별 상담·컨설팅으로 취업 성공까지 함께해요
           </p>
         </div>
         
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
+        <div className="mt-10 grid md:grid-cols-3 gap-4">
         {SOLUTIONS.map((s) => (
           <div
             key={s.title}
@@ -163,7 +163,7 @@ export default function Career() {
                 {s.title}
               </h4>
 
-              <ul className="mt-4 space-y-2.5 text-sm text-ink-600 leading-relaxed">
+              <ul className="mt-4 space-y-2.5 text-medium leading-relaxed">
                 {s.items.map((it, i) => (
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />

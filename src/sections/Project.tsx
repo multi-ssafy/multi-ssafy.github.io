@@ -116,7 +116,7 @@ export default function Project() {
                   <h3 className="mt-3 text-xl sm:text-2xl font-extrabold leading-snug">
                     {stage.caseTitle}
                   </h3>
-                  <p className="mt-2 text-sm text-brand-50 leading-relaxed">
+                  <p className="mt-2 text-medium leading-relaxed">
                     {stage.caseDesc}
                   </p>
                 </div>

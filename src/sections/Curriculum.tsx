@@ -1,6 +1,4 @@
-import { ArrowRight } from "@/lib/icons";
-
-// AI·SW CURRICULUM — 3단계 커리큘럼 + AI 학습 지원 환경
+// AI·SW CURRICULUM — AI 역량 로드맵 + 3단계 커리큘럼 + AI 학습 지원 환경
 
 export default function Curriculum() {
   return (
@@ -16,27 +14,27 @@ export default function Curriculum() {
             AI 커리큘럼
           </h2>
           <p className="section-desc">
-            삼성의 현업 경험을 담은 체계적인 교육과정으로 설계했어요
+            1년의 밀도 있는 몰입 과정을 통해
+            <br />
+            AI를 이해하고 AI 서비스를 완성하는 사람이 됩니다.
           </p>
         </div>
 
-        {/* AI 역량 성장 단계 */}
-        <div className="reveal mt-10 flex items-center justify-center gap-2 text-xs font-bold text-ink-400">
-          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
-            AI 이해
-          </span>
-          <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
-          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
-            AI 모델 실습
-          </span>
-          <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
-          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
-            AI 서비스 설계
-          </span>
+        {/* AI 역량 로드맵 (레퍼런스 이미지) */}
+        <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
+          <p className="text-center text-sm font-bold text-brand-600 mb-6">
+            AI 역량 성장 로드맵
+          </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/images/ai-roadmap.png"
+            alt="AI 역량 성장 로드맵: 입과 전 AI 이해부터 2학기 AI 서비스 설계 능력까지 5단계"
+            className="w-full max-w-xl mx-auto h-auto"
+          />
         </div>
 
         {/* 3단계 커리큘럼 */}
-        <div className="mt-6 grid md:grid-cols-3 gap-5">
+        <div className="mt-16 grid md:grid-cols-3 gap-5">
           {/* STEP 1 */}
           <div className="reveal relative">
             <div className="card p-7 h-full hover:shadow-card-hover hover:-translate-y-1">

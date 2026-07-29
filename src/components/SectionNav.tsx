@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 // id = 클릭 시 이동할 대표 섹션, spy = 이 항목이 활성화되는 섹션들(끊김 없는 하이라이트)
 const NAV = [
-  { id: "intro", label: "SSAFY 소개", spy: ["intro", "why", "roadmap"] },
+  { id: "intro", label: "SSAFY 소개", spy: ["intro", "difference", "why", "roadmap"] },
   { id: "curriculum", label: "AI 커리큘럼", spy: ["curriculum"] },
   { id: "campus", label: "캠퍼스", spy: ["campus"] },
   { id: "project", label: "프로젝트", spy: ["project"] },

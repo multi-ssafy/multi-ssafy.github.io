@@ -9,7 +9,10 @@ const REVIEW_URL = "https://www.ssafy.com";
 type Story = {
   photo: string;
   photoAlt: string;
-  major: string; // 전공
+  cohort: string; // 기수
+  majorType: string; // 전공 / 비전공
+  major: string; // 전공명
+  name: string; // 이름
   role: string; // AI 직무
   story: string; // 한 줄 스토리
   delay?: string;
@@ -17,35 +20,48 @@ type Story = {
 
 const STORIES: Story[] = [
   {
-    photo: "/assets/photos/story-seoul.jpg",
-    photoAlt: "AI 비즈니스 기획자 수료생",
-    major: "경영학",
+    photo: "/assets/photos/story-gumi.jpg",
+    photoAlt: "AI 비즈니스 기획자 정은선",
+    cohort: "12기",
+    majorType: "비전공",
+    major: "교육학과",
+    name: "정은선",
     role: "AI 비즈니스 기획자",
-    story: "비전공에서 출발해 AI로 신사업을 설계하는 기획자로 성장했어요.",
+    story: "초등학교 교사로 아이들을 가르치다, 이제는 AI를 활용해 가전을 기획합니다!",
     delay: undefined,
   },
   {
-    photo: "/assets/photos/story-gwangju.jpg",
-    photoAlt: "데이터 분석가 수료생",
-    major: "통계학",
+    photo: "/assets/photos/story-seoul.jpg",
+    photoAlt: "데이터 분석가 조제형",
+    cohort: "3기",
+    majorType: "전공",
+    major: "전기전자공학과",
+    name: "조제형",
     role: "데이터 분석가",
-    story: "전공 지식에 AI 역량을 더해 데이터로 의사결정을 이끕니다.",
+    story: "전기전자공학을 공부하던 학생에서 데이터로 답을 찾기까지, 머신러닝으로 데이터를 분석합니다!",
     delay: ".06s",
   },
   {
-    photo: "/assets/photos/story-gumi.jpg",
-    photoAlt: "HR 인사 전략 기획자 수료생",
-    major: "심리학",
+    photo: "/assets/photos/story-gwangju.jpg",
+    photoAlt: "HR 인사 전략 기획자 고금강",
+    cohort: "12기",
+    majorType: "비전공",
+    major: "경영학과",
+    name: "고금강",
     role: "HR 인사 전략 기획자",
-    story: "사람에 대한 이해에 데이터·AI를 접목한 인사 전략가로 일해요.",
+    story: "경영학 전공을 바탕으로 AI를 활용해 급여체계를 설계하는 인사전략기획자가 되었습니다!",
     delay: ".12s",
   },
   {
+    // 예시 — 실제 사례로 교체 예정
     photo: "/assets/photos/story-buulgyeong.jpg",
     photoAlt: "IT·AI 기술 세일즈 수료생",
-    major: "국제통상학",
+    cohort: "8기",
+    majorType: "비전공",
+    major: "국제통상학과",
+    name: "김서연",
     role: "IT·AI 기술 세일즈",
-    story: "기술을 이해하고 시장을 연결하는 AI 기술 세일즈로 진출했어요.",
+    story: "해외영업 경험에 AI를 더해, 기술과 시장을 잇는 세일즈로 진출했어요. (예시)",
     delay: ".18s",
   },
 ];
@@ -60,7 +76,7 @@ export default function Story() {
             나의 전공으로 탑티어가 되는 지름길
           </h2>
           <p className="section-desc">
-            전공과 경험, 지역이 달라도 각자의 출발점에서 성장할 수 있어요
+            어떤 스토리를 갖고 있더라도 각자의 출발점에서 함께 성장할 수 있어요
           </p>
         </div>
 
@@ -81,11 +97,14 @@ export default function Story() {
               </div>
               <div className="flex-1 p-5 sm:p-7 flex flex-col justify-center min-w-0">
                 <span className="tag bg-brand-50 text-brand-600 w-fit">
-                  {s.major} 전공
+                  {s.cohort} · {s.majorType}
                 </span>
                 <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-ink-900 leading-tight break-keep">
                   {s.role}
                 </h3>
+                <p className="mt-1.5 text-sm font-bold text-ink-700">
+                  {s.name} · {s.major}
+                </p>
                 <p className="mt-2 text-sm text-ink-500 leading-relaxed break-keep">
                   {s.story}
                 </p>

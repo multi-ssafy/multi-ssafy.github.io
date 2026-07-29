@@ -14,13 +14,15 @@ export default function IntroMessage() {
       </div>
 
       <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
-        <h2 className="reveal break-keep text-2xl font-black leading-[1.32] tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem]">
-          저마다의 전공과 배경은 달라도,
-          <br className="hidden sm:block" />{" "}
+        <h2 className="reveal break-keep text-2xl font-black leading-[1.5] tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem]">
+          저마다의 전공과 배경은 달라도
+          <br />
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
             AI 시대가 원하는 인재
           </span>
-          로 새롭게 시작하세요
+          로
+          <br />
+          새롭게 시작하세요
         </h2>
 
         <p className="reveal mt-7 break-keep text-base leading-relaxed text-ink-500 sm:text-xl">

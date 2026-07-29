@@ -80,12 +80,13 @@ export default function Story() {
                 />
               </div>
               <div className="flex-1 p-5 sm:p-7 flex flex-col justify-center min-w-0">
-                <div className="flex items-center gap-1.5 text-sm font-bold">
-                  <span className="tag bg-ink-100 text-ink-600">{s.major}</span>
-                  <span className="text-ink-300">→</span>
-                  <span className="text-brand-600">{s.role}</span>
-                </div>
-                <p className="mt-3 text-base sm:text-lg font-extrabold text-ink-900 leading-snug">
+                <span className="tag bg-brand-50 text-brand-600 w-fit">
+                  {s.major} 전공
+                </span>
+                <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-ink-900 leading-tight break-keep">
+                  {s.role}
+                </h3>
+                <p className="mt-2 text-sm text-ink-500 leading-relaxed break-keep">
                   {s.story}
                 </p>
                 <a

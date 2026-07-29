@@ -31,7 +31,7 @@ const SPONSORS: { src: string; alt: string; className?: string }[] = [
 
 export default function Sponsors() {
   return (
-    <section className="py-16 md:py-20 border-t border-ink-100 bg-white">
+    <section className="pt-16 md:pt-20 pb-32 md:pb-36 border-t border-ink-100 bg-white">
       <div className="max-w-content mx-auto px-5 sm:px-8 text-center">
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16">
           {SPONSORS.map((s) => (

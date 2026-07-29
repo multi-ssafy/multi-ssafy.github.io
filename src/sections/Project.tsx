@@ -149,7 +149,7 @@ export default function Project() {
             type="button"
             onClick={() => go(-1)}
             aria-label="이전 단계"
-            className="absolute left-2 sm:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-card ring-1 ring-ink-100 flex items-center justify-center text-ink-600 hover:text-brand-600 hover:scale-105 transition"
+            className="absolute left-2 sm:-left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-card ring-1 ring-ink-100 flex items-center justify-center text-ink-600 hover:text-brand-600 hover:scale-105 transition"
           >
             <ChevronRight className="w-5 h-5 rotate-180" />
           </button>
@@ -157,7 +157,7 @@ export default function Project() {
             type="button"
             onClick={() => go(1)}
             aria-label="다음 단계"
-            className="absolute right-2 sm:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-card ring-1 ring-ink-100 flex items-center justify-center text-ink-600 hover:text-brand-600 hover:scale-105 transition"
+            className="absolute right-2 sm:-right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-card ring-1 ring-ink-100 flex items-center justify-center text-ink-600 hover:text-brand-600 hover:scale-105 transition"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

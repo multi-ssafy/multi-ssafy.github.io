@@ -3,7 +3,6 @@ import {
   ClipboardCheck,
   ListChecks,
   ChevronRight,
-  ArrowUpRight,
 } from "@/lib/icons";
 import { APPLY_URL } from "@/data/site";
 
@@ -111,17 +110,6 @@ export default function Apply() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="reveal text-center mt-10">
-          <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener"
-            className="btn-primary w-full sm:w-auto"
-          >
-            지원하기 <ArrowUpRight className="w-4 h-4" />
-          </a>
-        </div>
       </div>
     </section>
   );

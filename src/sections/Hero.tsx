@@ -1,5 +1,4 @@
-import { APPLY_URL, PARTNER_LOGOS } from "@/data/site";
-import { ArrowUpRight } from "@/lib/icons";
+import { PARTNER_LOGOS } from "@/data/site";
 import NotifyButton from "@/components/NotifyButton";
 
 export default function Hero() {
@@ -16,6 +15,9 @@ export default function Hero() {
       </div>
 
       <div className="max-w-content mx-auto px-5 sm:px-8 py-16 text-center">
+        <span className="reveal in-view inline-flex items-center rounded-full bg-brand-50 px-4 py-1.5 text-sm sm:text-base font-bold text-brand-600 mb-5">
+          삼성이 만든 AI 인재 양성 프로그램
+        </span>
         <h1 className="reveal in-view break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
             AI
@@ -34,7 +36,7 @@ export default function Hero() {
             <p className="text-4xl sm:text-5xl font-black text-brand-600 leading-none">
               85<span className="text-2xl sm:text-3xl align-top">%</span>
             </p>
-            <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
+            <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
               취업률
             </p>
           </div>
@@ -44,7 +46,7 @@ export default function Hero() {
               1,700
               <span className="text-2xl sm:text-3xl align-top ml-0.5">시간</span>
             </p>
-            <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
+            <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
               AI 교육 시간
             </p>
           </div>
@@ -54,23 +56,14 @@ export default function Hero() {
               170
               <span className="text-2xl sm:text-3xl align-top ml-0.5">여 개</span>
             </p>
-            <p className="mt-2 text-sm sm:text-base font-bold text-ink-500">
+            <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
               채용 우대기업
             </p>
           </div>
         </div>
 
-        <div className="reveal in-view mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener"
-            className="btn-primary w-full sm:w-auto"
-          >
-            지원하기
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
-          <NotifyButton className="btn bg-white border-2 border-brand-600 text-brand-600 hover:bg-brand-50 hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto">
+        <div className="reveal in-view mt-9 flex items-center justify-center">
+          <NotifyButton className="btn bg-brand-600 text-white shadow-soft hover:bg-brand-700 hover:-translate-y-0.5 active:translate-y-0 w-full sm:w-auto">
             <svg
               className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"

@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { APPLY_URL } from "@/data/site";
-import { ArrowUpRight } from "@/lib/icons";
 
-// 하단 플로팅 지원 CTA 바
+// 하단 플로팅 알림신청 CTA 바
 // - 섹션 네비(#recruit-info 통과 시점)와 동일하게 등장, 그 이전엔 아래로 숨김
 // - PC: 하단 중앙 플로팅(우측 챗봇과 겹치지 않음)
 // - 모바일: 하단 전체 폭. 챗봇은 CSS로 바 위로 올림(body.apply-bar-visible)
@@ -36,17 +34,15 @@ export default function FloatingApplyBar() {
         }`}
       >
         <p className="min-w-0 truncate text-[13px] font-bold text-white sm:text-base">
-          SSAFY 17기, 지금이 시작할 때 <span aria-hidden="true">🔥</span>
+          모집이 시작되면 바로 알려드려요 <span aria-hidden="true">🔔</span>
         </p>
-        <a
-          href={APPLY_URL}
-          target="_blank"
-          rel="noopener"
+        <button
+          type="button"
+          onClick={() => window.dispatchEvent(new Event("ssafy:notify-open"))}
           className="btn-glow inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-700 sm:px-6"
         >
-          지원하기
-          <ArrowUpRight className="h-3.5 w-3.5" />
-        </a>
+          알림 신청
+        </button>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@
     @apply text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-ink-900 leading-tight;
   }
   .section-desc {
-    @apply mt-4 text-base sm:text-lg text-ink-500 leading-relaxed;
+    @apply mt-4 text-base sm:text-lg text-ink-600 leading-relaxed;
   }
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-all duration-200 whitespace-nowrap;

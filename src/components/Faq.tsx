@@ -76,11 +76,12 @@ export default function Faq() {
         </div>
 
         {/* 자주 묻는 질문 */}
-        <div className="reveal mt-16 max-w-3xl mx-auto">
-          <h3 className="text-center text-xl font-extrabold text-ink-900">
-            자주 묻는 질문
-          </h3>
-          <div className="mt-8 space-y-3">
+        <div className="reveal mt-20 max-w-3xl mx-auto">
+          <div className="text-center">
+            <p className="eyebrow justify-center">FAQ</p>
+            <h3 className="section-title mt-3">자주 묻는 질문</h3>
+          </div>
+          <div className="mt-10 space-y-3">
             {FAQS.map((item, i) => {
               const isOpen = open === i;
               return (

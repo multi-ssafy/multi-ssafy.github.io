@@ -46,7 +46,7 @@ export default function IntroMessage() {
         </div>
 
         
-        <p className="reveal mt-28 break-keep text-base leading-relaxed sm:text-xl">
+        <p className="reveal mt-28 break-keep text-base leading-relaxed sm:whitespace-nowrap sm:text-xl">
           <span className="font-bold text-ink-800">삼성이 만든 SSAFY</span>가{" "}
           <span className="font-bold text-ink-800">전문 AI 교육</span>과{" "}
           <span className="font-bold text-brand-600">

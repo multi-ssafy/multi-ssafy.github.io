@@ -1,5 +1,3 @@
-import { ArrowRight } from "@/lib/icons";
-
 // AI·SW CURRICULUM — 3단계 커리큘럼 + AI 학습 지원 환경
 
 export default function Curriculum() {
@@ -16,27 +14,14 @@ export default function Curriculum() {
             AI 커리큘럼
           </h2>
           <p className="section-desc">
-            삼성의 현업 경험을 담은 체계적인 교육과정으로 설계했어요
+            1년의 밀도 있는 몰입 과정을 통해
+            <br />
+            AI를 이해하고 AI 서비스를 완성하는 사람이 됩니다.
           </p>
         </div>
 
-        {/* AI 역량 성장 단계 */}
-        <div className="reveal mt-10 flex items-center justify-center gap-2 text-xs font-bold text-ink-400">
-          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
-            AI 이해
-          </span>
-          <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
-          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
-            AI 모델 실습
-          </span>
-          <ArrowRight className="w-3.5 h-3.5 text-ink-300" />
-          <span className="px-3 py-1.5 rounded-full bg-white border border-ink-100">
-            AI 서비스 설계
-          </span>
-        </div>
-
         {/* 3단계 커리큘럼 */}
-        <div className="mt-6 grid md:grid-cols-3 gap-5">
+        <div className="mt-14 grid md:grid-cols-3 gap-5">
           {/* STEP 1 */}
           <div className="reveal relative">
             <div className="card p-7 h-full hover:shadow-card-hover hover:-translate-y-1">

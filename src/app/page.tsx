@@ -11,6 +11,7 @@ import Hero from "@/sections/Hero";
 import IntroMessage from "@/sections/IntroMessage";
 import IntroVideo from "@/sections/IntroVideo";
 import Roadmap from "@/sections/Roadmap";
+import Difference from "@/sections/Difference";
 import WhySSAFY from "@/sections/WhySSAFY";
 import Curriculum from "@/sections/Curriculum";
 import Project from "@/sections/Project";
@@ -29,6 +30,7 @@ export default function Home() {
         <IntroMessage />
         <SectionNav />
         <IntroVideo />
+        <Difference />
         <WhySSAFY />
         <Roadmap />
         <Curriculum />

@@ -16,7 +16,7 @@ export default function Hero() {
 
       <div className="max-w-content mx-auto px-5 sm:px-8 py-16 text-center">
         <span className="reveal in-view inline-flex items-center rounded-full bg-brand-50 px-4 py-1.5 text-sm sm:text-base font-bold text-brand-600 mb-5">
-          삼성이 만든 AI 인재 양성 프로그램
+          삼성청년SW·AI아카데미
         </span>
         <h1 className="reveal in-view break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
           <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
@@ -43,11 +43,11 @@ export default function Hero() {
           <span className="hidden sm:block w-px h-12 bg-ink-200" />
           <div className="text-center">
             <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
-              1,700
+              1,025
               <span className="text-2xl sm:text-3xl align-top ml-0.5">시간</span>
             </p>
             <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
-              AI 교육 시간
+              AI 집중교육
             </p>
           </div>
           <span className="hidden sm:block w-px h-12 bg-ink-200" />

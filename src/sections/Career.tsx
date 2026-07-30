@@ -76,9 +76,9 @@ export default function Career() {
         <div className="reveal mt-14 card p-8 md:p-10">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <p className="text-[22px] font-bold">수료생 취업실적</p>
-            <span className="text-medium font-semibold">
+            {/* <span className="text-medium font-semibold">
               * 25.12월 기준
-            </span>
+            </span> */}
           </div>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
@@ -99,7 +99,7 @@ export default function Career() {
           {/* 취업 기업 수 */}
           <div className="relative min-h-[180px] rounded-2xl bg-ink-50 px-5 py-7 text-center flex flex-col items-center justify-center">
             <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
-              2,300
+              2,600
             </p>
             <p className="mt-3 text-lg font-bold">취업 기업 수</p>
           </div>
@@ -107,7 +107,7 @@ export default function Career() {
           {/* 우대 기업 수 */}
           <div className="relative min-h-[180px] rounded-2xl bg-ink-50 px-5 py-7 text-center flex flex-col items-center justify-center">
             <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
-              170
+              185
             </p>
             <p className="mt-3 text-lg font-bold">우대 기업 수</p>
 

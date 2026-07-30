@@ -61,8 +61,8 @@ export default function Hero() {
           <span className="hidden sm:block w-px h-12 bg-ink-200" />
           <div className="text-center">
             <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
-              170
-              <span className="text-2xl sm:text-3xl align-top ml-0.5">여 개</span>
+              185
+              <span className="text-2xl sm:text-3xl align-top ml-0.5">개</span>
             </p>
             <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
               채용 우대기업

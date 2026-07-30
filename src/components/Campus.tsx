@@ -233,7 +233,7 @@ export default function Campus() {
           <p className="eyebrow justify-center">CAMPUS &amp; TRACK</p>
           <h2 className="section-title mt-3 leading-[1.5]">
             <span className="block">내 커리어에 맞는 AI 트랙을</span>
-            <span className="block mt-3">전국 5개 캠퍼스 어디에서나!</span>
+            <span className="block">전국 5개 캠퍼스 어디에서나!</span>
           </h2>
         </div>
 

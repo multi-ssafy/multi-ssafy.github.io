@@ -23,9 +23,9 @@ export default function QuoteBanner() {
           <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
         </svg>
         <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-snug">
-          학습에서 끝나지 않고
+          기업에서 통하는 SW 인재로
           <br />
-          <span className="text-brand-400">현업에서 통하는</span> SW·AI 인재로
+          <span className="text-brand-400">취업 성공</span>
         </p>
       </div>
     </section>

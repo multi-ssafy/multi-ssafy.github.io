@@ -38,34 +38,30 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* 핵심 지표 3종 */}
-        <div className="reveal in-view mt-9 sm:mt-11 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-14">
+        {/* 3가지 메인 키워드 */}
+        <div className="reveal in-view mt-9 sm:mt-11 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12">
           <div className="text-center">
-            <p className="text-4xl sm:text-5xl font-black text-brand-600 leading-none">
+            <p className="text-base sm:text-lg font-bold text-ink-600">취업률</p>
+            <p className="mt-1.5 text-4xl sm:text-5xl font-black text-brand-600 leading-none">
               85<span className="text-2xl sm:text-3xl align-top">%</span>
             </p>
-            <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
-              취업률
+          </div>
+          <span className="hidden sm:block w-px h-14 bg-ink-200" />
+          <div className="text-center">
+            <p className="text-base sm:text-lg font-bold text-ink-600">
+              삼성이 만든
+            </p>
+            <p className="mt-1.5 text-3xl sm:text-4xl font-black text-ink-900 leading-none break-keep">
+              AI 전문 교육
             </p>
           </div>
-          <span className="hidden sm:block w-px h-12 bg-ink-200" />
+          <span className="hidden sm:block w-px h-14 bg-ink-200" />
           <div className="text-center">
-            <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
-              1,025
-              <span className="text-2xl sm:text-3xl align-top ml-0.5">시간</span>
+            <p className="text-base sm:text-lg font-bold text-ink-600">
+              교육지원금
             </p>
-            <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
-              AI 집중교육
-            </p>
-          </div>
-          <span className="hidden sm:block w-px h-12 bg-ink-200" />
-          <div className="text-center">
-            <p className="text-4xl sm:text-5xl font-black text-ink-900 leading-none">
-              170
-              <span className="text-2xl sm:text-3xl align-top ml-0.5">여 개</span>
-            </p>
-            <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
-              채용 우대기업
+            <p className="mt-1.5 text-3xl sm:text-4xl font-black text-brand-600 leading-none break-keep">
+              100만원<span className="text-ink-900">+α</span>
             </p>
           </div>
         </div>

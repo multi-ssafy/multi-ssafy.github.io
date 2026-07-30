@@ -16,11 +16,16 @@ const GROUPS: Group[] = [
       {
         title: "1학기 기본과정",
         desc: (
-          <>
-            AI기초 &amp; 알고리즘 중심교육
-            <br />
-            SW 전공자부터 AI 노베이스까지 문제없는 수준별 분반 운영
-          </>
+          <ul className="space-y-1">
+            <li className="flex gap-1.5">
+              <span aria-hidden>·</span>
+              <span>AI기초 &amp; 알고리즘 중심교육</span>
+            </li>
+            <li className="flex gap-1.5">
+              <span aria-hidden>·</span>
+              <span>SW 전공자부터 AI 노베이스까지 문제없는 수준별 분반 운영</span>
+            </li>
+          </ul>
         ),
       },
       {
@@ -84,9 +89,9 @@ export default function Roadmap() {
                       <h3 className="mt-4 text-base sm:text-lg font-extrabold text-ink-900 break-keep">
                         {s.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed break-keep">
+                      <div className="mt-2 text-sm leading-relaxed break-keep">
                         {s.desc}
-                      </p>
+                      </div>
                     </div>
                   );
                 })}

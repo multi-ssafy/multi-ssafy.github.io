@@ -49,7 +49,7 @@ export default function Difference() {
           </p> */}
         </div>
 
-        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto flex flex-col gap-3.5 sm:gap-4">
+        <div className="mt-12 sm:mt-14 max-w-4xl mx-auto flex flex-col gap-3.5 sm:gap-4">
           {ITEMS.map((item, i) => (
             <div
               key={i}

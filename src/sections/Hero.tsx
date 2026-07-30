@@ -1,18 +1,23 @@
 import { PARTNER_LOGOS } from "@/data/site";
 import NotifyButton from "@/components/NotifyButton";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Hero() {
   const marqueeLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
 
   return (
-    <section id="hero" className="relative overflow-hidden min-h-screen flex items-center">
+    <section id="hero" className="relative overflow-hidden min-h-screen flex flex-col">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-brand-100 rounded-full blur-3xl opacity-70" />
         <div className="absolute top-10 right-0 w-[380px] h-[380px] bg-coral-100 rounded-full blur-3xl opacity-60" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.ink.100)_1px,transparent_0)] [background-size:28px_28px] opacity-40" />
       </div>
 
-      <div className="max-w-content mx-auto px-5 sm:px-8 py-16 text-center">
+      {/* 상단 이미지 캐러셀 (자동 롤링) */}
+      <HeroCarousel />
+
+      <div className="flex-1 flex items-center">
+      <div className="w-full max-w-content mx-auto px-5 sm:px-8 py-8 text-center">
         {/* 아카데미명 — 크게, 양옆 구분선으로 분리 */}
         <div className="reveal in-view flex items-center justify-center gap-4 sm:gap-5 mb-5">
           <span className="w-8 sm:w-12 bg-ink-300" />
@@ -39,28 +44,28 @@ export default function Hero() {
         </div>
 
         {/* 3가지 메인 키워드 */}
-        <div className="reveal in-view mt-9 sm:mt-11 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12">
+        <div className="reveal in-view mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12">
           <div className="text-center">
-            <p className="text-base sm:text-lg font-bold text-ink-600">취업률</p>
-            <p className="mt-1.5 text-4xl sm:text-5xl font-black text-brand-600 leading-none">
-              85<span className="text-2xl sm:text-3xl align-top">%</span>
+            <p className="text-lg sm:text-2xl font-bold text-ink-700">취업률</p>
+            <p className="mt-1.5 text-4xl sm:text-6xl font-black text-brand-600 leading-none">
+              85<span className="text-2xl sm:text-4xl align-top">%</span>
             </p>
           </div>
-          <span className="hidden sm:block w-px h-14 bg-ink-200" />
+          <span className="hidden sm:block w-px h-16 bg-ink-200" />
           <div className="text-center">
-            <p className="text-base sm:text-lg font-bold text-ink-600">
+            <p className="text-lg sm:text-2xl font-bold text-ink-700">
               삼성이 만든
             </p>
-            <p className="mt-1.5 text-3xl sm:text-4xl font-black text-ink-900 leading-none break-keep">
+            <p className="mt-1.5 text-4xl sm:text-5xl font-black text-ink-900 leading-none break-keep">
               AI 전문 교육
             </p>
           </div>
-          <span className="hidden sm:block w-px h-14 bg-ink-200" />
+          <span className="hidden sm:block w-px h-16 bg-ink-200" />
           <div className="text-center">
-            <p className="text-base sm:text-lg font-bold text-ink-600">
+            <p className="text-lg sm:text-2xl font-bold text-ink-700">
               교육지원금
             </p>
-            <p className="mt-1.5 text-3xl sm:text-4xl font-black text-brand-600 leading-none break-keep">
+            <p className="mt-1.5 text-4xl sm:text-5xl font-black text-brand-600 leading-none break-keep">
               100만원<span className="text-ink-900">+α</span>
             </p>
           </div>
@@ -86,7 +91,7 @@ export default function Hero() {
           </NotifyButton>
         </div>
 
-        <div className="reveal in-view mt-20 sm:mt-28 relative overflow-hidden marquee-mask -mx-5 sm:-mx-8">
+        <div className="reveal in-view mt-12 sm:mt-16 relative overflow-hidden marquee-mask -mx-5 sm:-mx-8">
           <div className="flex w-max items-center gap-14 animate-marquee px-7">
             {marqueeLogos.map((logo, i) => (
               // eslint-disable-next-line @next/next/no-img-element
@@ -100,6 +105,7 @@ export default function Hero() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

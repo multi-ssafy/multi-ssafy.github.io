@@ -82,9 +82,9 @@ export default function CompanyVoices() {
               }`}
               style={v.delay ? { animationDelay: v.delay } : undefined}
             >
-              <div className="shrink-0 flex flex-col items-center gap-2 w-16">
+              <div className="shrink-0 flex flex-col items-center gap-2">
                 <LogoBadge company={v.company} logo={v.logo} />
-                <span className="text-xs font-bold text-ink-700 text-center leading-tight break-keep">
+                <span className="inline-flex items-center justify-center rounded-full bg-brand-600 px-3 py-1 text-xs font-bold text-white leading-tight whitespace-nowrap shadow-soft">
                   {v.company}
                 </span>
               </div>

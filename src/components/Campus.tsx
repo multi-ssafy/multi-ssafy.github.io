@@ -231,10 +231,9 @@ export default function Campus() {
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">CAMPUS &amp; TRACK</p>
-          <h2 className="section-title mt-3">
-            내 커리어에 맞는 AI 트랙을
-            <br />
-            전국 5개 캠퍼스 어디에서나!
+          <h2 className="section-title mt-3 leading-[1.5]">
+            <span className="block">내 커리어에 맞는 AI 트랙을</span>
+            <span className="block mt-3">전국 5개 캠퍼스 어디에서나!</span>
           </h2>
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronRight } from "@/lib/icons";
+import { ChevronRight, ArrowRight } from "@/lib/icons";
 
 // PROJECT — 단계별 프로젝트 우수사례 (관통 · 공통 · 특화 · 자율) 캐러셀
 // 캠퍼스처럼 좌우로 넘겨보며 살펴볼 수 있는 구조
@@ -21,7 +21,7 @@ const STAGES: Stage[] = [
   {
     key: "관통",
     step: "STAGE 01",
-    title: "관통 프로젝트",
+    title: "1학기 프로젝트",
     desc: "과목별 학습 내용을 기능 단위로 구현하며 하나의 어플리케이션을 점진적으로 완성하는 팀 프로젝트입니다.",
     tags: [],
     caseTitle: "생성형 AI를 접목한 일정 관리 서비스",
@@ -31,7 +31,7 @@ const STAGES: Stage[] = [
   {
     key: "공통",
     step: "STAGE 02",
-    title: "공통 프로젝트",
+    title: "2학기 1차 프로젝트",
     desc: "비전공자·전공자가 한 팀으로 구성되어 AI 기술을 접목한 서비스를 구현합니다.",
     tags: ["웹 기술", "웹 디자인", "AIoT", "모바일"],
     caseTitle: "실시간 협업 화이트보드",
@@ -41,7 +41,7 @@ const STAGES: Stage[] = [
   {
     key: "특화",
     step: "STAGE 03",
-    title: "특화 프로젝트",
+    title: "2학기 2차 프로젝트",
     desc: "관심 있는 특화 도메인을 익히고, 도메인별 AI 기술을 접목한 프로젝트를 구현합니다.",
     tags: ["인공지능", "빅데이터", "블록체인", "자율주행","메타버스 게임","핀테크"],
     caseTitle: "AI 기반 이상거래 탐지 핀테크",
@@ -51,7 +51,7 @@ const STAGES: Stage[] = [
   {
     key: "자율",
     step: "STAGE 04",
-    title: "자율 프로젝트",
+    title: "2학기 3차 프로젝트",
     desc: "아이디어 기획부터 명세 작성까지 스스로, 다양한 AI 기술을 활용해 나만의 포트폴리오를 완성합니다.",
     tags: ["자유주제", "기업연계", "오픈소스", "창업희망"],
     caseTitle: "창업으로 이어진 AI 헬스케어 앱",
@@ -176,6 +176,18 @@ export default function Project() {
               }`}
             />
           ))}
+        </div>
+
+        {/* 프로젝트 더 보러가기 */}
+        <div className="reveal text-center mt-10">
+          <a
+            href="https://gallery.ssafy.com/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            프로젝트 더 보러가기 <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

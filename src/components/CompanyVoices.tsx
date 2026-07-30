@@ -68,7 +68,7 @@ export default function CompanyVoices() {
             <h2 className="section-title mt-3">
               기업이 먼저 알아본 SSAFY!
               <span className="block mt-2 bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-                현업의 목소리
+                채용 담당자의 목소리
               </span>
             </h2>
         </div>
@@ -82,25 +82,18 @@ export default function CompanyVoices() {
               }`}
               style={v.delay ? { animationDelay: v.delay } : undefined}
             >
-              <LogoBadge company={v.company} logo={v.logo} />
+              <div className="shrink-0 flex flex-col items-center gap-2">
+                <LogoBadge company={v.company} logo={v.logo} />
+                <span className="inline-flex items-center justify-center rounded-full bg-brand-600 px-3 py-1 text-xs font-bold text-white leading-tight whitespace-nowrap shadow-soft">
+                  {v.company}
+                </span>
+              </div>
               <div
                 className={`card p-6 sm:p-7 flex-1 ${
                   i % 2 === 1 ? "md:rounded-tr-none" : "md:rounded-tl-none"
                 }`}
               >
-                <div
-                  className={`flex items-center gap-2 ${
-                    i % 2 === 1 ? "md:justify-end" : ""
-                  }`}
-                >
-                  <span className="tag bg-brand-600 text-white">
-                    {v.company}
-                  </span>
-                  <span className="text-sm font-bold">
-                    {v.role}
-                  </span>
-                </div>
-                <blockquote className="mt-3 text-base sm:text-lg font-bold text-ink-800 leading-[2] text-pretty break-keep">
+                <blockquote className="text-base sm:text-lg font-bold text-ink-800 leading-[2] text-pretty break-keep">
                   “{v.quote}”
                 </blockquote>
               </div>

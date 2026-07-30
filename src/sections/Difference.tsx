@@ -6,7 +6,7 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-         삼성의 AI 인증 체계 기반 교육 커리큘럼으로{" "}
+         삼성의 AI 인증 체계를 기반으로 설계한 커리큘럼으로 {" "}
         <span className="text-brand-600">현업 수준의 AI 인재</span>로 성장합니다.
       </>
     ),
@@ -14,16 +14,24 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-        16기 동안 쌓은 교육 노하우,{" "}
-        <span className="text-brand-600">85% {" "}</span>취업률로 증명합니다.
+        한계 너머의 미래에 도전할 수 있도록, {" "}
+        <span className="text-brand-600">매월 최대 160만원의 지원금으로 {" "}</span>교육과 성장에만 몰입합니다.
       </>
     ),
   },
   {
     text: (
       <>
-        취업 전 과정을 전담 컨설턴트가{" "}
-        <span className="text-brand-600">1:1 취업과외</span>로 지원합니다.
+        8년간 단 한 순간도 멈추지 않고 증명해 낸 열 여섯 기수의 교육 노하우,{" "}
+        <span className="text-brand-600">85% 취업률로 증명합니다.</span>
+      </>
+    ),
+  },
+  {
+    text: (
+      <>
+        입과부터 취업까지, 1:1 전담 취업 컨설턴트가{" "}
+        <span className="text-brand-600">나만의 취업 성공 로드맵을 밀착 지원합니다.</span>
       </>
     ),
   },
@@ -41,7 +49,7 @@ export default function Difference() {
           </p> */}
         </div>
 
-        <div className="mt-12 sm:mt-14 max-w-2xl mx-auto flex flex-col gap-3.5 sm:gap-4">
+        <div className="mt-12 sm:mt-14 max-w-4xl mx-auto flex flex-col gap-3.5 sm:gap-4">
           {ITEMS.map((item, i) => (
             <div
               key={i}

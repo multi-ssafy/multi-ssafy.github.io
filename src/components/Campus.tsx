@@ -98,9 +98,6 @@ function CampusPanel({ campus }: { campus: Campus }) {
         <h3 className="mt-1.5 text-xl sm:text-2xl font-extrabold text-ink-900">
           {campus.name}
         </h3>
-        <p className="mt-2 text-medium leading-relaxed">
-          {campus.desc}
-        </p>
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           {campus.tags.map((t) => (
             <span key={t} className="tag bg-brand-50 text-brand-600">
@@ -123,7 +120,7 @@ function CampusPanel({ campus }: { campus: Campus }) {
             >
               <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
             </svg>
-            <span className="text-sm font-bold text-ink-700">소개영상</span>
+            <span className="text-sm font-bold text-ink-700">캠퍼스 탐방 영상</span>
           </div>
           <a
             href={`https://www.youtube.com/watch?v=${campus.videoId}`}
@@ -234,12 +231,10 @@ export default function Campus() {
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">CAMPUS &amp; TRACK</p>
-          <h2 className="section-title mt-3">
-            전국 5개 캠퍼스에서 완성되는 몰입교육
+          <h2 className="section-title mt-3 leading-[1.5]">
+            <span className="block">내 커리어에 맞는 AI 트랙을</span>
+            <span className="block">전국 5개 캠퍼스 어디에서나!</span>
           </h2>
-          <p className="section-desc">
-            캠퍼스를 선택하면 운영 트랙과 교육 환경을 확인할 수 있어요
-          </p>
         </div>
 
         {/* 중앙 상단 캠퍼스 선택 탭 (세그먼트 컨트롤) */}

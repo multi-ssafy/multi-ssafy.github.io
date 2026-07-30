@@ -56,14 +56,6 @@ export default function Curriculum() {
                 <li>· AI 트렌드, 노하우 습득</li>
                 <li>· 미니프로젝트로 체험해보는 AI</li>
               </ul>
-              <div className="mt-5 flex flex-wrap gap-2">
-                <span className="tag bg-ink-50 text-ink-600">AI 거버넌스</span>
-                <span className="tag bg-ink-50 text-ink-600">AI 디자인 사고</span>
-                <span className="tag bg-ink-50 text-ink-600">AI 아이디어톤</span>
-                <span className="tag bg-ink-50 text-ink-600">
-                  AI 스마트 팩토리 로봇 퀘스트
-                </span>
-              </div>
             </div>
           </div>
 
@@ -108,14 +100,6 @@ export default function Curriculum() {
                 <li>· 생성형 AI와 프롬프트 이해</li>
                 <li>· 다양한 AI 모델 이해</li>
               </ul>
-              <div className="mt-5 flex flex-wrap gap-2">
-                <span className="tag bg-ink-50 text-ink-600">AI 기초</span>
-                <span className="tag bg-ink-50 text-ink-600">프롬프트</span>
-                <span className="tag bg-ink-50 text-ink-600">LangChain</span>
-                <span className="tag bg-ink-50 text-ink-600">RAG</span>
-                <span className="tag bg-ink-50 text-ink-600">머신러닝</span>
-                <span className="tag bg-ink-50 text-ink-600">알고리즘</span>
-              </div>
             </div>
           </div>
 
@@ -151,16 +135,9 @@ export default function Curriculum() {
               </p>
               <ul className="mt-3 space-y-1.5 text-sm leading-relaxed">
                 <li>· 다양한 AI를 활용한 프로젝트 경험</li>
-                <li>· AI 모델 성능 개선 실습</li>
+                <li>· AI 모델 성능 개선 실습 및 AI Agent 개발</li>
                 <li>· AI 서비스 배포와 운영</li>
               </ul>
-              <div className="mt-5 flex flex-wrap gap-2">
-                <span className="tag bg-ink-50 text-ink-600">컴퓨터 비전</span>
-                <span className="tag bg-ink-50 text-ink-600">LLM</span>
-                <span className="tag bg-ink-50 text-ink-600">파인튜닝</span>
-                <span className="tag bg-ink-50 text-ink-600">AI 에이전트</span>
-                <span className="tag bg-ink-50 text-ink-600">MLOps</span>
-              </div>
             </div>
           </div>
         </div>
@@ -204,17 +181,17 @@ export default function Curriculum() {
       </div>
       
         {/* AI 역량 로드맵 */}
-        <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
+        {/* <div className="reveal mt-12 sm:mt-14 max-w-2xl mx-auto">
           {/* <p className="text-center text-lg font-bold text-brand-600 mb-6">
             AI 역량 성장 로드맵
           </p> */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          {/* <img
             src="/assets/images/ai-roadmap.png"
             alt="AI 역량 성장 로드맵: 입과 전 AI 이해부터 2학기 AI 서비스 설계 능력까지 5단계"
             className="w-full max-w-xl mx-auto h-auto"
-          />
-        </div>
+          /> */}
+        {/* </div> */}
     </section>
   );
 }

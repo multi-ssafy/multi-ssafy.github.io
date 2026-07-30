@@ -27,18 +27,19 @@ const STORIES: Story[] = [
     major: "교육학과",
     name: "정은선",
     role: "AI 비즈니스 기획자",
-    story: "초등학교 교사로 아이들을 가르치다, 이제는 AI를 활용해 가전을 기획합니다!",
+    story:
+      "무스펙 비전공자로 진로 전환이 막막했지만, SSAFY에서 웹 개발 실무를 배우고 삼성전자 임직원의 멘토링을 받으며 AI 프로젝트를 수행했습니다. 교육학 전공자로서의 소통 역량과 SW 기술력의 시너지를 증명하며, 현재 삼성전자 AI 개발 기획자로 근무하고 있습니다.",
     delay: undefined,
   },
   {
     photo: "/assets/photos/story-seoul.jpg",
-    photoAlt: "데이터 분석가 조제형",
-    cohort: "3기",
-    majorType: "전공",
-    major: "전기전자공학과",
-    name: "조제형",
+    photoAlt: "데이터 분석가 지민경",
+    cohort: "11기",
+    majorType: "비전공",
+    major: "응용통계학과",
+    name: "지민경",
     role: "데이터 분석가",
-    story: "전기전자공학을 공부하던 학생에서 데이터로 답을 찾기까지, 머신러닝으로 데이터를 분석합니다!",
+    story: "응용통계학을 전공했지만, 데이터 분석 직무로의 취업은 쉽지 않았습니다. SSAFY 교육과 취업 컨설팅을 통해 기업과 직무에 맞춘 취업준비와 실무 역량을 강화할 수 있었습니다. 현재는 전공 지식과 SSAFY에서 쌓은 경험을 바탕으로 롯데손해보험 자동차보험 데이터 분석가로 활동하고 있습니다.",
     delay: ".06s",
   },
   {
@@ -49,19 +50,19 @@ const STORIES: Story[] = [
     major: "경영학과",
     name: "고금강",
     role: "HR 인사 전략 기획자",
-    story: "경영학 전공을 바탕으로 AI를 활용해 급여체계를 설계하는 인사전략기획자가 되었습니다!",
+    story:
+      "경영학도 특유의 끈기와 열정으로도 취업의 문턱은 너무 높았습니다. SSAFY의 체계적인 교육과 탄탄한 프로젝트 경험들이 경영학 지식과 융합되어, 현재 삼성전자에서 기술 이해도를 갖춘 인사 기획자로 활약하고 있습니다.",
     delay: ".12s",
   },
   {
-    // 예시 — 실제 사례로 교체 예정
     photo: "/assets/photos/story-buulgyeong.jpg",
     photoAlt: "IT·AI 기술 세일즈 수료생",
-    cohort: "8기",
+    cohort: "13기",
     majorType: "비전공",
-    major: "기계/금속공학과",
-    name: "황산나래",
+    major: "경제학과",
+    name: "김재희",
     role: "IT·AI 기술 세일즈",
-    story: "기계·금속공학에 AI 이해력을 더해, AI 데이터 분석으로 조선업의 IT/AI 기술을 세일즈합니다!",
+    story: "경제학 전공 후 병원 영업 경력자로 29세에 SSAFY를 시작했습니다. SSAFY 교육은 IT 기술 영업 분야에 대한 관심을 갖게 했고 기존 직무 경험까지 살려서 원하던 4개 회사에 동시 합격하는 성과가 있었습니다. 지금은 AJ네트웍스에서 IT장비 렌탈 영업을 담당하고 있습니다.",
     delay: ".18s",
   },
 ];
@@ -87,15 +88,7 @@ export default function Story() {
               className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex"
               style={s.delay ? { animationDelay: s.delay } : undefined}
             >
-              <div className="w-[36%] sm:w-[40%] shrink-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={s.photo}
-                  alt={s.photoAlt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex-1 p-5 sm:p-7 flex flex-col justify-center min-w-0">
+              <div className="flex-1 p-6 sm:p-7 flex flex-col justify-center min-w-0">
                 <span className="tag bg-brand-50 w-fit">
                   {s.cohort} · {s.majorType}
                 </span>

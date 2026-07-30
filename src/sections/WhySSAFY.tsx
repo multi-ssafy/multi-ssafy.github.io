@@ -1,74 +1,60 @@
-// 교육 혜택 — 혜택 카드 그리드 (레퍼런스 스타일: 혜택 배지 + 이모지 + 문구)
+// 교육 혜택 — 혜택 카드 그리드 (설명 문구 + 파란 강조만)
 // 이미 다른 파트에서 언급된 혜택(교육지원금, 취업률85%·취업컨설팅)은 제외
 
 type Benefit = {
-  emoji: string;
-  title: React.ReactNode;
-  note?: string;
-  badge: string;
+  lead: React.ReactNode; // 카드 문구 (파란 강조 포함)
 };
 
 const BENEFITS: Benefit[] = [
   {
-    emoji: "🖥️",
-    title: (
+    lead: (
       <>
-        고사양 NVIDIA
-        <br />
-        GPU 서버 보유
+        초고속 엔비디아 GPU 서버로{" "}
+        <span className="text-brand-600">현업 수준의 AI 개발 경험 축적</span>
       </>
     ),
-    badge: "bg-sky-100 text-sky-700",
   },
   {
-    emoji: "🗃️",
-    title: (
+    lead: (
       <>
-        100만원 상당
-        <br />
-        교보재 제공
+        100만 원 상당 교보재 제공{" "}
+        <span className="text-brand-600">취업 포트폴리오 완성</span>
       </>
     ),
-    badge: "bg-emerald-100 text-emerald-700",
   },
   {
-    emoji: "⚡",
-    title: "1인 1GPU 제공",
-    note: "* 5060급",
-    badge: "bg-amber-100 text-amber-700",
-  },
-  {
-    emoji: "🎤",
-    title: "국내 최고 대학 AI 교수의 라이브강의",
-    badge: "bg-violet-100 text-violet-700",
-  },
-  {
-    emoji: "📊",
-    title: (
+    lead: (
       <>
-        삼성 SW 역량 테스트
+        <span className="text-brand-600">대기 없는 무한한 AI 실습</span>
         <br />
-        응시 기회 제공
+        1인당 고성능 1GPU 제공
       </>
     ),
-    badge: "bg-brand-100 text-brand-700",
   },
   {
-    emoji: "🏆",
-    title: (
+    lead: (
       <>
-        삼성·5대은행 등
-        <br />
-        기업 연계 프로젝트
+        국내 최정상급 AI 석박사{" "}
+        <span className="text-brand-600">최신 기술 마스터</span>
       </>
     ),
-    badge: "bg-coral-100 text-coral-600",
-  }
-  // {
-  //   emoji: "📚",
-  //   title: "실무형 프로젝트 포트폴리오",
-  //   badge: "bg-rose-100 text-rose-700",
-  // },
+  },
+  {
+    lead: (
+      <>
+        삼성 SW 역량 테스트 응시 기회로{" "}
+        <span className="text-brand-600">취업 실전 대비</span>
+      </>
+    ),
+  },
+  {
+    lead: (
+      <>
+        삼성·금융권 기업 프로젝트 수행{" "}
+        <span className="text-brand-600">이력서에 바로 쓰는 핵심 스펙</span>
+      </>
+    ),
+  },
 ];
 
 export default function WhySSAFY() {
@@ -83,25 +69,16 @@ export default function WhySSAFY() {
           </p>
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-5 max-w-[790px] mx-auto">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {BENEFITS.map((b, i) => (
             <div
               key={i}
-              className="reveal card p-6 flex flex-col items-center justify-center aspect-square w-[250px] text-center hover:shadow-card-hover hover:-translate-y-1"
+              className="reveal card p-6 sm:p-7 flex items-center justify-center text-center min-h-[140px] hover:shadow-card-hover hover:-translate-y-1"
               style={i > 0 ? { animationDelay: `${i * 0.05}s` } : undefined}
             >
-              <span className={`tag ${b.badge}`}>혜택 {i + 1}</span>
-              <div className="mt-4 text-4xl sm:text-5xl" aria-hidden="true">
-                {b.emoji}
-              </div>
-              <p className="mt-3 text-base sm:text-lg font-bold text-ink-900 leading-snug break-keep">
-                {b.title}
+              <p className="text-base sm:text-lg font-bold text-ink-800 leading-relaxed break-keep">
+                {b.lead}
               </p>
-              {b.note && (
-                <p className="mt-1 text-xs font-semibold text-ink-400">
-                  {b.note}
-                </p>
-              )}
             </div>
           ))}
         </div>

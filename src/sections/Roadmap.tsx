@@ -11,7 +11,7 @@ type Step = {
 const STEPS: Step[] = [
   {
     dur: "5.5개월",
-    title: "기본과정",
+    title: "1학기 기본과정",
     desc: "AI 기초 지식과 알고리즘 중심의 몰입형 코딩 교육 (수준별 분반 운영)",
   },
   {

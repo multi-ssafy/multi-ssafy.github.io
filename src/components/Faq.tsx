@@ -188,7 +188,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
           </ol>
         </div>
 
-        <p className="text-ink-400">
+        <p className="text-ink-800">
           ※ 국민내일배움카드 발급제외대상자 및 K-디지털트레이닝 과정 수강으로
           인한 카드 잔액이 없을 경우 대전, 광주, 구미, 부울경(부산) 캠퍼스의
           교육생에게 지급되는 훈련장려금은 지급되지 않습니다.
@@ -199,9 +199,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
           <p>
             K-디지털트레이닝 관련 문의
             <br />▶ 대한상공회의소 SSAFY과정 담당 : 02-6050-3934
-          </p>
-          <p>
-            국민내일배움카드 관련 문의
+            <br />국민내일배움카드 관련 문의
             <br />▶ 본인 거주지역 고용센터
             <br />: 고용보험 홈페이지(
             <Ext href="https://www.ei.go.kr">www.ei.go.kr</Ext>) → ‘고용센터
@@ -278,17 +276,17 @@ export default function Faq() {
                     className="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-bold text-ink-900 break-keep">
+                    <span className="font-bold break-keep">
                       {item.q}
                     </span>
                     <ChevronDown
-                      className={`faq-icon w-5 h-5 text-ink-400 shrink-0 transition-transform ${
+                      className={`faq-icon w-5 h-5 shrink-0 transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <div className="faq-panel px-6 pb-5 text-sm text-ink-500 leading-relaxed break-keep">
+                    <div className="faq-panel px-6 pb-5 text-sm leading-relaxed break-keep">
                       {item.a}
                     </div>
                   )}

@@ -27,7 +27,7 @@ const CAMPUSES: Campus[] = [
     name: "서울 캠퍼스",
     eyebrow: "역삼 멀티캠퍼스",
     desc: "첨단 산업의 중심에서 SW·AI 인재로 성장합니다",
-    tags: ["Python", "Java", "Data"],
+    tags: ["Python", "Java", "Embedded", "Data"],
     image: "/assets/images/campus-seoul.jpg",
     imageAlt: "서울 캠퍼스 대표 사진",
     imagePosition: "center center",

@@ -109,7 +109,7 @@ export default function Career() {
             <p className="text-5xl md:text-6xl font-black text-ink-900 leading-none">
               185
             </p>
-            <p className="mt-3 text-lg font-bold">우대 기업 수</p>
+            <p className="mt-3 text-lg font-bold">채용 우대 기업 수</p>
 
             <p className="absolute bottom-3 left-4 right-4 text-medium leading-snug">
               * 채용 시 특별전형, 서류 가점 등

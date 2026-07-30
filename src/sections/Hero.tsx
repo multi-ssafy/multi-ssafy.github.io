@@ -65,7 +65,7 @@ export default function Hero() {
               <span className="text-2xl sm:text-3xl align-top ml-0.5">개</span>
             </p>
             <p className="mt-2 text-sm sm:text-base font-bold text-ink-600">
-              채용 우대기업
+              채용 우대 기업
             </p>
           </div>
         </div>

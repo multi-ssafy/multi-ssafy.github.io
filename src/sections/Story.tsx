@@ -87,15 +87,7 @@ export default function Story() {
               className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex"
               style={s.delay ? { animationDelay: s.delay } : undefined}
             >
-              <div className="w-[36%] sm:w-[40%] shrink-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={s.photo}
-                  alt={s.photoAlt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex-1 p-5 sm:p-7 flex flex-col justify-center min-w-0">
+              <div className="flex-1 p-6 sm:p-7 flex flex-col justify-center min-w-0">
                 <span className="tag bg-brand-50 w-fit">
                   {s.cohort} · {s.majorType}
                 </span>

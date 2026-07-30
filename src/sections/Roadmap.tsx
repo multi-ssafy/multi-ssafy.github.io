@@ -25,6 +25,10 @@ const GROUPS: Group[] = [
               <span aria-hidden>·</span>
               <span>SW 전공자부터 AI 노베이스까지 문제없는 수준별 분반 운영</span>
             </li>
+            <li className="flex gap-1.5">
+              <span aria-hidden>·</span>
+              <span>AI 스타트캠프</span>
+            </li>
           </ul>
         ),
       },

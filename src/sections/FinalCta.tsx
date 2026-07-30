@@ -15,7 +15,7 @@ export default function FinalCta() {
       </div>
       <div className="relative max-w-2xl mx-auto px-5 text-center reveal">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
-          차세대 SW·AI 인재로
+          차세대 AI·SW 인재로
           <br />
           성장할 준비가 되셨나요?
         </h2>

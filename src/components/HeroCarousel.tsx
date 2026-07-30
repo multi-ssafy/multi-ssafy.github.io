@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 // 메인 상단 이미지 캐러셀 (자동 롤링)
-// ※ 임시 placeholder 사진 — 실제 메인 이미지로 교체 예정
+// 등장 순서: main1 → main2 → 잡페어
 const SLIDES = [
+  { src: "/assets/images/main/main1.png", alt: "메인 이미지 1" },
+  { src: "/assets/images/main/main2.png", alt: "메인 이미지 2" },
   { src: "/assets/photos/job-fair.jpg", alt: "SSAFY 채용박람회 현장" },
-  { src: "/assets/photos/career-session.jpg", alt: "취업 실전 교육 현장" },
-  { src: "/assets/photos/consulting.jpg", alt: "1:1 취업 상담·컨설팅 모습" },
 ];
 
 const INTERVAL = 3500;
@@ -37,9 +37,6 @@ export default function HeroCarousel() {
           />
         ))}
       </div>
-
-      {/* 하단 페이드 (사진 밑을 흐려서 콘텐츠와 자연스럽게 연결) */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
 
       {/* 인디케이터 */}
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">

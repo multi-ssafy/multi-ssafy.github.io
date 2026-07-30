@@ -35,7 +35,7 @@ export default function FinalCta() {
         <p className="mt-6 text-sm text-ink-300">
           지금 바로{" "}
           <a
-            href={APPLY_URL}
+            href="https://ssafy.com/ksp/jsp/swp/apply/swpApplyProcess.jsp"
             target="_blank"
             rel="noopener"
             className="font-bold text-white hover:text-brand-300 underline underline-offset-4"

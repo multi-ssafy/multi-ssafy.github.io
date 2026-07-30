@@ -181,8 +181,10 @@ export default function Career() {
             수료 이후에도 취업할 때까지 이어지는 상담·교육·채용 연계
           </p> */}
           <a
-            href="https://www.ssafy.com/ksp/servlet/swp.content.controller.SwpContentServlet"
-            className="mt-3 inline-flex items-center gap-1.5 font-bold text-brand-600 hover:text-brand-700"
+            href="https://www.ssafy.com/ksp/servlet/swp.content.controller.SwpContentServlet?p_process=select-content-view&p_menu_cd=M0105&p_content_cd=C0105"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
           >
             취업지원 자세히 보기 <ArrowRight className="w-4 h-4" />
           </a>

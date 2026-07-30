@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "@/lib/icons";
+import { ArrowUpRight,ArrowRight } from "@/lib/icons";
 
 // CAREER STORY — 나의 전공으로 탑티어가 되는 지름길
 // 다양한 전공에서 AI 직무로 진출한 케이스 (예시 — 실제 인터뷰 사례로 교체 예정)
@@ -124,12 +124,12 @@ export default function Story() {
 
         <div className="reveal text-center mt-10">
           <a
-            href={REVIEW_URL}
+            href="https://www.ssafy.com/ksp/servlet/swp.board.controller.SwpBoardServlet?p_process=select-board-list&p_receipt_seq=&p_menu_cd=M0204&p_content_cd=&p_param1=226509"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            더 많은 취업 후기 보기
+            더 많은 취업 후기 보기 <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>

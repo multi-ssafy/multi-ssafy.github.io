@@ -24,7 +24,7 @@ export default function Hero() {
 
         {/* 메인 헤드라인 — 얇은 테두리 박스, 장식 없음 */}
         <div className="reveal in-view border border-ink-200 rounded-[1.75rem] px-6 py-8 sm:px-12 sm:py-10">
-          <h1 className="break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-ink-900 leading-[1.15]">
+          <h1 className="break-keep text-4xl sm:text-5xl md:text-6xl font-black tracking-widest text-ink-900 leading-[1.15]">
             {/* <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
               AI
             </span>

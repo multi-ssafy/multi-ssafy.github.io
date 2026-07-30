@@ -13,8 +13,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.ink.100)_1px,transparent_0)] [background-size:28px_28px] opacity-40" />
       </div>
 
-      {/* 상단 이미지 캐러셀 (자동 롤링) */}
-      <HeroCarousel />
+      {/* 상단 이미지 캐러셀 (자동 롤링) — 콘텐츠 폭에 맞춰 양쪽 여백 + 중앙정렬 */}
+      <div className="w-full max-w-content mx-auto px-5 sm:px-8 pt-6 sm:pt-8">
+        <HeroCarousel />
+      </div>
 
       <div className="flex-1 flex items-center">
       <div className="w-full max-w-content mx-auto px-5 sm:px-8 py-8 text-center">

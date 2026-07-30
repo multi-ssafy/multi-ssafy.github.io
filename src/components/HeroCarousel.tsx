@@ -21,7 +21,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden rounded-3xl">
       {/* 슬라이드 트랙 */}
       <div
         className="flex transition-transform duration-700 ease-out"
@@ -39,7 +39,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* 하단 페이드 (사진 밑을 흐려서 콘텐츠와 자연스럽게 연결) */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-white" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
 
       {/* 인디케이터 */}
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">

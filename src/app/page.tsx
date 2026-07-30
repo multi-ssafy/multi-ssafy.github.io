@@ -26,20 +26,31 @@ export default function Home() {
   return (
     <>
       <main id="top">
+        {/* 메인 (첫 페이지 고정) */}
         <Hero />
-        <IntroMessage />
         <SectionNav />
-        <IntroVideo />
+
+        {/* 1) 차별점 (3가지 교육특징은 Hero 내 3지표) */}
         <Difference />
-        <WhySSAFY />
+
+        {/* 2) 소개 영상 */}
+        <IntroMessage />
+        <IntroVideo />
+
+        {/* 3) 커리큘럼 */}
         <Roadmap />
         <Curriculum />
-        <Campus />
         <Project />
+        <WhySSAFY />
+
+        {/* 4) 캠퍼스 · 취업 */}
+        <Campus />
         <QuoteBanner />
         <Career />
         <Story />
         <CompanyVoices />
+
+        {/* 5) 지원 · 안내 */}
         <CtaBanner />
         <Apply />
         <Faq />

@@ -6,7 +6,7 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-         삼성의 AI 인증 체계를 기반으로 설계한 커리큘럼으로 {" "}
+         삼성의 AI 인증 체계를 기반으로 설계한 커리큘럼으로{" "}
         <span className="text-brand-600">현업 수준의 AI 인재</span>로 성장합니다.
       </>
     ),

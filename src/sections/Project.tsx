@@ -74,7 +74,7 @@ export default function Project() {
           <p className="eyebrow justify-center">PROJECT</p>
           <h2 className="section-title mt-3">프로젝트 우수사례</h2>
           <p className="section-desc">
-            관통부터 자율까지, 단계별 프로젝트로 실전 역량을 쌓아요
+            기본부터 심화까지, 단계별 프로젝트로 빈틈없는 실전 역량을 쌓아요
           </p>
         </div>
 

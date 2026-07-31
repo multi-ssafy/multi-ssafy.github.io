@@ -9,7 +9,8 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        초고속 엔비디아 GPU 서버로{" "}
+        초고속 엔비디아 GPU 서버로
+        <br />
         <span className="text-brand-600">현업 수준의 AI 개발 경험 축적</span>
       </>
     ),
@@ -53,7 +54,8 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        삼성·금융권 기업 프로젝트 수행{" "}
+        삼성·금융권 기업 프로젝트 수행
+        <br />
         <span className="text-brand-600">이력서에 바로 쓰는 핵심 스펙</span>
       </>
     ),

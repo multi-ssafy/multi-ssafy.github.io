@@ -25,7 +25,13 @@ export default function Apply() {
             <span className="font-bold text-brand-600">
               3분이면 끝나는 온라인 간편 지원
             </span>{" "}
-            📲
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/icons/mobile-apply.png"
+              alt=""
+              aria-hidden="true"
+              className="inline-block h-6 w-6 sm:h-7 sm:w-7 align-middle"
+            />
           </p>
         </div>
 

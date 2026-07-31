@@ -16,7 +16,7 @@ export default function CtaBanner() {
             모집 일정이 확정되면 가장 먼저 안내해드립니다.
           </p>
           <NotifyButton className="btn-white mt-7 inline-flex">
-            17기 모집 알림 신청 <ArrowRight className="w-4 h-4" />
+            SSAFY 정보 알림 신청 <ArrowRight className="w-4 h-4" />
           </NotifyButton>
         </div>
       </div>

@@ -20,19 +20,19 @@ export default function FinalCta() {
           성장할 준비가 되셨나요?
         </h2>
         <p className="mt-4 text-ink-300">
-          17기 모집 소식을 가장 먼저 받아보세요.
+          SSAFY 소식을 가장 먼저 받아보세요.
         </p>
 
         <div className="mt-9">
           <NotifyButton className="btn-primary text-base !px-8 !py-4">
-            17기 모집 알림 신청
+            SSAFY 정보 알림 신청
           </NotifyButton>
         </div>
         {/* <p className="mt-4 text-xs text-ink-500">
           ※ 사전 알림 신청은 데모 화면이며, 입력하신 정보는 저장·전송되지
           않습니다.
         </p> */}
-        <p className="mt-6 text-sm text-ink-300">
+        {/* <p className="mt-6 text-sm text-ink-300">
           지금 바로{" "}
           <a
             href="https://ssafy.com/ksp/jsp/swp/apply/swpApplyProcess.jsp"
@@ -42,7 +42,7 @@ export default function FinalCta() {
           >
             SSAFY 지원하기 →
           </a>
-        </p>
+        </p> */}
       </div>
     </section>
   );

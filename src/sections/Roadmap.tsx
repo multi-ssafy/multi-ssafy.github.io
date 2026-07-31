@@ -44,7 +44,25 @@ const GROUPS: Group[] = [
     steps: [
       {
         title: "2학기 심화과정",
-        desc: "AI 프로젝트 기반 자기주도 학습, 실무와 동일한 개발 방식 활용",
+        desc: (
+          <ul className="space-y-1">
+            <li className="flex gap-1.5">
+              <span aria-hidden>·</span>
+              <span>
+              AI기반 자기주도형 프로젝트
+              <span className="block">(트랙/도메인 별 다양한 주제)</span>
+            </span>
+            </li>
+            <li className="flex gap-1.5">
+              <span aria-hidden>·</span>
+              <span>실무 환경과 동일한 개발방식 활용</span>
+            </li>
+            <li className="flex gap-1.5">
+              <span aria-hidden>·</span>
+              <span>기업 연계 프로젝트</span>
+            </li>
+          </ul>
+        ),
       },
       {
         title: "2차 Job Fair",

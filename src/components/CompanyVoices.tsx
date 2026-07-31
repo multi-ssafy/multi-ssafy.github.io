@@ -4,7 +4,7 @@
 type Voice = {
   company: string;
   role: string;
-  quote: string;
+  quote: React.ReactNode;
   logo?: string;
   delay?: string;
 };
@@ -13,24 +13,40 @@ const VOICES: Voice[] = [
   {
     company: "농심NDS",
     role: "인사담당자",
-    quote:
-      "경력직 이상의 퍼포먼스와 우수한 적응력, 협업에서 인정받는 인재는 단연 SSAFY 출신입니다.",
+    quote: (
+      <>
+        경력직 이상의 퍼포먼스와 우수한 적응력, 협업에서 인정받는 인재는
+        <br />
+        단연 SSAFY 출신입니다.
+      </>
+    ),
     logo: "/assets/logo/companies/nongsim.png",
     delay: ".08s",
   },
   {
     company: "우리은행",
     role: "채용담당자",
-    quote:
-      "프로젝트 경험 기반의 압도적인 기술 이해도와 협업 역량을 갖춘, 빠르게 성장하는 인재입니다.",
+    quote: (
+      <>
+        프로젝트 경험 기반의 압도적인 기술 이해도와 협업 역량을 갖춘,
+        <br />
+        빠르게 성장하는 인재입니다.
+      </>
+    ),
     logo: "/assets/logo/companies/ourbank.png",
     delay: ".08s",
   },
   {
     company: "아이포트폴리오",
     role: "채용담당자",
-    quote:
-      "채용 박람회에서 지원자들의 주도적인 태도와 긍정적인 에너지를 보며, 함께 일하고 싶은 인재라고 생각했고, 계획에 없던 채용 포지션을 오픈하여 영입했습니다.",
+    quote: (
+      <>
+        채용 박람회에서 지원자들의 주도적인 태도와 긍정적인 에너지를 보며,
+        <br />
+        함께 일하고 싶은 인재라고 생각했고, 계획에 없던 채용 포지션을 오픈하여
+        영입했습니다.
+      </>
+    ),
     logo: "/assets/logo/companies/iportfolio.png",
     delay: ".16s",
   },
@@ -73,7 +89,7 @@ export default function CompanyVoices() {
             </h2>
         </div>
 
-        <div className="mt-14 max-w-3xl mx-auto flex flex-col gap-6">
+        <div className="mt-14 max-w-4xl mx-auto flex flex-col gap-6">
           {VOICES.map((v, i) => (
             <div
               key={v.company}

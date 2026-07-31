@@ -46,32 +46,16 @@ export default function Hero() {
         </div>
 
         {/* 3가지 메인 키워드 */}
-        <div className="reveal in-view mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12">
-          <div className="text-center">
-            {/* <p className="text-lg sm:text-2xl font-bold text-ink-700">취업률</p> */}
-            <p className="mt-1.5 text-3xl sm:text-3xl font-black text-brand-600 leading-none">
-              취업률 85<span className="text-3xl sm:text-3xl align-top">%</span>
-            </p>
-          </div>
-          <span className="hidden sm:block w-px h-16 bg-ink-200" />
-          <div className="text-center">
-            {/* <p className="text-lg sm:text-2xl font-bold text-ink-700">
-              삼성이 만든
-            </p> */}
-            <p className="mt-1.5 text-3xl sm:text-3xl font-black text-ink-900 leading-none break-keep">
-              삼성이 만든 AI 전문 교육
-            </p>
-          </div>
-          <span className="hidden sm:block w-px h-16 bg-ink-200" />
-          <div className="text-center">
-            {/* <p className="text-lg sm:text-2xl font-bold text-ink-700">
-              교육지원금
-            </p> */}
-            <p className="mt-1.5 text-3xl sm:text-3xl font-black text-brand-600 leading-none break-keep">
-              교육지원금 100만원 +α
-              {/* <span className="text-ink-900"></span> */}
-            </p>
-          </div>
+        <div className="reveal in-view mt-8 sm:mt-10 flex flex-col items-center gap-3 sm:gap-5">
+          <p className="text-4xl sm:text-6xl font-black text-brand-600 leading-none">
+            취업률 85<span className="text-2xl sm:text-4xl align-top">%</span>
+          </p>
+          <p className="text-4xl sm:text-6xl font-black text-ink-900 leading-tight break-keep">
+            삼성이 만든 AI 전문 교육
+          </p>
+          <p className="text-4xl sm:text-6xl font-black text-brand-600 leading-tight break-keep">
+            교육지원금 100만원 +α
+          </p>
         </div>
 
         <div className="reveal in-view mt-9 flex items-center justify-center">

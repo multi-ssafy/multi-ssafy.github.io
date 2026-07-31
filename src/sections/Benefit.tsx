@@ -10,7 +10,7 @@ const iconBoxStyle = {
 
 const BENEFITS = [
   {
-    tag: "최대 월 160만 원",
+    tag: "최대 월 130만 원",
     title: "교육지원금 지급",
     desc: "교육에만 집중할 수 있도록",
     delay: undefined,

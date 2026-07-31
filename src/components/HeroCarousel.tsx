@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 // 메인 상단 이미지 캐러셀 (자동 롤링)
 // 등장 순서: main1 → main2 → 잡페어
 const SLIDES = [
-  { src: "/assets/images/main/main1.png", alt: "메인 이미지 1" },
-  { src: "/assets/images/main/main2.png", alt: "메인 이미지 2" },
-  { src: "/assets/photos/job-fair.jpg", alt: "SSAFY 채용박람회 현장" },
+  { src: "/assets/images/main/main3.jpg", alt: "메인 이미지 1" },
+  { src: "/assets/images/main/main2.jpg", alt: "메인 이미지 2" },
+  { src: "/assets/images/main/main1.jpg", alt: "SSAFY 채용박람회 현장" },
 ];
 
 const INTERVAL = 3500;

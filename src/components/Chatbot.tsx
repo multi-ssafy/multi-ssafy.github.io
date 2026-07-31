@@ -69,7 +69,7 @@ const flow: Record<string, FlowNode> = {
     ],
   },
   benefit: {
-    bot: "교육에 집중할 수 있도록 지원해요.\n• 교육지원금 월 최대 160만원\n• GPU 인프라 · AI 전문 강사진",
+    bot: "교육에 집중할 수 있도록 지원해요.\n• 교육지원금 월 최대 130만원\n• GPU 인프라 · AI 전문 강사진",
     options: [
       { label: "혜택 자세히 보기", href: "#benefit" },
       { label: "처음으로", goto: "root", subtle: true },

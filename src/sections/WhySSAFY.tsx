@@ -17,7 +17,8 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        100만 원 상당 교보재 제공{" "}
+        100만원 상당 교보재 제공
+        <br />
         <span className="text-brand-600">취업 포트폴리오 완성</span>
       </>
     ),
@@ -25,7 +26,7 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        <span className="text-brand-600">대기 없는 무한한 AI 실습</span>
+        <span className="text-brand-600">서버 대기 없는 무한한 AI 실습</span>
         <br />
         1인당 고성능 1GPU 제공
       </>
@@ -34,7 +35,8 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        국내 최정상급 AI 석박사{" "}
+        국내 최정상급 AI 석박사
+        <br />
         <span className="text-brand-600">최신 기술 마스터</span>
       </>
     ),
@@ -42,7 +44,8 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        삼성 SW 역량 테스트 응시 기회로{" "}
+        삼성 SW 역량 테스트 응시 기회로
+        <br />
         <span className="text-brand-600">취업 실전 대비</span>
       </>
     ),

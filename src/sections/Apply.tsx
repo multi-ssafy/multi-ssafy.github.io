@@ -20,11 +20,12 @@ export default function Apply() {
     <section id="apply" className="scroll-mt-20 py-20 md:py-28 bg-ink-50/60">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <div className="text-center max-w-2xl mx-auto reveal">
-          <h2 className="section-title mt-3">지원자격 및 선발 프로세스</h2>
+          <h2 className="section-title mt-3">지원자격 및 모집 프로세스</h2>
           <p className="section-desc">
             <span className="font-bold text-brand-600">
               3분이면 끝나는 온라인 간편 지원
-            </span>
+            </span>{" "}
+            📲
           </p>
         </div>
 
@@ -88,7 +89,7 @@ export default function Apply() {
               <div className="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
                 <ListChecks className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-extrabold text-ink-900">선발 프로세스</h3>
+              <h3 className="text-lg font-extrabold text-ink-900">모집 프로세스</h3>
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2.5 text-sm sm:text-base font-bold text-ink-700">
               {SELECT_STEPS.map((step, i) => (

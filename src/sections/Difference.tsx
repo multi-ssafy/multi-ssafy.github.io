@@ -15,7 +15,7 @@ const ITEMS: Item[] = [
     text: (
       <>
         한계 너머의 미래에 도전할 수 있도록, {" "}
-        <span className="text-brand-600">매월 최대 160만원의 지원금으로 {" "}</span>교육과 성장에만 몰입합니다.
+        <span className="text-brand-600">매월 최대 130만원의 지원금으로 {" "}</span>교육과 성장에만 몰입합니다.
       </>
     ),
   },

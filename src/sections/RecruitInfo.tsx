@@ -52,7 +52,7 @@ export default function RecruitInfo() {
           <div className="card p-8 hover:shadow-card-hover hover:-translate-y-1 flex flex-col justify-center">
             <p className="text-sm font-bold text-ink-400">교육지원금</p>
             <p className="mt-4 text-2xl font-extrabold text-brand-600 leading-snug">
-              월 최대 160만원
+              월 최대 130만원
             </p>
             <span className="tag bg-brand-50 text-brand-600 mt-3 w-fit">
               교육 기간 매월 지급

@@ -89,14 +89,15 @@ export default function Story() {
               style={s.delay ? { animationDelay: s.delay } : undefined}
             >
               <div className="flex-1 p-6 sm:p-7 flex flex-col justify-center min-w-0">
-                <span className="tag bg-brand-50 w-fit">
-                  {s.cohort} · {s.majorType}
-                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  <span className="tag bg-brand-50 w-fit">{s.cohort}</span>
+                  <span className="tag bg-brand-50 w-fit">{s.major}</span>
+                </div>
                 <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-brand-600 leading-tight break-keep">
                   {s.role}
                 </h3>
                 <p className="mt-1.5 text-sm font-bold ">
-                  {s.major}
+                  {s.name}
                 </p>
                 <p className="mt-2 text-sm leading-relaxed break-keep">
                   {s.story}

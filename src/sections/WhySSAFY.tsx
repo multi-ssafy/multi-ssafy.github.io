@@ -72,14 +72,14 @@ export default function WhySSAFY() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-content mx-auto">
           {BENEFITS.map((b, i) => (
             <div
               key={i}
               className="reveal card p-6 sm:p-7 flex items-center justify-center text-center min-h-[140px] hover:shadow-card-hover hover:-translate-y-1"
               style={i > 0 ? { animationDelay: `${i * 0.05}s` } : undefined}
             >
-              <p className="text-sm sm:text-base font-bold text-ink-800 leading-relaxed break-keep">
+              <p className="text-lg sm:text-xl font-bold text-ink-800 leading-relaxed break-keep">
                 {b.lead}
               </p>
             </div>

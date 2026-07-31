@@ -127,8 +127,8 @@ export default function Project() {
                 <p className="text-xs font-bold tracking-wide text-brand-600">
                   {stage.step}
                 </p>
-                <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-ink-900">
-                  {stage.title}
+                <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-ink-900 break-keep">
+                  {stage.title} : {stage.key} 프로젝트
                 </h3>
                 <p className="mt-4 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                   {stage.desc}

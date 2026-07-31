@@ -6,23 +6,23 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-         삼성의 AI 인증 체계를 기반으로 설계한 커리큘럼으로{" "}
-        <span className="text-brand-600">현업 수준의 AI 인재</span>로 성장합니다.
+        삼성의 AI 인증 체계 기반 커리큘럼으로{" "}
+        <span className="text-brand-600">현업 수준의 AI 인재로 성장할 수 있습니다.</span>
       </>
     ),
   },
   {
     text: (
       <>
-        한계 너머의 미래에 도전할 수 있도록, {" "}
-        <span className="text-brand-600">매월 최대 130만원의 지원금으로 {" "}</span>교육과 성장에만 몰입합니다.
+        <span className="text-brand-600">매월 최대 130만원,{" "}</span>
+        오직 교육과 성장에만 몰입할 수 있도록 아낌없이 지원합니다.
       </>
     ),
   },
   {
     text: (
       <>
-        8년간 단 한 순간도 멈추지 않고 축적해 온 열 여섯 기수의 교육 노하우,{" "}
+        멈추지 않고 이어온 열여섯 기수의 교육 노하우가{" "}
         <span className="text-brand-600">85% 취업률로 증명합니다.</span>
       </>
     ),
@@ -30,7 +30,7 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-        입과부터 취업까지, 1:1 전담 취업 컨설턴트가{" "}
+        입과부터 취업까지, 1:1 전담 컨설턴트가{" "}
         <span className="text-brand-600">나만의 취업 성공 로드맵을 밀착 지원합니다.</span>
       </>
     ),

@@ -52,7 +52,7 @@ const STAGES: Stage[] = [
     key: "자율",
     step: "STAGE 04",
     title: "2학기 3차 프로젝트",
-    desc: "아이디어 기획부터 명세 작성까지 스스로, 다양한 AI 기술을 활용해 나만의 포트폴리오를 완성합니다.",
+    desc: "아이디어 기획부터 명세 작성까지 스스로, \n다양한 AI 기술을 활용해 나만의 포트폴리오를 완성합니다.",
     tags: ["자유주제", "기업연계", "오픈소스", "창업희망"],
     caseTitle: "창업으로 이어진 AI 헬스케어 앱",
     caseDesc:
@@ -130,7 +130,7 @@ export default function Project() {
                 <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-ink-900">
                   {stage.title}
                 </h3>
-                <p className="mt-4 text-sm sm:text-base leading-relaxed">
+                <p className="mt-4 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                   {stage.desc}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">

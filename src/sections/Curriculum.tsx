@@ -14,7 +14,7 @@ export default function Curriculum() {
             AI 커리큘럼
           </h2>
           <p className="section-desc">
-            1년의 밀도 있는 몰입 과정을 통해
+            1년간의 밀도 있는 몰입 과정을 통해
             <br />
             AI를 이해하고 서비스를 완성해요
           </p>

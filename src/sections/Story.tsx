@@ -22,7 +22,7 @@ type Story = {
 const STORIES: Story[] = [
   {
     photo: "/assets/photos/story-gumi.jpg",
-    photoAlt: "AI 비즈니스 기획자 정은선",
+    photoAlt: "AI 비즈니스 기획자 정OO",
     cohort: "12기",
     majorType: "비전공",
     major: "교육학과",
@@ -35,19 +35,31 @@ const STORIES: Story[] = [
   },
   {
     photo: "/assets/photos/story-seoul.jpg",
-    photoAlt: "데이터 분석가 지민경",
-    cohort: "11기",
+    photoAlt: "데이터 분석가 김OO",
+    cohort: "14기",
     majorType: "비전공",
-    major: "응용통계학과",
-    name: "지OO",
+    major: "정보통계학과",
+    name: "김OO",
     role: "데이터 분석가",
-    company: "롯데손해보험",
-    story: "(사례변경예정)응용통계학을 전공했지만, 데이터 분석 직무로의 취업은 쉽지 않았습니다. SSAFY 교육과 취업 컨설팅을 통해 기업과 직무에 맞춘 취업준비와 실무 역량을 강화할 수 있었습니다. 현재는 전공 지식과 SSAFY에서 쌓은 경험을 바탕으로 롯데손해보험 자동차보험 데이터 분석가로 활동하고 있습니다.",
+    company: "NH농협카드",
+    story: "정보통계학을 전공했지만 데이터 분석가로의 취업은 쉽지 않았고 자신감도 많이 위축되어 있었습니다. 하지만 SSAFY의 데이터 특화 커리큘럼으로 실무 역량을 쌓았고 막막했던 금융권 취업 과정에서는 8회에 걸쳐 전담 컨설턴트님의 모의면접과 집중 케어를 받으며 점차 달라지는 저를 발견했습니다. 실무 프로젝트는 물론, 1:1 취업 멘토링으로 확신을 얻은 덕분에 마침내 원하던 NH농협카드 데이터 분석 직무에 합격했습니다.",
     delay: ".06s",
   },
   {
+    photo: "/assets/photos/story-buulgyeong.jpg",
+    photoAlt: "IT·AI 기술 세일즈 김OO",
+    cohort: "13기",
+    majorType: "비전공",
+    major: "경제학과",
+    name: "김OO",
+    role: "IT·AI 기술 세일즈",
+    company: "AJ네트웍스",
+    story: "적지 않은 나이에 비전공 출신의 개발자를 꿈꾸며 SSAFY에 입과했지만, 취업 컨설턴트와의 꾸준한 상담을 통해 제 진짜 강점이 '영업'에 있음을 깨달았습니다. SSAFY에서 쌓은 탄탄한 IT 기술력에 기존 영업 경력을 융합하여 'IT 기술영업'으로 방향을 전환했고, 차별화된 장점을 무기로 AJ네트웍스 IT 기술영업 직무에 합격했습니다.",
+    delay: ".18s",
+  },
+  {
     photo: "/assets/photos/story-gwangju.jpg",
-    photoAlt: "HR 인사 전략 기획자 고금강",
+    photoAlt: "HR 인사 전략 기획자 고OO",
     cohort: "12기",
     majorType: "비전공",
     major: "경영학과",
@@ -57,18 +69,6 @@ const STORIES: Story[] = [
     story:
       "“해결하지 못할 문제는 없다” 라는 저의 평소 지론과 경영학 특유의 열정으로 취업 문을 두드렸지만 그 문턱은 너무 높았습니다. 개발에 흥미가 있어 AI 모델을 만들어도 이를 서비스로 연결할 백엔드 역량이 없어 늘 답답했습니다. SSAFY에 들어와 현업 프로세스 그대로 백엔드 구축부터 AI 성능 최적화까지 경험하며 확실한 포트폴리오로 남길 수 있었습니다. 현재 삼성전자에서 기술 이해도를 갖춘 인사 기획자로 당당히 도약했습니다.",
     delay: ".12s",
-  },
-  {
-    photo: "/assets/photos/story-buulgyeong.jpg",
-    photoAlt: "IT·AI 기술 세일즈 수료생",
-    cohort: "13기",
-    majorType: "비전공",
-    major: "경제학과",
-    name: "김OO",
-    role: "IT·AI 기술 세일즈",
-    company: "AJ네트웍스",
-    story: "적지 않은 나이에 비전공 출신의 개발자를 꿈꾸며 SSAFY에 입과했지만, 취업 컨설턴트와의 꾸준한 상담을 통해 제 진짜 강점이 '영업'에 있음을 깨달았습니다. SSAFY에서 쌓은 탄탄한 IT 기술력에 기존 영업 경력을 융합하여 'IT 기술영업'으로 방향을 전환했고, 차별화된 장점을 무기로 AJ네트웍스 IT 기술영업 직무에 합격했습니다.",
-    delay: ".18s",
   },
 ];
 
@@ -106,10 +106,10 @@ export default function Story() {
                 <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-brand-600 leading-tight break-keep">
                   {s.role}
                 </h3>
-                <p className="mt-1.5 text-sm font-bold ">
+                <p className="mt-1.5 text-md font-bold ">
                   {s.name}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed break-keep">
+                <p className="mt-2 text-md leading-relaxed break-keep text-justify">
                   {s.story}
                 </p>
                 {/* <a

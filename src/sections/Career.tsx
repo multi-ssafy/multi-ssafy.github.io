@@ -151,7 +151,7 @@ export default function Career() {
             className="group relative reveal"
             style={s.delay ? { animationDelay: s.delay } : undefined}
           >
-            <div className="card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col h-full">
+            <div className="card overflow-hidden flex flex-col h-full">
               {/* 사진 영역 */}
               <div className="relative aspect-[16/10] overflow-hidden bg-ink-50">
                 {s.photo ? (

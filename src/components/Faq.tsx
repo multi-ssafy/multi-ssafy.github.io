@@ -5,20 +5,6 @@ import { ChevronDown } from "@/lib/icons";
 
 // MORE INFORMATION — 설명회 다시보기 + 자주 묻는 질문(FAQ)
 
-// 외부 링크 (새 탭)
-function Ext({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="font-medium text-brand-600 hover:underline break-all"
-    >
-      {children}
-    </a>
-  );
-}
-
 const FAQS: { q: string; a: ReactNode }[] = [
   {
     q: "SW 경험이 전혀 없는데 지원 가능한가요?",
@@ -109,104 +95,21 @@ const FAQS: { q: string; a: ReactNode }[] = [
     ),
   },
   {
-    q: "국민내일배움카드 발급 및 K-디지털트레이닝 과정 수강 여부는 어떻게 확인할 수 있나요?",
+    q: "현재 재직 중이거나 취업 이력이 있어도 지원 가능한가요?",
     a: (
-      <div className="space-y-4">
+      <div className="space-y-2">
         <p>
-          국민내일배움카드 및 K-디지털트레이닝 과정은 고용노동부 고용24(
-          <Ext href="https://www.work24.go.kr">www.work24.go.kr</Ext>)에서
-          확인하실 수 있습니다.
+          현재 미취업상태로 더 간절하게 취업을 준비하는 분들에게 우선적으로 교육
+          기회를 제공하고자 재직자의 지원을 제한하고 있습니다. (아르바이트,
+          인턴의 경우 개별 확인 필요 — 사무국 문의)
         </p>
-
-        <div className="space-y-2">
-          <p className="font-bold text-ink-800">
-            □ 국민내일배움카드 발급 대상자 확인
-          </p>
-          <p>
-            아래의 발급제외대상자에 해당하지 않는 경우는 국민내일배움카드 신청
-            가능합니다.
-          </p>
-          <div className="rounded-xl bg-ink-50 p-4">
-            <p className="mb-2 font-semibold text-ink-700">
-              [국민내일배움카드 발급제외대상자]
-            </p>
-            <ul className="space-y-1">
-              <li>① 공무원, 사립학교 교직원</li>
-              <li>② 75세 이상인 사람</li>
-              <li>
-                ③ 대규모 기업 근로자로서, 월 임금 300만원 이상이고, 만 45세
-                미만인 사람
-              </li>
-              <li>④ 월 소득 500만원 이상의 특수형태근로종사자</li>
-              <li>
-                ⑤ 사업 기간이 1년 미만이거나 월 소득이 300만원 이상인 법인대표
-              </li>
-              <li>
-                ⑥ 사업 기간이 1년 미만이거나 연 매출 4억 이상의 자영업자
-              </li>
-              <li>⑦ 월 소득이 300만원 이상인 비영리단체 대표</li>
-              <li>
-                ⑧ 졸업까지 남은 수업연한이 2년 이상인 대학/대학원 재학생,
-                고등학교 1~2학년생
-              </li>
-              <li>
-                ⑨ 생계급여를 받고 있는 사람(조건부 수급자 또는 조건부과 유예자는
-                지원 가능)
-              </li>
-              <li>
-                ⑩ 다른 부처 또는 지방자치단체로부터 교육/훈련비를 지원받고 있는
-                사람
-              </li>
-              <li>⑪ 지원·융자·수강제한 기간인 부정수급자</li>
-              <li>⑫ 부정행위에 따른 지원금을 반환하지 않은 사람</li>
-              <li>⑬ 기타 지원 필요성이 인정되지 않는 사람</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="space-y-2">
-          <p className="font-bold text-ink-800">
-            □ 국민내일배움카드 발급 및 K-디지털트레이닝 과정 확인 방법
-          </p>
-          <p>
-            * 고용24(
-            <Ext href="https://www.work24.go.kr">www.work24.go.kr</Ext>) 로그인 →
-            “마이페이지” 접속 후 아래 사항 확인
-          </p>
-          <ol className="list-decimal space-y-1.5 pl-5">
-            <li>
-              국민내일배움카드 발급이력 확인 : “직업훈련관리” →
-              “국민내일배움카드”
-            </li>
-            <li>
-              K-디지털트레이닝 훈련이력 확인 : “직업훈련관리” → “직업훈련이력”
-            </li>
-            <li>
-              국민내일배움카드 지원 잔액 확인 : “직업훈련관리” →
-              “국민내일배움카드” → “카드사용내역”
-            </li>
-          </ol>
-        </div>
-
-        <p className="text-ink-800">
-          ※ 국민내일배움카드 발급제외대상자 및 K-디지털트레이닝 과정 수강으로
-          인한 카드 잔액이 없을 경우 대전, 광주, 구미, 부울경(부산) 캠퍼스의
-          교육생에게 지급되는 훈련장려금은 지급되지 않습니다.
+        <p className="text-ink-400">
+          * 졸업예정자의 경우 재직여부 무관 지원 가능
         </p>
-
-        <div className="space-y-2">
-          <p className="font-bold text-ink-800">□ 문의처</p>
-          <p>
-            K-디지털트레이닝 관련 문의
-            <br />▶ 대한상공회의소 SSAFY과정 담당 : 02-6050-3934
-            <br />국민내일배움카드 관련 문의
-            <br />▶ 본인 거주지역 고용센터
-            <br />: 고용보험 홈페이지(
-            <Ext href="https://www.ei.go.kr">www.ei.go.kr</Ext>) → ‘고용센터
-            찾기’ 메뉴 확인
-            <br />▶ 고용노동부 대표번호 : 1350
-          </p>
-        </div>
+        <p className="text-ink-400">
+          * 취업 이력이 있더라도 본 과정 인터뷰일(12월 예정) 기준 재직자가
+          아니라면 지원 가능
+        </p>
       </div>
     ),
   },

@@ -15,6 +15,11 @@ const SOLUTIONS = [
       "취업 동향 및 직무 지식 함양",
       "자기소개서·IT 포트폴리오 작성 지원",
     ],
+    hover: [
+      "서류부터 면접까지 합격률을 높이는 단계별 집중 프로그램",
+      "현업 개발자와 취업 전문가의 클래스가 다른 핵심 취업 특강",
+      "언제 어디서나 학습 가능! 온라인 강의와 취업 백서(e-Book) 제공",
+    ],
     delay: undefined,
   },
   {
@@ -41,6 +46,11 @@ const SOLUTIONS = [
       "직업 심리검사·취업역량 진단으로 진로 설계",
       "특별전형·서류가점 등 우대 기업 채용 정보 제공",
     ],
+    hover: [
+      "취업 성공의 지름길 전문 컨설턴트의 1:1 면접 집중 클리닉",
+      "AI 취업 역량 진단과 데이터 분석 기반 맞춤형 취업 전략",
+      "현업 개발자와의 생생한 멘토링을 통한 실전형 진로 설계",
+    ],
     delay: ".06s",
   },
   {
@@ -51,6 +61,11 @@ const SOLUTIONS = [
       "채용박람회·캠퍼스 리크루팅·기업탐방",
       "우수 IT·AI기업 채용정보 제공",
       "기업과 함께하는 취업 프로그램",
+    ],
+    hover: [
+      "SSAFY 캠퍼스에서 진행되는 채용박람회(연간 300여개 기업 참여)",
+      "합격을 앞당기는 채용 특별 전형 및 SSAFY 교육생 단독 우대 채용 기회 제공",
+      "기업 현장 탐방, 5대 은행 AI 해커톤 등 강력한 맞춤형 프로그램",
     ],
     delay: ".12s",
   },
@@ -133,7 +148,7 @@ export default function Career() {
         {SOLUTIONS.map((s) => (
           <div
             key={s.title}
-            className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col"
+            className="group relative reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col"
             style={s.delay ? { animationDelay: s.delay } : undefined}
           >
             {/* 사진 영역 */}
@@ -168,6 +183,22 @@ export default function Career() {
                   <li key={i} className="flex items-start gap-2.5">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
                     <span>{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 마우스 오버 시 상세 메시지 오버레이 */}
+            <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-center gap-3.5 bg-white/[0.98] p-7 opacity-0 ring-1 ring-brand-100 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
+                {s.icon}
+              </div>
+              <h4 className="text-lg font-extrabold text-ink-900">{s.title}</h4>
+              <ul className="space-y-2.5 text-medium leading-relaxed">
+                {s.hover.map((it, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
+                    <span className="break-keep">{it}</span>
                   </li>
                 ))}
               </ul>

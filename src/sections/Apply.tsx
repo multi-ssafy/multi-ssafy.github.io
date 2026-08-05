@@ -165,6 +165,18 @@ export default function Apply() {
               alt="적성진단 테스트 예시문제"
               className="w-full h-auto rounded-lg"
             />
+            <p className="mt-4 text-sm leading-relaxed text-ink-600 break-keep">
+              SW전공 적성진단은 삼성 SW Expert Academy(
+              <a
+                href="https://swexpertacademy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-brand-600 hover:underline break-all"
+              >
+                swexpertacademy.com
+              </a>
+              ) 사이트 내 난이도 2~3단계 연습문제를 참고하시기 바랍니다.
+            </p>
           </div>
         </div>
       )}

@@ -52,19 +52,19 @@ export default function Roadmap() {
                   return (
                     <div
                       key={s.title}
-                      className="card p-5 h-full hover:shadow-card-hover hover:-translate-y-1"
+                      className="card relative p-5 min-h-[150px] h-full flex flex-col items-center justify-center text-center hover:shadow-card-hover hover:-translate-y-1"
                     >
                       <span
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-black text-white ${
+                        className={`absolute top-4 left-4 w-8 h-8 rounded-full flex items-center justify-center text-sm font-black text-white ${
                           s.fair ? "bg-coral-500" : "bg-brand-600"
                         }`}
                       >
                         {num}
                       </span>
-                      <h3 className="mt-4 text-center text-base sm:text-lg font-extrabold text-ink-900 whitespace-nowrap">
+                      <h3 className="text-base sm:text-lg font-extrabold text-ink-900 whitespace-nowrap">
                         {s.title}
                       </h3>
-                      <p className="mt-1.5 text-center text-sm text-ink-500 whitespace-nowrap">
+                      <p className="mt-1.5 text-sm text-ink-500 whitespace-nowrap">
                         {s.desc}
                       </p>
                     </div>

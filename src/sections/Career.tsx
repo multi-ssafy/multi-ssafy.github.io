@@ -191,7 +191,7 @@ export default function Career() {
             </div>
 
             {/* 마우스 오버 시 뜨는 작은 팝업 창 (우측·하단으로 이동해 카드 타이틀이 보이도록) */}
-            <div className="pointer-events-none absolute left-[26%] top-[48%] z-30 w-[78%] translate-y-2 rounded-2xl bg-white p-5 opacity-0 shadow-2xl ring-1 ring-brand-200 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="pointer-events-none absolute left-[38%] top-[64%] z-30 w-[76%] translate-y-2 rounded-2xl bg-white p-5 opacity-0 shadow-2xl ring-1 ring-brand-200 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
               <div className="flex items-center gap-2.5">
                 <span className="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
                   {s.icon}

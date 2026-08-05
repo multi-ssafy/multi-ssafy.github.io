@@ -148,7 +148,7 @@ export default function Career() {
         {SOLUTIONS.map((s) => (
           <div
             key={s.title}
-            className="group relative reveal z-0 hover:z-40"
+            className="group relative reveal z-0 hover:z-20"
             style={s.delay ? { animationDelay: s.delay } : undefined}
           >
             <div className="card overflow-hidden flex flex-col h-full">

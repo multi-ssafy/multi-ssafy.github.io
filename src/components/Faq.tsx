@@ -103,10 +103,10 @@ const FAQS: { q: string; a: ReactNode }[] = [
           기회를 제공하고자 재직자의 지원을 제한하고 있습니다. (아르바이트,
           인턴의 경우 개별 확인 필요 — 사무국 문의)
         </p>
-        <p className="text-ink-400">
+        <p className="text-ink-800">
           * 졸업예정자의 경우 재직여부 무관 지원 가능
         </p>
-        <p className="text-ink-400">
+        <p className="text-ink-800">
           * 취업 이력이 있더라도 본 과정 인터뷰일(12월 예정) 기준 재직자가
           아니라면 지원 가능
         </p>

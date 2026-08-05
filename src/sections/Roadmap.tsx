@@ -64,7 +64,7 @@ export default function Roadmap() {
                       <h3 className="text-base sm:text-lg font-extrabold text-ink-900 whitespace-nowrap">
                         {s.title}
                       </h3>
-                      <p className="mt-1.5 text-sm text-ink-500 whitespace-nowrap">
+                      <p className="mt-1.5 text-md whitespace-nowrap">
                         {s.desc}
                       </p>
                     </div>

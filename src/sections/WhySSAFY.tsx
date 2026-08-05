@@ -18,27 +18,27 @@ const BENEFITS: Benefit[] = [
   {
     lead: (
       <>
-        100만원 상당 교보재 제공
+        국내 최정상급 석학의 AI 강연으로
         <br />
-        <span className="text-brand-600">취업 포트폴리오 완성</span>
+        <span className="text-brand-600">최신 기술 마스터</span>
       </>
     ),
   },
   {
     lead: (
       <>
-        <span className="text-brand-600">서버 대기 없는 무한한 AI 실습</span>
+        <span className="text-brand-600">서버 대기 없는 무한 AI 실습</span>
         <br />
         1인당 고성능 1GPU 제공
       </>
     ),
   },
-  {
+    {
     lead: (
       <>
-        국내 최정상급 AI 석박사
+        100만원 상당 프로젝트 교보재 제공
         <br />
-        <span className="text-brand-600">최신 기술 마스터</span>
+        <span className="text-brand-600">취업 포트폴리오 완성</span>
       </>
     ),
   },
@@ -70,7 +70,7 @@ export default function WhySSAFY() {
           <p className="eyebrow justify-center">BENEFIT</p>
           <h2 className="section-title mt-3">교육 혜택</h2>
           <p className="section-desc">
-            학습부터 취업까지 SSAFY가 확실하게 지원할게요
+            기초부터 완성까지 싸피가 든든하게 지원할게요
           </p>
         </div>
 

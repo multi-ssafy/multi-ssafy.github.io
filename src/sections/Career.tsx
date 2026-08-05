@@ -12,7 +12,7 @@ const SOLUTIONS = [
     icon: <GraduationCap className="w-5 h-5" />,
     items: [
       "단계별 취업 경쟁력 제고 교육",
-      "비즈니스 매너 및 직무 지식 함양",
+      "취업 동향 및 직무 지식 함양",
       "자기소개서·IT 포트폴리오 작성 지원",
     ],
     delay: undefined,
@@ -37,8 +37,8 @@ const SOLUTIONS = [
       </svg>
     ),
     items: [
-      "직업 심리검사·취업역량 진단으로 진로 설계",
       "전문 컨설턴트 1:1 상담 · 면접 클리닉",
+      "직업 심리검사·취업역량 진단으로 진로 설계",
       "특별전형·서류가점 등 우대 기업 채용 정보 제공",
     ],
     delay: ".06s",
@@ -50,7 +50,7 @@ const SOLUTIONS = [
     items: [
       "채용박람회·캠퍼스 리크루팅·기업탐방",
       "우수 IT·AI기업 채용정보 제공",
-      "개인별 진로 코칭, 취업활동 지원",
+      "기업과 함께하는 취업 프로그램",
     ],
     delay: ".12s",
   },
@@ -68,7 +68,7 @@ export default function Career() {
             취업 성과로 증명합니다
           </h2>
           <p className="section-desc">
-            전문가와 함께 AI 시대에 맞는 나의 진로를 설계해요
+            나만의 전담 취업컨설턴트와 함께 미래를 설계해요
           </p>
         </div>
 

@@ -14,7 +14,7 @@ const ITEMS: Item[] = [
   {
     text: (
       <>
-        <span className="text-brand-600">매월 최대 130만원,{" "}</span>
+        <span className="text-brand-600">매월 100만원+α,{" "}</span>
         오직 교육과 성장에만 몰입할 수 있도록 아낌없이 지원합니다.
       </>
     ),

@@ -18,7 +18,7 @@ export default function IntroMessage() {
           <span className="block mb-5">전공과 배경은 달라도</span>
           <span className="block mb-5">
             <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-              AI 시대가 원하는 인재
+              AI 시대의 핵심인재
             </span>
             로
           </span>

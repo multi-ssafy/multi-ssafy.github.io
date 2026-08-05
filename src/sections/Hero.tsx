@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="reveal in-view flex items-center justify-center gap-4 sm:gap-5 mb-5">
           <span className="w-8 sm:w-12 bg-ink-300" />
             <p className="text-3xl font-bold text-brand-600 tracking-wider">
-              AI로 연결되는 기회, SSAFY로 완성되는 미래
+              AI로 여는 나만의 미래
             </p>
           <span className="w-8 sm:w-12 bg-ink-300" />
         </div>
@@ -54,7 +54,7 @@ export default function Hero() {
             삼성이 만든 AI 전문 교육
           </p>
           <p className="text-4xl sm:text-6xl font-black text-brand-600 leading-tight break-keep">
-            교육지원금 100만원 +α
+            교육지원금 매월 100만원+α
           </p>
         </div>
 

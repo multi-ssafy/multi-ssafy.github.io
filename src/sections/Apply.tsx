@@ -11,7 +11,7 @@ import { APPLY_URL } from "@/data/site";
 
 // APPLICATION GUIDE — 지원자격 및 선발 프로세스 (4개 박스로 압축)
 
-const SELECT_STEPS = ["지원서 접수", "SSAFY 적성진단", "인터뷰", "교육 시작"];
+const SELECT_STEPS = ["지원서 접수 (26.10월 예정)", "SSAFY 적성진단", "인터뷰", "교육 시작"];
 
 export default function Apply() {
   const [showAptitudeModal, setShowAptitudeModal] = useState(false);
@@ -52,15 +52,12 @@ export default function Apply() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
-                4년제 대학 졸업(예정)자 또는 국내 지정 마이스터고 졸업자
+                4년제 대졸(예정)자 또는 마이스터고 졸업자
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
                 <span>
-                  전공 무관{" "}
-                  <span>
-                    (병역필 또는 면제자)
-                  </span>
+                  전공 무관
                 </span>
               </li>
             </ul>
@@ -127,7 +124,7 @@ export default function Apply() {
             </button>
 
             <p className="mt-3 text-medium">
-              * 세부 일정은 단계별 합격자에게 개별 안내됩니다.
+              * 세부 일정은 각 대상자에게 개별 안내됩니다.
             </p>
           </div>
         </div>

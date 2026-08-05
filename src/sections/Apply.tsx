@@ -133,7 +133,7 @@ export default function Apply() {
       {/* 적성진단 예시문제 모달 */}
       {showAptitudeModal && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60"
+          className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/60"
           onClick={() => setShowAptitudeModal(false)}
         >
           <div

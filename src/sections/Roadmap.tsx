@@ -1,9 +1,8 @@
-// 학습 로드맵 — 1년(12개월) 성장 여정: 6개월씩 두 학기로 구성
-import { type ReactNode } from "react";
+// 학습 로드맵 — 1년(12개월) 성장 여정: 학기별 6개월씩, 과정/잡페어 너비 차등
 
 type Step = {
   title: string;
-  desc: ReactNode;
+  desc: string;
   fair?: boolean;
 };
 
@@ -11,64 +10,17 @@ type Group = { label: string; steps: Step[] };
 
 const GROUPS: Group[] = [
   {
-    label: "6개월",
+    label: "1학기 (6개월)",
     steps: [
-      {
-        title: "1학기 기본과정",
-        desc: (
-          <ul className="space-y-1">
-            <li className="flex gap-1.5">
-              <span aria-hidden>·</span>
-              <span>AI기초 &amp; 알고리즘 중심교육</span>
-            </li>
-            <li className="flex gap-1.5">
-              <span aria-hidden>·</span>
-              <span>SW 전공자부터 AI 노베이스까지 문제없는 수준별 분반 운영</span>
-            </li>
-            <li className="flex gap-1.5">
-              <span aria-hidden>·</span>
-              <span>AI 스타트캠프</span>
-            </li>
-          </ul>
-        ),
-      },
-      {
-        title: "1차 Job Fair",
-        desc: "취업역량 향상 집중교육과 개인별 취업지원 서비스 제공",
-        fair: true,
-      },
+      { title: "1학기 기본과정", desc: "알고리즘 및 AI 중심 교육" },
+      { title: "1차 Job Fair", desc: "자기탐색 및 진로설계", fair: true },
     ],
   },
   {
-    label: "6개월",
+    label: "2학기 (6개월)",
     steps: [
-      {
-        title: "2학기 심화과정",
-        desc: (
-          <ul className="space-y-1">
-            <li className="flex gap-1.5">
-              <span aria-hidden>·</span>
-              <span>
-              AI기반 자기주도형 프로젝트
-              <span className="block">(트랙/도메인 별 다양한 주제)</span>
-            </span>
-            </li>
-            <li className="flex gap-1.5">
-              <span aria-hidden>·</span>
-              <span>실무 환경과 동일한 개발방식 활용</span>
-            </li>
-            <li className="flex gap-1.5">
-              <span aria-hidden>·</span>
-              <span>기업 연계 프로젝트</span>
-            </li>
-          </ul>
-        ),
-      },
-      {
-        title: "2차 Job Fair",
-        desc: "채용 박람회 개최와 개인별 맞춤형 경력 설계·취업지원",
-        fair: true,
-      },
+      { title: "2학기 심화과정", desc: "AI 기반 자기주도형 실전 프로젝트" },
+      { title: "2차 Job Fair", desc: "SSAFY만의 채용박람회", fair: true },
     ],
   },
 ];
@@ -85,21 +37,22 @@ export default function Roadmap() {
           </p>
         </div>
 
-        <div className="reveal mt-14 grid gap-6 sm:gap-8 md:grid-cols-2">
+        <div className="reveal mt-14 grid gap-6 lg:gap-8 lg:grid-cols-2">
           {GROUPS.map((group, gi) => (
             <div key={gi}>
-              {/* 6개월 헤더 바 */}
+              {/* 학기 헤더 바 */}
               <div className="rounded-xl bg-brand-600 py-2.5 text-center text-base font-bold text-white shadow-soft">
                 {group.label}
               </div>
 
-              <div className="mt-4 grid grid-cols-2 gap-4">
+              {/* 과정(넓게) + 잡페어(좁게) 너비 차등 */}
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-[1.7fr_1fr]">
                 {group.steps.map((s, si) => {
                   const num = gi * 2 + si + 1;
                   return (
                     <div
                       key={s.title}
-                      className="card p-5 sm:p-6 h-full hover:shadow-card-hover hover:-translate-y-1"
+                      className="card p-5 h-full hover:shadow-card-hover hover:-translate-y-1"
                     >
                       <span
                         className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-black text-white ${
@@ -108,12 +61,12 @@ export default function Roadmap() {
                       >
                         {num}
                       </span>
-                      <h3 className="mt-4 text-base sm:text-lg font-extrabold text-ink-900 break-keep">
+                      <h3 className="mt-4 text-base sm:text-lg font-extrabold text-ink-900 whitespace-nowrap">
                         {s.title}
                       </h3>
-                      <div className="mt-2 text-sm leading-relaxed break-keep">
+                      <p className="mt-1.5 text-sm text-ink-500 whitespace-nowrap">
                         {s.desc}
-                      </div>
+                      </p>
                     </div>
                   );
                 })}

@@ -188,16 +188,20 @@ export default function Career() {
               </ul>
             </div>
 
-            {/* 마우스 오버 시 상세 메시지 오버레이 */}
-            <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-center gap-3.5 bg-white/[0.98] p-7 opacity-0 ring-1 ring-brand-100 transition-opacity duration-300 group-hover:opacity-100">
-              <div className="w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
-                {s.icon}
+            {/* 마우스 오버 시 뜨는 작은 팝업 창 */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 w-[86%] -translate-x-1/2 -translate-y-1/2 scale-95 rounded-2xl bg-white p-5 opacity-0 shadow-2xl ring-1 ring-brand-200 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
+              <div className="flex items-center gap-2.5">
+                <span className="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                  {s.icon}
+                </span>
+                <h4 className="text-base font-extrabold text-ink-900">
+                  {s.title}
+                </h4>
               </div>
-              <h4 className="text-lg font-extrabold text-ink-900">{s.title}</h4>
-              <ul className="space-y-2.5 text-medium leading-relaxed">
+              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-600">
                 {s.hover.map((it, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
                     <span className="break-keep">{it}</span>
                   </li>
                 ))}

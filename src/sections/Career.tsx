@@ -148,48 +148,50 @@ export default function Career() {
         {SOLUTIONS.map((s) => (
           <div
             key={s.title}
-            className="group relative reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col"
+            className="group relative reveal"
             style={s.delay ? { animationDelay: s.delay } : undefined}
           >
-            {/* 사진 영역 */}
-            <div className="relative aspect-[16/10] overflow-hidden bg-ink-50">
-              {s.photo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={s.photo.src}
-                  alt={s.photo.alt}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full bg-gradient-to-br from-brand-600 to-brand-800 relative overflow-hidden">
-                  <div className="pointer-events-none absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-                </div>
-              )}
-            </div>
-
-            {/* 카드 내용 */}
-            <div className="p-7 flex-1 flex flex-col">
-              {/* 제목 위 아이콘 */}
-              <div className="mb-4 w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
-                {s.icon}
+            <div className="card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex flex-col h-full">
+              {/* 사진 영역 */}
+              <div className="relative aspect-[16/10] overflow-hidden bg-ink-50">
+                {s.photo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={s.photo.src}
+                    alt={s.photo.alt}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-brand-600 to-brand-800 relative overflow-hidden">
+                    <div className="pointer-events-none absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+                  </div>
+                )}
               </div>
 
-              <h4 className="text-lg font-extrabold text-ink-900">
-                {s.title}
-              </h4>
+              {/* 카드 내용 */}
+              <div className="p-7 flex-1 flex flex-col">
+                {/* 제목 위 아이콘 */}
+                <div className="mb-4 w-11 h-11 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center">
+                  {s.icon}
+                </div>
 
-              <ul className="mt-4 space-y-2.5 text-medium leading-relaxed">
-                {s.items.map((it, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
-                    <span>{it}</span>
-                  </li>
-                ))}
-              </ul>
+                <h4 className="text-lg font-extrabold text-ink-900">
+                  {s.title}
+                </h4>
+
+                <ul className="mt-4 space-y-2.5 text-medium leading-relaxed">
+                  {s.items.map((it, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* 마우스 오버 시 뜨는 작은 팝업 창 */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 w-[86%] -translate-x-1/2 -translate-y-1/2 scale-95 rounded-2xl bg-white p-5 opacity-0 shadow-2xl ring-1 ring-brand-200 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
+            {/* 마우스 오버 시 뜨는 작은 팝업 창 (우측·하단으로 이동해 카드 타이틀이 보이도록) */}
+            <div className="pointer-events-none absolute left-[26%] top-[48%] z-30 w-[78%] translate-y-2 rounded-2xl bg-white p-5 opacity-0 shadow-2xl ring-1 ring-brand-200 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
               <div className="flex items-center gap-2.5">
                 <span className="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
                   {s.icon}

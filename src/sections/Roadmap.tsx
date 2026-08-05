@@ -61,10 +61,10 @@ export default function Roadmap() {
                       >
                         {num}
                       </span>
-                      <h3 className="mt-4 text-base sm:text-lg font-extrabold text-ink-900 whitespace-nowrap">
+                      <h3 className="mt-4 text-center text-base sm:text-lg font-extrabold text-ink-900 whitespace-nowrap">
                         {s.title}
                       </h3>
-                      <p className="mt-1.5 text-sm text-ink-500 whitespace-nowrap">
+                      <p className="mt-1.5 text-center text-sm text-ink-500 whitespace-nowrap">
                         {s.desc}
                       </p>
                     </div>

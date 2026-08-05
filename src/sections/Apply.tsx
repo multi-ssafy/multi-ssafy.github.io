@@ -119,7 +119,7 @@ export default function Apply() {
               onClick={() => setShowAptitudeModal(true)}
               className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 underline underline-offset-2"
             >
-              SSAFY 적성진단 테스트 예시문제
+              SSAFY 적성진단 테스트 예시문제 
               {/* <ChevronRight className="w-3.5 h-3.5" /> */}
             </button>
 

@@ -33,7 +33,7 @@ export default function Roadmap() {
           <p className="eyebrow justify-center">ROADMAP</p>
           <h2 className="section-title mt-3">1년의 학습 로드맵</h2>
           <p className="section-desc">
-            취업까지 12개월 성장 여정을 함께해요
+            나의 꿈과 함께 취업까지 12개월 성장 여정을 함께해요
           </p>
         </div>
 

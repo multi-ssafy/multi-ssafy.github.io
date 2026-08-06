@@ -195,7 +195,7 @@ export default function Career() {
             {/* 마우스 오버 시 뜨는 팝업 창 (우측·하단으로 이동해 카드 타이틀이 보이도록) */}
             <div
               className={`pointer-events-none absolute left-[38%] top-[64%] z-30 translate-y-2 rounded-2xl bg-white opacity-0 shadow-2xl ring-2 ring-brand-400 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 ${
-                isBig ? "w-max max-w-[44rem] p-6" : "w-[76%] p-5"
+                isBig ? "w-max max-w-[44rem] px-6 py-12" : "w-[76%] p-5"
               }`}
             >
               <div className={`flex items-center ${isBig ? "gap-3" : "gap-2.5"}`}>
@@ -208,7 +208,7 @@ export default function Career() {
                 </span>
                 <h4
                   className={`font-extrabold text-ink-900 ${
-                    isBig ? "text-xl" : "text-base"
+                    isBig ? "text-2xl" : "text-base"
                   }`}
                 >
                   {s.title}
@@ -216,7 +216,7 @@ export default function Career() {
               </div>
               <ul
                 className={`leading-relaxed ${
-                  isBig ? "mt-4 space-y-2.5 text-base" : "mt-3 space-y-2 text-sm"
+                  isBig ? "mt-5 space-y-8 text-lg" : "mt-3 space-y-2 text-sm"
                 }`}
               >
                 {s.hover.map((it, i) => (

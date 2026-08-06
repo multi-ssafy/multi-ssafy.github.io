@@ -89,7 +89,7 @@ const STORIES: Story[] = [
     cohort: "12기",
     majorType: "비전공",
     major: "기계공학부&소프트웨어학과",
-    name: "홍O",
+    name: "홍OO",
     role: "반도체 SW 개발자",
     company: "SK하이닉스",
     story:

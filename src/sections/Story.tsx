@@ -70,6 +70,32 @@ const STORIES: Story[] = [
       "“해결하지 못할 문제는 없다” 라는 저의 평소 지론과 경영학 특유의 열정으로 취업 문을 두드렸지만 그 문턱은 너무 높았습니다. 개발에 흥미가 있어 AI 모델을 만들어도 이를 서비스로 연결할 백엔드 역량이 없어 늘 답답했습니다. SSAFY에 들어와 현업 프로세스 그대로 백엔드 구축부터 AI 성능 최적화까지 경험하며 확실한 포트폴리오로 남길 수 있었습니다. 현재 삼성전자에서 기술 이해도를 갖춘 AX전문가로 당당히 도약하여 HR을 포함한 경영 지원 전반에 AI를 적용시키는 역할을 담당하고 있습니다.",
     delay: ".12s",
   },
+  {
+    photo: "",
+    photoAlt: "백엔드 개발자 조OO",
+    cohort: "14기",
+    majorType: "전공",
+    major: "컴퓨터과학부",
+    name: "조OO",
+    role: "백엔드 개발자",
+    company: "카카오",
+    story:
+      "거듭된 불합격 통보와 SW전공자로서 부족했던 기본기로 자책하던 중, 다양한 AI 프로젝트를 경험할 수 있다는 기대로 SSAFY에 입과했습니다. 매일 8시간씩 AI와 기본 역량을 다지고, 전담 취업 컨설턴트님과 채용 정보 및 기출 질문을 철저히 분석하는 한편 지치고 힘들 때면 동료들과 밥 한 끼의 위로를 나누며 흔들리는 마음을 다잡았습니다. 그 결과 카카오 신입공채 테크 직무에 당당히 합격하여, 현재는 최적의 솔루션을 고민하는 백엔드 개발자로 활약하고 있습니다.",
+    delay: ".24s",
+  },
+  {
+    photo: "",
+    photoAlt: "반도체 SW 개발자 홍O",
+    cohort: "12기",
+    majorType: "비전공",
+    major: "기계공학부&소프트웨어학과",
+    name: "홍OO",
+    role: "반도체 SW 개발자",
+    company: "SK하이닉스",
+    story:
+      "기계공학도에서 개발자로 전향한 제게 SSAFY는 유일한 스펙이었습니다. 인턴십이나 대외 공모전 경험은 전무했지만, 오직 SSAFY 프로젝트 수상 이력만으로 면접에서 저의 실력을 증명해냈습니다. 뿐만 아니라 교육과 취업준비를 병행하기 벅찬 와중에도, 취업지원센터의 밀착 컨설팅과 정기적인 채용 소식 공유 덕분에 취업 준비 시간을 효율적으로 관리할 수 있었습니다. 이처럼 SSAFY의 체계적인 지원을 발판 삼아, 현재 SK하이닉스에서 반도체 생산에 기여하는 개발자로 활약 중입니다.",
+    delay: ".30s",
+  },
 ];
 
 export default function Story() {
@@ -93,7 +119,7 @@ export default function Story() {
               className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex"
               style={s.delay ? { animationDelay: s.delay } : undefined}
             >
-              <div className="flex-1 p-6 sm:p-7 flex flex-col justify-center min-w-0">
+              <div className="flex-1 p-6 sm:p-7 flex flex-col justify-start min-w-0">
                 <div className="flex flex-wrap gap-1.5">
                   <span className="tag bg-brand-50 w-fit">{s.cohort}</span>
                   <span className="tag bg-brand-50 w-fit">{s.major}</span>

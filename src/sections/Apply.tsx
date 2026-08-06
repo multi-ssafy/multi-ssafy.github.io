@@ -11,7 +11,7 @@ import { APPLY_URL } from "@/data/site";
 
 // APPLICATION GUIDE — 지원자격 및 선발 프로세스 (4개 박스로 압축)
 
-const SELECT_STEPS = ["지원서 접수 (26.10월 예정)", "SSAFY 적성진단", "인터뷰", "교육 시작"];
+const SELECT_STEPS = ["지원서 접수 ('26.10월예정)", "SSAFY 적성진단", "인터뷰", "교육 시작"];
 
 export default function Apply() {
   const [showAptitudeModal, setShowAptitudeModal] = useState(false);
@@ -165,13 +165,13 @@ export default function Apply() {
               alt="적성진단 테스트 예시문제"
               className="w-full h-auto rounded-lg"
             />
-            <p className="mt-4 text-sm leading-relaxed break-keep">
+            <p className="mt-4 font-bold text-sm text-brand-600 leading-relaxed break-keep">
               * SW전공 적성진단은 삼성 SW Expert Academy(
               <a
                 href="https://swexpertacademy.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-brand-600 hover:underline break-all"
+                className="font-medium text-brand-600 underline break-all"
               >
                 swexpertacademy.com
               </a>

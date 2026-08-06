@@ -11,7 +11,7 @@ import { APPLY_URL } from "@/data/site";
 
 // APPLICATION GUIDE — 지원자격 및 선발 프로세스 (4개 박스로 압축)
 
-const SELECT_STEPS = ["지원서 접수 ('26.10월예정)", "SSAFY 적성진단", "인터뷰", "교육 시작"];
+const SELECT_STEPS = ["지원서 접수 ('26.10월)", "SSAFY 적성진단", "인터뷰", "교육 시작"];
 
 export default function Apply() {
   const [showAptitudeModal, setShowAptitudeModal] = useState(false);

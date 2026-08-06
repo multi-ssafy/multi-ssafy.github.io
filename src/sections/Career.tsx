@@ -16,9 +16,9 @@ const SOLUTIONS = [
       "자기소개서·IT 포트폴리오 작성 지원",
     ],
     hover: [
-      "서류부터 면접까지 합격률을 높이는 단계별 집중 프로그램",
-      "현업 개발자와 취업 전문가의 클래스가 다른 핵심 취업 특강",
-      "언제 어디서나 학습 가능! 온라인 강의와 취업 백서(e-Book) 제공",
+      "서류부터 면접까지 합격률을 높이는<br />단계별 집중 프로그램",
+      "현업 개발자와 취업 전문가의<br />클래스가 다른 핵심 취업 특강",
+      "언제 어디서나 학습 가능!<br />온라인 강의와 취업 백서(e-Book) 제공",
     ],
     delay: undefined,
   },
@@ -145,7 +145,9 @@ export default function Career() {
         </div>
         
         <div className="mt-10 grid md:grid-cols-3 gap-4">
-        {SOLUTIONS.map((s) => (
+        {SOLUTIONS.map((s) => {
+          const isBig = s.title === "취업특강"; // 우선 취업특강만 크게 (테스트)
+          return (
           <div
             key={s.title}
             className="group relative reveal z-0 hover:z-20"
@@ -190,27 +192,54 @@ export default function Career() {
               </div>
             </div>
 
-            {/* 마우스 오버 시 뜨는 작은 팝업 창 (우측·하단으로 이동해 카드 타이틀이 보이도록) */}
-            <div className="pointer-events-none absolute left-[38%] top-[64%] z-30 w-[76%] translate-y-2 rounded-2xl bg-white p-5 opacity-0 shadow-2xl ring-2 ring-brand-400 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="flex items-center gap-2.5">
-                <span className="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+            {/* 마우스 오버 시 뜨는 팝업 창 (우측·하단으로 이동해 카드 타이틀이 보이도록) */}
+            <div
+              className={`pointer-events-none absolute left-[38%] top-[64%] z-30 translate-y-2 rounded-2xl bg-white opacity-0 shadow-2xl ring-2 ring-brand-400 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 ${
+                isBig ? "w-max max-w-[24rem] p-7" : "w-[76%] p-5"
+              }`}
+            >
+              <div className={`flex items-center ${isBig ? "gap-3" : "gap-2.5"}`}>
+                <span
+                  className={`rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 ${
+                    isBig ? "w-11 h-11 [&>svg]:w-6 [&>svg]:h-6" : "w-9 h-9"
+                  }`}
+                >
                   {s.icon}
                 </span>
-                <h4 className="text-base font-extrabold text-ink-900">
+                <h4
+                  className={`font-extrabold text-ink-900 ${
+                    isBig ? "text-xl" : "text-base"
+                  }`}
+                >
                   {s.title}
                 </h4>
               </div>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed">
+              <ul
+                className={`leading-relaxed ${
+                  isBig ? "mt-4 space-y-2.5 text-lg" : "mt-3 space-y-2 text-sm"
+                }`}
+              >
                 {s.hover.map((it, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
-                    <span className="break-keep">{it}</span>
+                  <li
+                    key={i}
+                    className={`flex items-start ${isBig ? "gap-2.5" : "gap-2"}`}
+                  >
+                    <span
+                      className={`rounded-full bg-brand-400 shrink-0 ${
+                        isBig ? "mt-2 w-2 h-2" : "mt-1.5 w-1.5 h-1.5"
+                      }`}
+                    />
+                  <span
+                    className={isBig ? "break-keep" : "break-keep"}
+                    dangerouslySetInnerHTML={{ __html: it }}
+                  />
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
 
         <div className="reveal text-center mt-14">

@@ -78,7 +78,7 @@ export default function Career() {
         <div className="text-center max-w-2xl mx-auto reveal">
           <p className="eyebrow justify-center">OUTCOME</p>
           <h2 className="section-title mt-3 !leading-snug">
-            우수한 교육은
+            SSAFY의 교육은
             <br className="hidden sm:block" />
             취업 성과로 증명합니다
           </h2>

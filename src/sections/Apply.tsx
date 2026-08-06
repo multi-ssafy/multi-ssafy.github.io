@@ -165,7 +165,7 @@ export default function Apply() {
               alt="적성진단 테스트 예시문제"
               className="w-full h-auto rounded-lg"
             />
-            <p className="mt-4 rounded-xl bg-brand-50 border border-brand-100 px-4 py-3 font-bold text-sm text-brand-600 leading-relaxed break-keep">
+            <p className="mt-4 rounded-xl bg-brand-100 border border-brand-100 px-4 py-3 font-bold text-sm text-brand-600 leading-relaxed break-keep">
               * SW전공 적성진단은 삼성 SW Expert Academy(
               <a
                 href="https://swexpertacademy.com"

@@ -119,7 +119,7 @@ export default function Story() {
               className="reveal card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 flex"
               style={s.delay ? { animationDelay: s.delay } : undefined}
             >
-              <div className="flex-1 p-6 sm:p-7 flex flex-col justify-center min-w-0">
+              <div className="flex-1 p-6 sm:p-7 flex flex-col justify-start min-w-0">
                 <div className="flex flex-wrap gap-1.5">
                   <span className="tag bg-brand-50 w-fit">{s.cohort}</span>
                   <span className="tag bg-brand-50 w-fit">{s.major}</span>

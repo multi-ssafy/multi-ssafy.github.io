@@ -195,20 +195,20 @@ export default function Career() {
             {/* 마우스 오버 시 뜨는 팝업 창 (우측·하단으로 이동해 카드 타이틀이 보이도록) */}
             <div
               className={`pointer-events-none absolute left-[38%] top-[64%] z-30 translate-y-2 rounded-2xl bg-white opacity-0 shadow-2xl ring-2 ring-brand-400 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 ${
-                isBig ? "w-[155%] p-8" : "w-[76%] p-5"
+                isBig ? "w-[100%] p-6" : "w-[76%] p-5"
               }`}
             >
-              <div className={`flex items-center ${isBig ? "gap-4" : "gap-2.5"}`}>
+              <div className={`flex items-center ${isBig ? "gap-3" : "gap-2.5"}`}>
                 <span
                   className={`rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 ${
-                    isBig ? "w-16 h-16 [&>svg]:w-8 [&>svg]:h-8" : "w-9 h-9"
+                    isBig ? "w-11 h-11 [&>svg]:w-6 [&>svg]:h-6" : "w-9 h-9"
                   }`}
                 >
                   {s.icon}
                 </span>
                 <h4
                   className={`font-extrabold text-ink-900 ${
-                    isBig ? "text-5xl" : "text-base"
+                    isBig ? "text-xl" : "text-base"
                   }`}
                 >
                   {s.title}
@@ -216,17 +216,17 @@ export default function Career() {
               </div>
               <ul
                 className={`leading-relaxed ${
-                  isBig ? "mt-6 space-y-4 text-4xl" : "mt-3 space-y-2 text-sm"
+                  isBig ? "mt-4 space-y-2.5 text-base" : "mt-3 space-y-2 text-sm"
                 }`}
               >
                 {s.hover.map((it, i) => (
                   <li
                     key={i}
-                    className={`flex items-start ${isBig ? "gap-3" : "gap-2"}`}
+                    className={`flex items-start ${isBig ? "gap-2.5" : "gap-2"}`}
                   >
                     <span
                       className={`rounded-full bg-brand-400 shrink-0 ${
-                        isBig ? "mt-4 w-3 h-3" : "mt-1.5 w-1.5 h-1.5"
+                        isBig ? "mt-2 w-2 h-2" : "mt-1.5 w-1.5 h-1.5"
                       }`}
                     />
                     <span className="break-keep">{it}</span>

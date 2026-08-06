@@ -87,7 +87,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
             1(객관식), 기초 논리 테스트 2(주관식))
           </li>
         </ul>
-        <p className="text-ink-400">
+        <p className="text-ink-900">
           * SW적성진단은 ‘SSAFY 적성진단’으로 명칭이 변경되었으며, 문항 출제
           유형은 동일합니다.
         </p>

@@ -12,8 +12,8 @@ const NAV = [
   { id: "curriculum", label: "AI 커리큘럼", spy: ["curriculum"] },
   { id: "campus", label: "캠퍼스", spy: ["campus"] },
   { id: "project", label: "프로젝트", spy: ["project"] },
-  { id: "career", label: "취업지원", spy: ["career", "story", "company-voices"] },
-  { id: "apply", label: "모집안내", spy: ["apply", "faq", "recruit-alert"] },
+  { id: "career", label: "취업지원", spy: ["career", "story"] },
+  { id: "apply", label: "모집안내", spy: ["apply", "faq"] },
 ];
 
 export default function SectionNav() {

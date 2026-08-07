@@ -6,7 +6,6 @@ import Sponsors from "@/components/Sponsors";
 import Chatbot from "@/components/Chatbot";
 import FloatingApplyBar from "@/components/FloatingApplyBar";
 import NotificationModal from "@/components/NotificationModal";
-import CompanyVoices from "@/components/CompanyVoices";
 import Hero from "@/sections/Hero";
 import IntroMessage from "@/sections/IntroMessage";
 import IntroVideo from "@/sections/IntroVideo";
@@ -20,7 +19,6 @@ import Career from "@/sections/Career";
 import Story from "@/sections/Story";
 import CtaBanner from "@/sections/CtaBanner";
 import Apply from "@/sections/Apply";
-import FinalCta from "@/sections/FinalCta";
 
 export default function Home() {
   return (
@@ -48,13 +46,11 @@ export default function Home() {
         <QuoteBanner />
         <Career />
         <Story />
-        <CompanyVoices />
 
         {/* 5) 지원 · 안내 */}
         <CtaBanner />
         <Apply />
         <Faq />
-        <FinalCta />
       </main>
       <Sponsors />
       <Chatbot />

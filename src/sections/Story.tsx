@@ -152,10 +152,13 @@ export default function Story() {
                   )}
                 </div>
                 <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-brand-600 leading-tight break-keep">
-                  {s.title}
+                  {s.role}
                 </h3>
-                <p className="mt-1.5 text-md font-bold text-ink-700">
-                  {s.role} · {s.name}
+                <p className="mt-1.5 text-md font-bold ">
+                  {s.name}
+                </p>
+                <p className="mt-3 text-base sm:text-lg font-extrabold text-ink-900 leading-snug break-keep">
+                  {s.title}
                 </p>
                 <p className="mt-2 text-md leading-relaxed break-keep text-justify">
                   {renderStory(s.story)}

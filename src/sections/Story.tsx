@@ -14,10 +14,24 @@ type Story = {
   major: string; // 전공명
   name: string; // 이름
   role: string; // AI 직무
-  story: string; // 한 줄 스토리
+  title: string; // 사례 타이틀(헤드라인)
+  story: string; // 스토리 (<...> 안 문구는 파랗게 강조)
   company?: string; // 재직 기업
   delay?: string;
 };
+
+// story 문자열의 <...> 구간을 파란색 강조로 렌더링
+function renderStory(text: string) {
+  return text.split(/(<[^>]*>)/g).map((part, i) =>
+    part.startsWith("<") && part.endsWith(">") ? (
+      <strong key={i} className="font-bold text-brand-600">
+        {part.slice(1, -1)}
+      </strong>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
 
 const STORIES: Story[] = [
   {
@@ -29,8 +43,9 @@ const STORIES: Story[] = [
     name: "정OO",
     role: "AI 비즈니스 기획자",
     company: "삼성전자",
+    title: "초등교육자가 삼성전자 AI 개발자로!",
     story:
-      "초등 교육자로 근무하다 더 많은 아이들의 삶을 편리하게 만드는 소프트웨어 개발자가 되고 싶다는 마음이 커져 진로를 변경하였습니다. 백지상태의 비전공자로 독학을 하다 막막함을 느껴 SSAFY에 입과했습니다. 웹 개발 실무부터 삼성전자 연계 AI 프로젝트를 수행하며 개발에도 자신감이 생겼습니다. 현재는 삼성전자에 입사해 AI 개발 기획자로 근무하며 교육학 전공자로서의 소통 역량과 SW 기술력의 시너지를 발휘하고 있습니다.",
+      "아이들을 위한 SW를 만들고 싶었던 저의 꿈, SSAFY의 AI 교육, <삼성전자 멘토와 함께한 실무 프로젝트가 현실로 바꿔줬습니다.> 이제는 삼성전자의 AI 개발 기획자로서 더 많은 사람들의 삶을 편리하게 만들고 있습니다.",
     delay: undefined,
   },
   {
@@ -42,7 +57,9 @@ const STORIES: Story[] = [
     name: "김OO",
     role: "데이터 분석가",
     company: "NH농협카드",
-    story: "정보통계학을 전공했지만 데이터 분석가로의 취업은 쉽지 않았고 자신감도 많이 위축되어 있었습니다. 하지만 SSAFY의 데이터 특화 커리큘럼으로 실무 역량을 쌓았고 막막했던 금융권 취업 과정에서는 8회에 걸쳐 전담 컨설턴트님의 모의면접과 집중 케어를 받으며 점차 달라지는 저를 발견했습니다. 실무 프로젝트는 물론, 1:1 취업 멘토링으로 확신을 얻은 덕분에 마침내 원하던 NH농협카드 데이터 분석 직무에 합격했습니다.",
+    title: "SSAFY 데이터 과정으로 NH농협의 데이터 분석가가 되다",
+    story:
+      "정보통계학을 전공했지만 자신감이 없던 저는 SSAFY의 Data 특화 교육과 모의면접, 1:1 취업 멘토링을 통해 확신을 갖게 되었습니다. 그리고 마침내 원하던 NH농협카드의 데이터 분석가가 되었습니다.",
     delay: ".06s",
   },
   {
@@ -54,7 +71,9 @@ const STORIES: Story[] = [
     name: "김OO",
     role: "IT·AI 기술 세일즈",
     company: "AJ네트웍스",
-    story: "적지 않은 나이에 비전공 출신의 개발자를 꿈꾸며 SSAFY에 입과했지만, 취업 컨설턴트와의 꾸준한 상담을 통해 제 진짜 강점이 '영업'에 있음을 깨달았습니다. SSAFY에서 쌓은 탄탄한 IT 기술력에 기존 영업 경력을 융합하여 'IT 기술영업'으로 방향을 전환했고, 차별화된 장점을 무기로 AJ네트웍스 IT 기술영업 직무에 합격했습니다.",
+    title: "SSAFY교육 + 취업컨설팅 + 대학 전공 = 나의 진정한 무기",
+    story:
+      "경제학과로 취업에 고민이 많았던 저는 SSAFY 취업 컨설팅을 통해 저의 진로를 찾았습니다. SSAFY에서 배운 AI, IT 지식과 제 전공을 결합한 차별화된 경쟁력을 무기로 AJ네트웍스 IT 기술영업 직무에 합격했습니다.",
     delay: ".18s",
   },
   {
@@ -66,8 +85,9 @@ const STORIES: Story[] = [
     name: "고OO",
     role: "HR·AX 기획자",
     company: "삼성전자",
+    title: "경영학도에서 AX 전문가로, SSAFY와 함께 도약하다",
     story:
-      "“해결하지 못할 문제는 없다” 라는 저의 평소 지론과 경영학 특유의 열정으로 취업 문을 두드렸지만 그 문턱은 너무 높았습니다. 개발에 흥미가 있어 AI 모델을 만들어도 이를 서비스로 연결할 백엔드 역량이 없어 늘 답답했습니다. SSAFY에 들어와 현업 프로세스 그대로 백엔드 구축부터 AI 성능 최적화까지 경험하며 확실한 포트폴리오로 남길 수 있었습니다. 현재 삼성전자에서 기술 이해도를 갖춘 AX전문가로 당당히 도약하여 HR을 포함한 경영 지원 전반에 AI를 적용시키는 역할을 담당하고 있습니다.",
+      "경영학도의 열정만 있던 저에게 취업의 문은 높았습니다. SSAFY의 실무형 프로젝트를 통해 기업의 프로세스, 필요 기술을 알게 되었고 지금은 삼성전자에서 HR 등 각 분야에 AI를 적용하는 AX 전문가로 당당히 도약하였습니다.",
     delay: ".12s",
   },
   {
@@ -79,21 +99,23 @@ const STORIES: Story[] = [
     name: "조OO",
     role: "백엔드 개발자",
     company: "카카오",
+    title: "거듭된 취업실패, SSAFY를 만난 후엔 카카오 개발자로",
     story:
-      "거듭된 불합격 통보와 SW전공자로서 부족했던 기본기로 자책하던 중, 다양한 AI 프로젝트를 경험할 수 있다는 기대로 SSAFY에 입과했습니다. 매일 8시간씩 AI와 기본 역량을 다지고, 전담 취업 컨설턴트님과 채용 정보 및 기출 질문을 철저히 분석하는 한편 지치고 힘들 때면 동료들과 밥 한 끼의 위로를 나누며 흔들리는 마음을 다잡았습니다. 그 결과 카카오 신입공채 테크 직무에 당당히 합격하여, 현재는 최적의 솔루션을 고민하는 백엔드 개발자로 활약하고 있습니다.",
+      "거듭된 불합격으로 자책하던 저를 SSAFY의 체계적인 AI교육과 취업 컨설팅이 다시 일으켜 세웠습니다. 동료들의 격려와 함께 한 시간은 역량이 되어, 마침내 카카오에 합격하여 지금 백엔드 개발자로 활약하고 있습니다.",
     delay: ".24s",
   },
   {
     photo: "",
-    photoAlt: "반도체 SW 개발자 홍O",
+    photoAlt: "반도체 SW 개발자 홍OO",
     cohort: "12기",
     majorType: "비전공",
     major: "기계공학부&소프트웨어학과",
     name: "홍OO",
     role: "반도체 SW 개발자",
     company: "SK하이닉스",
+    title: "반도체 개발자로 취업성공, SSAFY 프로젝트가 증명하다",
     story:
-      "기계공학도에서 개발자로 전향한 제게 SSAFY는 유일한 스펙이었습니다. 인턴십이나 대외 공모전 경험은 전무했지만, 오직 SSAFY 프로젝트 수상 이력만으로 면접에서 저의 실력을 증명해냈습니다. 뿐만 아니라 교육과 취업준비를 병행하기 벅찬 와중에도, 취업지원센터의 밀착 컨설팅과 정기적인 채용 소식 공유 덕분에 취업 준비 시간을 효율적으로 관리할 수 있었습니다. 이처럼 SSAFY의 체계적인 지원을 발판 삼아, 현재 SK하이닉스에서 반도체 생산에 기여하는 개발자로 활약 중입니다.",
+      "면접장에서 SSAFY 프로젝트 수상 이력 하나만으로 제 실력을 증명할 수 있었습니다. 체계적인 교육뿐 아니라 밀착 취업 컨설팅으로 도와준 SSAFY 덕분에 지금은 SK하이닉스 반도체 개발자로 성장할 수 있었습니다.",
     delay: ".30s",
   },
 ];
@@ -130,13 +152,13 @@ export default function Story() {
                   )}
                 </div>
                 <h3 className="mt-2.5 text-xl sm:text-2xl font-black text-brand-600 leading-tight break-keep">
-                  {s.role}
+                  {s.title}
                 </h3>
-                <p className="mt-1.5 text-md font-bold ">
-                  {s.name}
+                <p className="mt-1.5 text-md font-bold text-ink-700">
+                  {s.role} · {s.name}
                 </p>
                 <p className="mt-2 text-md leading-relaxed break-keep text-justify">
-                  {s.story}
+                  {renderStory(s.story)}
                 </p>
                 {/* <a
                   href={REVIEW_URL}

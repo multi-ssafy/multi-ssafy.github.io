@@ -43,7 +43,7 @@ const STORIES: Story[] = [
     name: "정OO",
     role: "AI 비즈니스 기획자",
     company: "삼성전자",
-    title: "초등교육자가 삼성전자 AI 개발자로!",
+    title: '"초등교육자가 삼성전자 AI 개발자로 !"',
     story:
       "아이들을 위한 SW를 만들고 싶었던 저의 꿈, SSAFY의 AI 교육, <삼성전자 멘토와 함께한 실무 프로젝트가 현실로 바꿔줬습니다.> 이제는 삼성전자의 AI 개발 기획자로서 더 많은 사람들의 삶을 편리하게 만들고 있습니다.",
     delay: undefined,
@@ -57,7 +57,7 @@ const STORIES: Story[] = [
     name: "김OO",
     role: "데이터 분석가",
     company: "NH농협카드",
-    title: "SSAFY 데이터 과정으로 NH농협의 데이터 분석가가 되다",
+    title: '"SSAFY 데이터 과정으로 NH농협의 데이터 분석가가 되다"',
     story:
       "정보통계학을 전공했지만 자신감이 없던 저는 <SSAFY의 Data 특화 교육과 모의면접, 1:1 취업 멘토링을 통해 확신을 갖게 되었습니다.> 그리고 마침내 원하던 NH농협카드의 데이터 분석가가 되었습니다.",
     delay: ".06s",
@@ -71,7 +71,7 @@ const STORIES: Story[] = [
     name: "김OO",
     role: "IT·AI 기술 세일즈",
     company: "AJ네트웍스",
-    title: "SSAFY교육 + 취업컨설팅 + 대학 전공 = 나의 진정한 무기",
+    title: '"SSAFY교육 + 취업컨설팅 + 대학 전공 = 나의 진정한 무기"',
     story:
       "경제학과로 취업에 고민이 많았던 저는 SSAFY 취업 컨설팅을 통해 저의 진로를 찾았습니다. <SSAFY에서 배운 AI, IT 지식과 제 전공을 결합한 차별화된 경쟁력을 무기로> AJ네트웍스 IT 기술영업 직무에 합격했습니다.",
     delay: ".18s",
@@ -85,7 +85,7 @@ const STORIES: Story[] = [
     name: "고OO",
     role: "HR·AX 기획자",
     company: "삼성전자",
-    title: "경영학도에서 AX 전문가로, SSAFY와 함께 도약하다",
+    title: '"경영학도에서 AX 전문가로, SSAFY와 함께 도약하다"',
     story:
       "경영학도의 열정만 있던 저에게 취업의 문은 높았습니다. <SSAFY의 실무형 프로젝트를 통해 기업의 프로세스, 필요 기술을 알게 되었고> 지금은 삼성전자에서 HR 등 각 분야에 AI를 적용하는 AX 전문가로 당당히 도약하였습니다.",
     delay: ".12s",
@@ -99,7 +99,7 @@ const STORIES: Story[] = [
     name: "조OO",
     role: "백엔드 개발자",
     company: "카카오",
-    title: "거듭된 취업실패, SSAFY를 만난 후엔 카카오 개발자로",
+    title: '"거듭된 취업실패, SSAFY를 만난 후엔 카카오 개발자로"',
     story:
       "거듭된 불합격으로 자책하던 <저를 SSAFY의 체계적인 AI교육과 취업 컨설팅이 다시 일으켜 세웠습니다.> 동료들의 격려와 함께 한 시간은 역량이 되어, 마침내 카카오에 합격하여 지금 백엔드 개발자로 활약하고 있습니다.",
     delay: ".24s",
@@ -113,7 +113,7 @@ const STORIES: Story[] = [
     name: "홍OO",
     role: "반도체 SW 개발자",
     company: "SK하이닉스",
-    title: "반도체 개발자로 취업성공, SSAFY 프로젝트가 증명하다",
+    title: '"반도체 개발자로 취업성공, SSAFY 프로젝트가 증명하다"',
     story:
       "면접장에서 <SSAFY 프로젝트 수상 이력 하나만으로 제 실력을 증명할 수 있었습니다.> 체계적인 교육뿐 아니라 밀착 취업 컨설팅으로 도와준 SSAFY 덕분에 지금은 SK하이닉스 반도체 개발자로 성장할 수 있었습니다.",
     delay: ".30s",
